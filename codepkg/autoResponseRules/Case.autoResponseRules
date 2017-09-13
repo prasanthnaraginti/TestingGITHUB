@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>CTP  Case Auto-Response Rule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Application</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Lodgement</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.CTP_CaseSubStatus__c</field>
+                <operation>equals</operation>
+                <value>Application received</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <senderEmail>akash-sharma.sharma@capgemini.com</senderEmail>
+            <senderName>Dispute Resolution Service</senderName>
+            <template>unfiled$public/CTP_Claimant_Application_Submission</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Feedback</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.CTP_CaseType__c</field>
+                <operation>equals</operation>
+                <value>CAS</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.CTP_Response_Required__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <notifyCcRecipients>true</notifyCcRecipients>
+            <senderEmail>parul.singhai@capgemini.com</senderEmail>
+            <senderName>Claimant Advisory Services</senderName>
+            <template>CTP_Claimant_Advisory_Services/CTP_Email_Template_for_submitting_feedback_via_email_web</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Feedback</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>equals</operation>
+                <value>CAS Feedback</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>parul.singhai@capgemini.com</replyToEmail>
+            <senderEmail>parul.singhai@capgemini.com</senderEmail>
+            <senderName>Claimant Advisory Services</senderName>
+            <template>CTP_Claimant_Advisory_Services/CTP_Email_Template_for_submitting_feedback_via_email_web</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>
