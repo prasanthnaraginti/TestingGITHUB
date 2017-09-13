@@ -1,0 +1,2563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <businessProcesses>
+        <fullName>Application level</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Appropriate Dispute Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lodgement</fullName>
+            <default>true</default>
+        </values>
+    </businessProcesses>
+    <compactLayouts>
+        <fullName>CTP_ApplicationHighlight</fullName>
+        <fields>CaseNumber</fields>
+        <fields>CTP_ClaimNumber__c</fields>
+        <fields>CTP_DaysSinceReceived__c</fields>
+        <fields>Claimant_Name__c</fields>
+        <fields>Insurer__c</fields>
+        <fields>CTP_InsurerInternalReviewDone__c</fields>
+        <fields>OwnerId</fields>
+        <label>Application Highlight</label>
+    </compactLayouts>
+    <fields>
+        <fullName>Accident_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Location of Accident</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_AccidentDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Accident Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_ActionAndOutcome__c</fullName>
+        <externalId>false</externalId>
+        <label>Action and Outcome</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Introduction Call</fullName>
+                    <default>false</default>
+                    <label>Introduction Call</label>
+                </value>
+                <value>
+                    <fullName>10 week Call</fullName>
+                    <default>false</default>
+                    <label>10 week Call</label>
+                </value>
+                <value>
+                    <fullName>23 week Call</fullName>
+                    <default>false</default>
+                    <label>23 week Call</label>
+                </value>
+                <value>
+                    <fullName>Claimant has been contacted</fullName>
+                    <default>false</default>
+                    <label>Claimant has been contacted</label>
+                </value>
+                <value>
+                    <fullName>No Answer</fullName>
+                    <default>false</default>
+                    <label>No Answer</label>
+                </value>
+                <value>
+                    <fullName>Claimant does not want to be contacted</fullName>
+                    <default>false</default>
+                    <label>Claimant does not want to be contacted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_ActionDueDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Action Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_CaseSubStatus__c</fullName>
+        <description>This field provides information about the case sub status</description>
+        <externalId>false</externalId>
+        <label>Case Sub Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Status</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Application received</fullName>
+                    <default>false</default>
+                    <label>Application received</label>
+                </value>
+                <value>
+                    <fullName>Application verification</fullName>
+                    <default>false</default>
+                    <label>Application verification</label>
+                </value>
+                <value>
+                    <fullName>Screening</fullName>
+                    <default>false</default>
+                    <label>Screening</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Reply</fullName>
+                    <default>false</default>
+                    <label>Awaiting Reply</label>
+                </value>
+                <value>
+                    <fullName>Triage</fullName>
+                    <default>false</default>
+                    <label>Triage</label>
+                </value>
+                <value>
+                    <fullName>Appropriate Dispute Resolution</fullName>
+                    <default>false</default>
+                    <label>Appropriate Dispute Resolution</label>
+                </value>
+                <value>
+                    <fullName>Allocated</fullName>
+                    <default>false</default>
+                    <label>Allocated</label>
+                </value>
+                <value>
+                    <fullName>Analysis</fullName>
+                    <default>false</default>
+                    <label>Analysis</label>
+                </value>
+                <value>
+                    <fullName>Hearing</fullName>
+                    <default>false</default>
+                    <label>Hearing</label>
+                </value>
+                <value>
+                    <fullName>Decision</fullName>
+                    <default>false</default>
+                    <label>Decision</label>
+                </value>
+                <value>
+                    <fullName>QA</fullName>
+                    <default>false</default>
+                    <label>QA</label>
+                </value>
+                <value>
+                    <fullName>Account payable</fullName>
+                    <default>false</default>
+                    <label>Account payable</label>
+                </value>
+                <value>
+                    <fullName>Finalised</fullName>
+                    <default>false</default>
+                    <label>Finalised</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Lodgement</controllingFieldValue>
+                <valueName>Application received</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lodgement</controllingFieldValue>
+                <valueName>Application verification</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lodgement</controllingFieldValue>
+                <valueName>Screening</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lodgement</controllingFieldValue>
+                <valueName>Awaiting Reply</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appropriate Dispute Resolution</controllingFieldValue>
+                <valueName>Triage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appropriate Dispute Resolution</controllingFieldValue>
+                <valueName>Appropriate Dispute Resolution</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appropriate Dispute Resolution</controllingFieldValue>
+                <valueName>Allocated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Decision</controllingFieldValue>
+                <valueName>Analysis</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Decision</controllingFieldValue>
+                <valueName>Hearing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Decision</controllingFieldValue>
+                <valueName>Decision</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finalisation</controllingFieldValue>
+                <valueName>QA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finalisation</controllingFieldValue>
+                <valueName>Account payable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finalisation</controllingFieldValue>
+                <valueName>Finalised</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_CaseSubType__c</fullName>
+        <description>This field provides information about the case sub type</description>
+        <externalId>false</externalId>
+        <label>Case Sub Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Status</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Application received</fullName>
+                    <default>false</default>
+                    <label>Application received</label>
+                </value>
+                <value>
+                    <fullName>Acceptance verification</fullName>
+                    <default>false</default>
+                    <label>Acceptance verification</label>
+                </value>
+                <value>
+                    <fullName>Screening</fullName>
+                    <default>false</default>
+                    <label>Screening</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Reply</fullName>
+                    <default>false</default>
+                    <label>Awaiting Reply</label>
+                </value>
+                <value>
+                    <fullName>Triage</fullName>
+                    <default>false</default>
+                    <label>Triage</label>
+                </value>
+                <value>
+                    <fullName>ADR</fullName>
+                    <default>false</default>
+                    <label>ADR</label>
+                </value>
+                <value>
+                    <fullName>Allocated</fullName>
+                    <default>false</default>
+                    <label>Allocated</label>
+                </value>
+                <value>
+                    <fullName>Analysis</fullName>
+                    <default>false</default>
+                    <label>Analysis</label>
+                </value>
+                <value>
+                    <fullName>Hearing</fullName>
+                    <default>false</default>
+                    <label>Hearing</label>
+                </value>
+                <value>
+                    <fullName>Decision</fullName>
+                    <default>false</default>
+                    <label>Decision</label>
+                </value>
+                <value>
+                    <fullName>QA</fullName>
+                    <default>false</default>
+                    <label>QA</label>
+                </value>
+                <value>
+                    <fullName>Account payable</fullName>
+                    <default>false</default>
+                    <label>Account payable</label>
+                </value>
+                <value>
+                    <fullName>Finalise</fullName>
+                    <default>false</default>
+                    <label>Finalise</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Lodgement</controllingFieldValue>
+                <valueName>Application received</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lodgement</controllingFieldValue>
+                <valueName>Acceptance verification</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lodgement</controllingFieldValue>
+                <valueName>Screening</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lodgement</controllingFieldValue>
+                <valueName>Awaiting Reply</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appropriate Dispute Resolution</controllingFieldValue>
+                <valueName>Triage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appropriate Dispute Resolution</controllingFieldValue>
+                <valueName>ADR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appropriate Dispute Resolution</controllingFieldValue>
+                <valueName>Allocated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Decision</controllingFieldValue>
+                <valueName>Analysis</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Decision</controllingFieldValue>
+                <valueName>Hearing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Decision</controllingFieldValue>
+                <valueName>Decision</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finalisation</controllingFieldValue>
+                <valueName>QA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finalisation</controllingFieldValue>
+                <valueName>Account payable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finalisation</controllingFieldValue>
+                <valueName>Finalise</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_CaseType__c</fullName>
+        <description>This field specifies the type of case.</description>
+        <externalId>false</externalId>
+        <label>Case Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Merit review</fullName>
+                    <default>false</default>
+                    <label>Merit review</label>
+                </value>
+                <value>
+                    <fullName>Medical</fullName>
+                    <default>false</default>
+                    <label>Medical</label>
+                </value>
+                <value>
+                    <fullName>Claims</fullName>
+                    <default>false</default>
+                    <label>Claims</label>
+                </value>
+                <value>
+                    <fullName>Misc. Claims</fullName>
+                    <default>false</default>
+                    <label>Misc. Claims</label>
+                </value>
+                <value>
+                    <fullName>DRS</fullName>
+                    <default>false</default>
+                    <label>DRS</label>
+                </value>
+                <value>
+                    <fullName>CAS</fullName>
+                    <default>false</default>
+                    <label>CAS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_ClaimNumber__c</fullName>
+        <description>Holds claim number provided by insurer for a particular claim</description>
+        <externalId>false</externalId>
+        <label>Claim Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Date_of_accident__c</fullName>
+        <description>Created as part of DCR-20 for new submitted application</description>
+        <externalId>false</externalId>
+        <label>Date of accident</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Date_of_birth__c</fullName>
+        <description>Created as part of DCR-20 for new submitted application</description>
+        <externalId>false</externalId>
+        <label>Date of birth</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Date_rejected__c</fullName>
+        <externalId>false</externalId>
+        <label>Date rejected</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_DaysSinceReceived__c</fullName>
+        <description>Calculated the number of days since the application has been received</description>
+        <externalId>false</externalId>
+        <formula>TODAY()- DATEVALUE(CreatedDate)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days since received</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_DisputeCategories__c</fullName>
+        <externalId>false</externalId>
+        <label>Dispute Categories</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Merit review</fullName>
+                    <default>false</default>
+                    <label>Merit review</label>
+                </value>
+                <value>
+                    <fullName>Medical assessment</fullName>
+                    <default>false</default>
+                    <label>Medical assessment</label>
+                </value>
+                <value>
+                    <fullName>Claims assessment</fullName>
+                    <default>false</default>
+                    <label>Claims assessment</label>
+                </value>
+                <value>
+                    <fullName>CAS</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>CAS</label>
+                </value>
+                <value>
+                    <fullName>Disputes</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Disputes</label>
+                </value>
+                <value>
+                    <fullName>Medical review</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Medical review</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_DisputeTypes__c</fullName>
+        <externalId>false</externalId>
+        <label>Dispute Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>CTP_DisputeCategories__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Weekly Payments</fullName>
+                    <default>false</default>
+                    <label>Weekly Payments</label>
+                </value>
+                <value>
+                    <fullName>Funeral Expenses</fullName>
+                    <default>false</default>
+                    <label>Funeral Expenses</label>
+                </value>
+                <value>
+                    <fullName>Cessation re Pending Damages Claim</fullName>
+                    <default>false</default>
+                    <label>Cessation re Pending Damages Claim</label>
+                </value>
+                <value>
+                    <fullName>Retirement age termination</fullName>
+                    <default>false</default>
+                    <label>Retirement age termination</label>
+                </value>
+                <value>
+                    <fullName>Suspension re medical evidence</fullName>
+                    <default>false</default>
+                    <label>Suspension re medical evidence</label>
+                </value>
+                <value>
+                    <fullName>Suspension re work fitness evidence</fullName>
+                    <default>false</default>
+                    <label>Suspension re work fitness evidence</label>
+                </value>
+                <value>
+                    <fullName>Suspension re rehabilitation</fullName>
+                    <default>false</default>
+                    <label>Suspension re rehabilitation</label>
+                </value>
+                <value>
+                    <fullName>Insurer notice periods</fullName>
+                    <default>false</default>
+                    <label>Insurer notice periods</label>
+                </value>
+                <value>
+                    <fullName>Recoverable statutory benefits</fullName>
+                    <default>false</default>
+                    <label>Recoverable statutory benefits</label>
+                </value>
+                <value>
+                    <fullName>Refund of weekly payments</fullName>
+                    <default>false</default>
+                    <label>Refund of weekly payments</label>
+                </value>
+                <value>
+                    <fullName>Weekly benefits outside Australia</fullName>
+                    <default>false</default>
+                    <label>Weekly benefits outside Australia</label>
+                </value>
+                <value>
+                    <fullName>Variation of weeklies</fullName>
+                    <default>false</default>
+                    <label>Variation of weeklies</label>
+                </value>
+                <value>
+                    <fullName>Cost of treatment and care</fullName>
+                    <default>false</default>
+                    <label>Cost of treatment and care</label>
+                </value>
+                <value>
+                    <fullName>Gratuitous service</fullName>
+                    <default>false</default>
+                    <label>Gratuitous service</label>
+                </value>
+                <value>
+                    <fullName>Verification of expensesTreatment &amp; care within time</fullName>
+                    <default>false</default>
+                    <label>Verification of expensesTreatment &amp; care within time</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care authorised</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care authorised</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care compensated</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care compensated</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care amount payable</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care amount payable</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care limits</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care limits</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care outside Australia</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care outside Australia</label>
+                </value>
+                <value>
+                    <fullName>Excluded treatment &amp; care</fullName>
+                    <default>false</default>
+                    <label>Excluded treatment &amp; care</label>
+                </value>
+                <value>
+                    <fullName>Benefits reduced re Death</fullName>
+                    <default>false</default>
+                    <label>Benefits reduced re Death</label>
+                </value>
+                <value>
+                    <fullName>No Benefits if WC payable</fullName>
+                    <default>false</default>
+                    <label>No Benefits if WC payable</label>
+                </value>
+                <value>
+                    <fullName>No Benefits if vehicle uninsured</fullName>
+                    <default>false</default>
+                    <label>No Benefits if vehicle uninsured</label>
+                </value>
+                <value>
+                    <fullName>Mental harm limits on benefits</fullName>
+                    <default>false</default>
+                    <label>Mental harm limits on benefits</label>
+                </value>
+                <value>
+                    <fullName>Damages impacts on benefits</fullName>
+                    <default>false</default>
+                    <label>Damages impacts on benefits</label>
+                </value>
+                <value>
+                    <fullName>Return to work benefits</fullName>
+                    <default>false</default>
+                    <label>Return to work benefits</label>
+                </value>
+                <value>
+                    <fullName>Overpayment of benefits</fullName>
+                    <default>false</default>
+                    <label>Overpayment of benefits</label>
+                </value>
+                <value>
+                    <fullName>Good faith duties</fullName>
+                    <default>false</default>
+                    <label>Good faith duties</label>
+                </value>
+                <value>
+                    <fullName>Just &amp; expeditious duties</fullName>
+                    <default>false</default>
+                    <label>Just &amp; expeditious duties</label>
+                </value>
+                <value>
+                    <fullName>Claimants duty to minimise loss</fullName>
+                    <default>false</default>
+                    <label>Claimants duty to minimise loss</label>
+                </value>
+                <value>
+                    <fullName>Insurer delaying offer</fullName>
+                    <default>false</default>
+                    <label>Insurer delaying offer</label>
+                </value>
+                <value>
+                    <fullName>Claimants duty to cooperate</fullName>
+                    <default>false</default>
+                    <label>Claimants duty to cooperate</label>
+                </value>
+                <value>
+                    <fullName>Claimants duty to give particulars</fullName>
+                    <default>false</default>
+                    <label>Claimants duty to give particulars</label>
+                </value>
+                <value>
+                    <fullName>Insurer direction re particulars</fullName>
+                    <default>false</default>
+                    <label>Insurer direction re particulars</label>
+                </value>
+                <value>
+                    <fullName>Reinstatement of a claim</fullName>
+                    <default>false</default>
+                    <label>Reinstatement of a claim</label>
+                </value>
+                <value>
+                    <fullName>Review of a Merit Review</fullName>
+                    <default>false</default>
+                    <label>Review of a Merit Review</label>
+                </value>
+                <value>
+                    <fullName>Legal costs</fullName>
+                    <default>false</default>
+                    <label>Legal costs</label>
+                </value>
+                <value>
+                    <fullName>Treatment and Care</fullName>
+                    <default>false</default>
+                    <label>Treatment and Care</label>
+                </value>
+                <value>
+                    <fullName>Treatment improving recovering</fullName>
+                    <default>false</default>
+                    <label>Treatment improving recovering</label>
+                </value>
+                <value>
+                    <fullName>Earning capacity impairment</fullName>
+                    <default>false</default>
+                    <label>Earning capacity impairment</label>
+                </value>
+                <value>
+                    <fullName>Minor injury</fullName>
+                    <default>false</default>
+                    <label>Minor injury</label>
+                </value>
+                <value>
+                    <fullName>Permanent impairment</fullName>
+                    <default>false</default>
+                    <label>Permanent impairment</label>
+                </value>
+                <value>
+                    <fullName>Interim permanent impairment</fullName>
+                    <default>false</default>
+                    <label>Interim permanent impairment</label>
+                </value>
+                <value>
+                    <fullName>Further medical assessment</fullName>
+                    <default>false</default>
+                    <label>Further medical assessment</label>
+                </value>
+                <value>
+                    <fullName>Reviews of medical assessments</fullName>
+                    <default>false</default>
+                    <label>Reviews of medical assessments</label>
+                </value>
+                <value>
+                    <fullName>Non binding opinions</fullName>
+                    <default>false</default>
+                    <label>Non binding opinions</label>
+                </value>
+                <value>
+                    <fullName>Claimant settlement approval</fullName>
+                    <default>false</default>
+                    <label>Claimant settlement approval</label>
+                </value>
+                <value>
+                    <fullName>Exemptions from damages assessment</fullName>
+                    <default>false</default>
+                    <label>Exemptions from damages assessment</label>
+                </value>
+                <value>
+                    <fullName>Damages and liability</fullName>
+                    <default>false</default>
+                    <label>Damages and liability</label>
+                </value>
+                <value>
+                    <fullName>Legal Costs - 7.37 DAM</fullName>
+                    <default>false</default>
+                    <label>Legal Costs - 7.37 DAM</label>
+                </value>
+                <value>
+                    <fullName>Further damages assessment</fullName>
+                    <default>false</default>
+                    <label>Further damages assessment</label>
+                </value>
+                <value>
+                    <fullName>Treatment and Care - 3.24 SB</fullName>
+                    <default>false</default>
+                    <label>Treatment and Care - 3.24 SB</label>
+                </value>
+                <value>
+                    <fullName>Treatment improving recovering - 3.28 (3) SB</fullName>
+                    <default>false</default>
+                    <label>Treatment improving recovering - 3.28 (3) SB</label>
+                </value>
+                <value>
+                    <fullName>Earning capacity impairment - 4.10 SB &amp; DAM</fullName>
+                    <default>false</default>
+                    <label>Earning capacity impairment - 4.10 SB &amp; DAM</label>
+                </value>
+                <value>
+                    <fullName>Minor injury - 3.11, 3.28, 4.4 SB &amp; DAM</fullName>
+                    <default>false</default>
+                    <label>Minor injury - 3.11, 3.28, 4.4 SB &amp; DAM</label>
+                </value>
+                <value>
+                    <fullName>Permanent impairment - 7.21 SB &amp; DAM</fullName>
+                    <default>false</default>
+                    <label>Permanent impairment - 7.21 SB &amp; DAM</label>
+                </value>
+                <value>
+                    <fullName>Interim permanent impairment - 7.22 SB &amp; DAM</fullName>
+                    <default>false</default>
+                    <label>Interim permanent impairment - 7.22 SB &amp; DAM</label>
+                </value>
+                <value>
+                    <fullName>Further medical assessment - 7.25 SB &amp; DAM</fullName>
+                    <default>false</default>
+                    <label>Further medical assessment - 7.25 SB &amp; DAM</label>
+                </value>
+                <value>
+                    <fullName>Reviews of medical assessments - 7.26 SB &amp; DAM</fullName>
+                    <default>false</default>
+                    <label>Reviews of medical assessments - 7.26 SB &amp; DAM</label>
+                </value>
+                <value>
+                    <fullName>Non binding opinions - 7.27 SB &amp; DAM</fullName>
+                    <default>false</default>
+                    <label>Non binding opinions - 7.27 SB &amp; DAM</label>
+                </value>
+                <value>
+                    <fullName>Enquiry</fullName>
+                    <default>false</default>
+                    <label>Enquiry</label>
+                </value>
+                <value>
+                    <fullName>Feedback</fullName>
+                    <default>false</default>
+                    <label>Feedback</label>
+                </value>
+                <value>
+                    <fullName>Compliment</fullName>
+                    <default>false</default>
+                    <label>Compliment</label>
+                </value>
+                <value>
+                    <fullName>Complaint</fullName>
+                    <default>false</default>
+                    <label>Complaint</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Weekly Payments</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Funeral Expenses</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Cessation re Pending Damages Claim</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Retirement age termination</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Suspension re medical evidence</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Suspension re work fitness evidence</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Suspension re rehabilitation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Insurer notice periods</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Recoverable statutory benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Refund of weekly payments</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Weekly benefits outside Australia</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Variation of weeklies</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Cost of treatment and care</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Gratuitous service</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Verification of expensesTreatment &amp; care within time</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Treatment &amp; care authorised</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Treatment &amp; care compensated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Treatment &amp; care amount payable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Treatment &amp; care limits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Treatment &amp; care outside Australia</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Excluded treatment &amp; care</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Benefits reduced re Death</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>No Benefits if WC payable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>No Benefits if vehicle uninsured</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Mental harm limits on benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Damages impacts on benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Return to work benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Overpayment of benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Good faith duties</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Just &amp; expeditious duties</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Claimants duty to minimise loss</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Insurer delaying offer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Claimants duty to cooperate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Claimants duty to give particulars</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Insurer direction re particulars</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Reinstatement of a claim</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Review of a Merit Review</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Merit review</controllingFieldValue>
+                <valueName>Legal costs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Treatment and Care</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Treatment improving recovering</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Earning capacity impairment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Minor injury</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Permanent impairment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Interim permanent impairment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Further medical assessment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Reviews of medical assessments</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Medical assessment</controllingFieldValue>
+                <valueName>Non binding opinions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Claims assessment</controllingFieldValue>
+                <valueName>Claimant settlement approval</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Claims assessment</controllingFieldValue>
+                <valueName>Exemptions from damages assessment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Claims assessment</controllingFieldValue>
+                <valueName>Damages and liability</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Claims assessment</controllingFieldValue>
+                <valueName>Further damages assessment</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_DoNotContactReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Do Not Contact Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CTP_DoNotContact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>DO NOT CONTACT</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CTP_DueDate__c</fullName>
+        <description>Field created from list of fields from confluence. 5 days from Insurer Reply due date (date from Insurer has been sent a notification for Lodge a reply)</description>
+        <externalId>false</externalId>
+        <label>Due date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_EntitlementName__c</fullName>
+        <externalId>false</externalId>
+        <label>Entitlement Name</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>26 week Entitlement</fullName>
+                    <default>false</default>
+                    <label>26 week Entitlement</label>
+                </value>
+                <value>
+                    <fullName>2 year Entitlement</fullName>
+                    <default>false</default>
+                    <label>2 year Entitlement</label>
+                </value>
+                <value>
+                    <fullName>Damages Entitlement</fullName>
+                    <default>false</default>
+                    <label>Damages Entitlement</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_Feedback_Sub_type__c</fullName>
+        <description>Created as part of DCR-308 to store sub-type for Feedback type of Case</description>
+        <externalId>false</externalId>
+        <label>Feedback Sub-type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>CTP_Feedback_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Motor Accident Injury Claims</fullName>
+                    <default>false</default>
+                    <label>Motor Accident Injury Claims</label>
+                </value>
+                <value>
+                    <fullName>Making a Claims</fullName>
+                    <default>false</default>
+                    <label>Making a Claims</label>
+                </value>
+                <value>
+                    <fullName>Insurance Policies</fullName>
+                    <default>false</default>
+                    <label>Insurance Policies</label>
+                </value>
+                <value>
+                    <fullName>The CTP Scheme</fullName>
+                    <default>false</default>
+                    <label>The CTP Scheme</label>
+                </value>
+                <value>
+                    <fullName>Green Slips</fullName>
+                    <default>false</default>
+                    <label>Green Slips</label>
+                </value>
+                <value>
+                    <fullName>Claims Disputes</fullName>
+                    <default>false</default>
+                    <label>Claims Disputes</label>
+                </value>
+                <value>
+                    <fullName>Our Contact Support Services</fullName>
+                    <default>false</default>
+                    <label>Our Contact Support Services</label>
+                </value>
+                <value>
+                    <fullName>Our Dispute Resolution Services</fullName>
+                    <default>false</default>
+                    <label>Our Dispute Resolution Services</label>
+                </value>
+                <value>
+                    <fullName>CTP Green Slip</fullName>
+                    <default>false</default>
+                    <label>CTP Green Slip</label>
+                </value>
+                <value>
+                    <fullName>About my Insurer</fullName>
+                    <default>false</default>
+                    <label>About my Insurer</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Enquiry</controllingFieldValue>
+                <valueName>Motor Accident Injury Claims</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enquiry</controllingFieldValue>
+                <valueName>Claims Disputes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enquiry</controllingFieldValue>
+                <valueName>CTP Green Slip</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Feedback</controllingFieldValue>
+                <controllingFieldValue>Complaint</controllingFieldValue>
+                <controllingFieldValue>Compliment</controllingFieldValue>
+                <valueName>The CTP Scheme</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Feedback</controllingFieldValue>
+                <controllingFieldValue>Complaint</controllingFieldValue>
+                <valueName>Green Slips</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Feedback</controllingFieldValue>
+                <controllingFieldValue>Complaint</controllingFieldValue>
+                <controllingFieldValue>Compliment</controllingFieldValue>
+                <valueName>Our Contact Support Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Feedback</controllingFieldValue>
+                <controllingFieldValue>Complaint</controllingFieldValue>
+                <controllingFieldValue>Compliment</controllingFieldValue>
+                <valueName>Our Dispute Resolution Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Feedback</controllingFieldValue>
+                <controllingFieldValue>Complaint</controllingFieldValue>
+                <controllingFieldValue>Compliment</controllingFieldValue>
+                <valueName>About my Insurer</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_Feedback_Type__c</fullName>
+        <description>Created as part of DCR-308.</description>
+        <externalId>false</externalId>
+        <label>Feedback Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Enquiry</fullName>
+                    <default>false</default>
+                    <label>Enquiry</label>
+                </value>
+                <value>
+                    <fullName>Feedback</fullName>
+                    <default>false</default>
+                    <label>Feedback</label>
+                </value>
+                <value>
+                    <fullName>Compliment</fullName>
+                    <default>false</default>
+                    <label>Compliment</label>
+                </value>
+                <value>
+                    <fullName>Complaint</fullName>
+                    <default>false</default>
+                    <label>Complaint</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_InjuredPersonAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Claimant Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Cases (Claimant Account)</relationshipLabel>
+        <relationshipName>Cases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_InjuredPersonContact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Claimant Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cases (Claimant Contact)</relationshipLabel>
+        <relationshipName>Cases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_InsurerInternalReviewDone__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field to specify if Insurer internal review has been completed by the Insurer</description>
+        <externalId>false</externalId>
+        <label>Has the insurer done an internal review?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CTP_InsurerRepresentative__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field has information about insurer representative. It has look up to contact</description>
+        <externalId>false</externalId>
+        <label>Insurer Representative</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Insurer_name__c</fullName>
+        <description>Created as part of DCR-20 for new submitted application</description>
+        <externalId>false</externalId>
+        <label>Insurer name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_LegalFirmInsurer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>DCR-283- Legal Firm of Insurer</description>
+        <externalId>false</externalId>
+        <label>Legal Firm - Insurer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Cases (Legal Firm - Insurer)</relationshipLabel>
+        <relationshipName>InsurerCases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_LegalFirm__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>DCR-283</description>
+        <externalId>false</externalId>
+        <label>Legal Firm</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Cases (Legal Firm)</relationshipLabel>
+        <relationshipName>LegalFirmAccount</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_LegalRepresentativeInsurer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>DCR-283</description>
+        <externalId>false</externalId>
+        <label>Legal Representative-Insurer-</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cases (Legal Representative-Insurer-)</relationshipLabel>
+        <relationshipName>LegalRepresentativeInsurerCases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_LegalRepresentative__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>DCR-283</description>
+        <externalId>false</externalId>
+        <label>Legal Representative</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cases (Legal Representative)</relationshipLabel>
+        <relationshipName>CaseRepresentative</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Location_of_accident__c</fullName>
+        <description>Created as part of DCR-20 for new submitted application</description>
+        <displayLocationInDecimal>false</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Location of accident</label>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>CTP_LodgementDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Lodgement Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_OtherRelationshipDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>Relationship Description</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_OwnerEqualsLoggedinUser__c</fullName>
+        <description>Logged in user is Case owner</description>
+        <externalId>false</externalId>
+        <formula>IF($User.Id=OwnerId,true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Equals Loggedin User</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CTP_ReasonForRejection__c</fullName>
+        <description>This field specifies the reason for rejection of an Application</description>
+        <externalId>false</externalId>
+        <label>Reason for rejection</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <controllingField>CTP_ScreeningResult__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No claim lodged</fullName>
+                    <default>false</default>
+                    <label>No claim lodged</label>
+                </value>
+                <value>
+                    <fullName>No Internal Review Requested</fullName>
+                    <default>false</default>
+                    <label>No Internal Review Requested</label>
+                </value>
+                <value>
+                    <fullName>No jurisdictionNo Jurisdiction - non NSW accident</fullName>
+                    <default>false</default>
+                    <label>No Jurisdiction - non NSW accident</label>
+                </value>
+                <value>
+                    <fullName>Application out of time</fullName>
+                    <default>false</default>
+                    <label>Application out of time</label>
+                </value>
+                <value>
+                    <fullName>Duplicate Application</fullName>
+                    <default>false</default>
+                    <label>Duplicate Application</label>
+                </value>
+                <value>
+                    <fullName>Claimant under 18</fullName>
+                    <default>false</default>
+                    <label>Age&lt;18 with no legal rep</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>No claim lodged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>No Internal Review Requested</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>No jurisdictionNo Jurisdiction - non NSW accident</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Application out of time</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Duplicate Application</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Claimant under 18</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+        </valueSet>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CTP_RejectionComments__c</fullName>
+        <description>Rejection comments should be provided when Application is rejected and reason of rejection is set to others.</description>
+        <externalId>false</externalId>
+        <label>Rejection Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CTP_RepresentativeAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Representative Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Cases (Representative Account)</relationshipLabel>
+        <relationshipName>Cases2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_RepresentativeContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Representative Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cases (Representative Contact)</relationshipLabel>
+        <relationshipName>Cases2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CTP_RepresentativeRelationship__c</fullName>
+        <externalId>false</externalId>
+        <label>Relationship to Representative</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Father</fullName>
+                    <default>false</default>
+                    <label>Father</label>
+                </value>
+                <value>
+                    <fullName>Mother</fullName>
+                    <default>false</default>
+                    <label>Mother</label>
+                </value>
+                <value>
+                    <fullName>Son</fullName>
+                    <default>false</default>
+                    <label>Son</label>
+                </value>
+                <value>
+                    <fullName>Daughter</fullName>
+                    <default>false</default>
+                    <label>Daughter</label>
+                </value>
+                <value>
+                    <fullName>Relative</fullName>
+                    <default>false</default>
+                    <label>Relative</label>
+                </value>
+                <value>
+                    <fullName>Spouse</fullName>
+                    <default>false</default>
+                    <label>Spouse</label>
+                </value>
+                <value>
+                    <fullName>Friend</fullName>
+                    <default>false</default>
+                    <label>Friend</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_Response_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Created as part of DCr-308 to store the preference for  response required for Feedback case</description>
+        <externalId>false</externalId>
+        <label>Response Required</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CTP_ReviewCompletionDate__c</fullName>
+        <description>Created as part of DCR-236, User provides the date when insurer internal review was done, populated from claimant portal.</description>
+        <externalId>false</externalId>
+        <label>Insurer internal review date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_ReviewReceiptDate__c</fullName>
+        <description>Created as part of DCR-236, User provides the date of receipt of insurer internal review, populated from claimant portal.</description>
+        <externalId>false</externalId>
+        <label>Insurer internal review receipt date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_SLAViolation__c</fullName>
+        <externalId>false</externalId>
+        <label>SLA Violation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_ScreeningResult__c</fullName>
+        <description>This field provides information regarding screening result by DRS.</description>
+        <externalId>false</externalId>
+        <label>Screening result</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <label>Accepted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_Time_When_Application_Lodged__c</fullName>
+        <externalId>false</externalId>
+        <label>Time When Application Lodged</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_TriageOutcome__c</fullName>
+        <description>Field to hold the outcome of triage  done by DRO.</description>
+        <externalId>false</externalId>
+        <label>TriageOutcome</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>More triage</fullName>
+                    <default>false</default>
+                    <label>More triage</label>
+                </value>
+                <value>
+                    <fullName>ADR</fullName>
+                    <default>false</default>
+                    <label>ADR</label>
+                </value>
+                <value>
+                    <fullName>Allocate</fullName>
+                    <default>false</default>
+                    <label>Allocate</label>
+                </value>
+                <value>
+                    <fullName>Resolved</fullName>
+                    <default>false</default>
+                    <label>Resolved</label>
+                </value>
+                <value>
+                    <fullName>Non - jurisdictional</fullName>
+                    <default>false</default>
+                    <label>Non - jurisdictional</label>
+                </value>
+                <value>
+                    <fullName>Further info</fullName>
+                    <default>false</default>
+                    <label>Further info</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_VisualIndicatior__c</fullName>
+        <description>Indicates if a case is successfully screened or not based on the screening result field</description>
+        <externalId>false</externalId>
+        <formula>IF( TEXT(CTP_ScreeningResult__c)==&apos;Accepted&apos;, IMAGE(&quot;/servlet/servlet.FileDownload?file=0150k000000DdPt&quot;,&quot;Green&quot;,20,20), IF( TEXT(CTP_ScreeningResult__c)==&apos;Rejected&apos;,IMAGE(&quot;/servlet/servlet.FileDownload?file=0150k000000DdPy&quot;,&quot;Red&quot;,20,20),null))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Screening result indicator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_outline_what_it_is_that_you_dont_agr__c</fullName>
+        <description>Reasons for claimant&apos;s application for dispute and disagreements with the insurer&apos;s internal review decision.
+Created as part of DCR-20.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Outline what it is that you don&apos;t agree with in the Insurer&apos;s Decision and how you think it should be different</inlineHelpText>
+        <label>How do you disagree with the insurer?</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Claimant_Name__c</fullName>
+        <description>Name of claimant for whom the application has been submitted. This is derived from UCD.</description>
+        <externalId>false</externalId>
+        <label>Claimant Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Origin</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reason</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <recordTypes>
+        <fullName>CTP_Application</fullName>
+        <active>true</active>
+        <businessProcess>Application level</businessProcess>
+        <compactLayoutAssignment>CTP_ApplicationHighlight</compactLayoutAssignment>
+        <description>The means by which a party refers a merit review matter, medical assessment matter, misc claims assessment matter and claims assessment matter.</description>
+        <label>Application</label>
+        <picklistValues>
+            <picklist>CTP_ActionAndOutcome__c</picklist>
+            <values>
+                <fullName>10 week Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23 week Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant does not want to be contacted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant has been contacted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Introduction Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_CaseSubStatus__c</picklist>
+            <values>
+                <fullName>Account payable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application verification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appropriate Dispute Resolution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Reply</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finalised</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Screening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_CaseSubType__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acceptance verification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account payable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Reply</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finalise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Screening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_CaseType__c</picklist>
+            <values>
+                <fullName>Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merit review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Misc%2E Claims</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_DisputeCategories__c</picklist>
+            <values>
+                <fullName>Claims assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merit review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_DisputeTypes__c</picklist>
+            <values>
+                <fullName>Benefits reduced re Death</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cessation re Pending Damages Claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant settlement approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimants duty to cooperate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimants duty to give particulars</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimants duty to minimise loss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost of treatment and care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damages and liability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damages impacts on benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Earning capacity impairment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Earning capacity impairment - 4%2E10 SB %26 DAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Excluded treatment %26 care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exemptions from damages assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Funeral Expenses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further damages assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further medical assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further medical assessment - 7%2E25 SB %26 DAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good faith duties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gratuitous service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurer delaying offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurer direction re particulars</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurer notice periods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interim permanent impairment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interim permanent impairment - 7%2E22 SB %26 DAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Just %26 expeditious duties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Costs - 7%2E37 DAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental harm limits on benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minor injury</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minor injury - 3%2E11%2C 3%2E28%2C 4%2E4 SB %26 DAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Benefits if WC payable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Benefits if vehicle uninsured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non binding opinions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non binding opinions - 7%2E27 SB %26 DAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overpayment of benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permanent impairment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permanent impairment - 7%2E21 SB %26 DAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recoverable statutory benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refund of weekly payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reinstatement of a claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retirement age termination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return to work benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Review of a Merit Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reviews of medical assessments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reviews of medical assessments - 7%2E26 SB %26 DAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspension re medical evidence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspension re rehabilitation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspension re work fitness evidence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment %26 care amount payable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment %26 care authorised</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment %26 care compensated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment %26 care limits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment %26 care outside Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment and Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment and Care - 3%2E24 SB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment improving recovering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment improving recovering - 3%2E28 %283%29 SB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Variation of weeklies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verification of expensesTreatment %26 care within time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly benefits outside Australia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_EntitlementName__c</picklist>
+            <values>
+                <fullName>2 year Entitlement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26 week Entitlement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damages Entitlement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Feedback_Sub_type__c</picklist>
+            <values>
+                <fullName>Claims Disputes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green Slips</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance Policies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Making a Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motor Accident Injury Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Our Contact Support Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Our Dispute Resolution Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The CTP Scheme</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Feedback_Type__c</picklist>
+            <values>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_ReasonForRejection__c</picklist>
+            <values>
+                <fullName>Application out of time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant under 18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Internal Review Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No claim lodged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No jurisdictionNo Jurisdiction - non NSW accident</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_RepresentativeRelationship__c</picklist>
+            <values>
+                <fullName>Daughter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Father</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mother</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Son</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spouse</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_SLAViolation__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_ScreeningResult__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_TriageOutcome__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More triage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non - jurisdictional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Sample Cases</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>CTP_Reason_for_Rejection_Mandatory</fullName>
+        <active>true</active>
+        <description>If the screening result is mandatory user must provide reason</description>
+        <errorConditionFormula>TEXT( CTP_ScreeningResult__c)=&apos;Rejected&apos; &amp;&amp; ISBLANK(CTP_ReasonForRejection__c)</errorConditionFormula>
+        <errorDisplayField>CTP_ReasonForRejection__c</errorDisplayField>
+        <errorMessage>Please select reason for rejection</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CTP_Rejection_comments_mandatory</fullName>
+        <active>true</active>
+        <description>Rejection comments should be provided if Screening result is &quot;Rejected&quot; and Reason of rejection is &quot;Other&quot;-Created as part of DCR-399</description>
+        <errorConditionFormula>AND(
+IF( TEXT( CTP_ScreeningResult__c) ==&apos;Rejected&apos;,true,false),
+IF(INCLUDES(  CTP_ReasonForRejection__c,&apos;Other&apos;),true,false),
+ If(CTP_RejectionComments__c ==NULL,true,false))</errorConditionFormula>
+        <errorDisplayField>CTP_RejectionComments__c</errorDisplayField>
+        <errorMessage>Please fill in the reason for rejection</errorMessage>
+    </validationRules>
+</CustomObject>

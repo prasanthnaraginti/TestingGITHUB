@@ -1,0 +1,17 @@
+Dear {!Contact.Name},
+
+We have referred your enquiry to be reviewed by our Compliance, Enforcement and Investigations team who will be in contact with you within one business day.
+
+If you need help
+
+If you have any questions please contact our Claims Advisory Service on 1300 656 919.
+
+Please do not reply on this email, if you have any enquiries please send your email to motor@sira.nsw.gov.au
+
+Kind regards
+Claims Advisory Service
+State Insurance Regulatory Authority 
+p 1300 656 919 
+www.sira.nsw.gov.au
+
+{!Case.Thread_Id}

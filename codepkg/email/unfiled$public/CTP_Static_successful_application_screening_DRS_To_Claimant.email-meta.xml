@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Static template till case gets merge fields facility. Officer of DRS emails Claimant at the end of successful application screening</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>CTP_Static_successful_application_screening_DRS_To_Claimant</name>
+    <style>none</style>
+    <subject>Application Acceptance Confirmation</subject>
+    <type>custom</type>
+</EmailTemplate>

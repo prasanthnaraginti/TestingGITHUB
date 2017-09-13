@@ -1,0 +1,55 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="ClaimaintsActivityHistory">
+	<aura:handler name="init" value="{!this}" action="{!c.doOnload}"/>
+    <aura:attribute name="recordId" type="Id"/> 
+    <aura:attribute name="caseItems" type="CaseItem__c[]" />
+    <aura:attribute name="communitylink" type="string" />
+    
+    <div class="slds-section slds-is-open">
+      <h2 class="slds-section__title">
+      
+          <span class="slds-truncate" title="Section Title">Pending Case Items</span>
+        
+      </h2>
+      
+	</div>
+    
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+          <thead>
+            <tr class="slds-text-title_caps">
+              <th scope="col">
+                <div class="slds-truncate" title="Description">REPLY</div>
+              </th>
+              <th scope="col">
+                <div class="slds-truncate" title="Description">CLAIM NUMBER</div>
+              </th>
+              <th scope="col">
+                <div class="slds-truncate" title="Submitted By">DUE DATE</div>
+              </th>
+                <th scope="col">
+                <div class="slds-truncate" title="Submitted Date">STATUS</div>
+              </th>
+            </tr>
+          </thead>
+            
+          <tbody>
+           <aura:iteration items="{!v.caseItems}" var="cItem">   
+            <tr>
+              <td scope="row" data-label="Description">
+                  <!--                  <div class="slds-truncate" title="Cloudhub"><a href="{!v.communitylink + '/' + cItem.CommunityPageURL__c + '?recordId=' + cItem.Id}" >Reply</a></div>-->
+                  <div class="slds-truncate" title="Cloudhub"><a href="{!v.communitylink + '/' + 'additionalinfo?recordId=' + cItem.Id}" >Reply</a></div>
+                </td>
+              <td data-label="Submitted By">
+                <div class="slds-truncate" title="Cloudhub">{!cItem.CTP_Claim_Number__c}</div>
+              </td>
+              <td data-label="Submitted Date">
+                <div class="slds-truncate" title="Cloudhub">{!cItem.CTP_ReplyDueByDate__c}</div>
+              </td>
+              <td data-label="Submitted Date">
+                <div class="slds-truncate" title="Cloudhub">{!cItem.Status__c}</div>
+              </td>
+           </tr> 
+           </aura:iteration>    
+         </tbody>
+      </table>
+    
+</aura:component>

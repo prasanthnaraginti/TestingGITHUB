@@ -1,0 +1,5 @@
+The knowledge article created by {!Article__kav.CreatedBy} on {!Article__kav.ArticleCreatedDate} has passed the approval process and is now published.
+
+Article Type: {!Article__kav.RecordType} 
+Article Summary: {!Article__kav.Summary}
+Last Modified by: {!Article__kav.LastModifiedBy}

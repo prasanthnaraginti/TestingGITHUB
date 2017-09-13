@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>DCR-293 Claimant submits the reply and receives an email acknowledgement of the reply submission</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SIRA_Letterhead</letterhead>
+    <name>CTP-ClaimantSubmitsReplyAndReceivesEmailAcknowledgementOfReplySubmission</name>
+    <style>freeForm</style>
+    <subject>Additional Information Submitted - {!Case.CaseNumber}</subject>
+    <textOnly>Additional Information Submitted - 00001067
+
+We acknowledge receipt of additional information in relation to an application for merit review received
+by the Merit Review Service on {!CaseItem__c.CreatedDate} submitted by {!CaseItem__c.SubmittedByName__c} (Insurer Triager).
+
+If you have any queries, please contact mrs@sira.nsw.gov.au or call us on (02 9284 2284)
+
+.
+Yours sincerely
+Merit Review Service</textOnly>
+    <type>html</type>
+</EmailTemplate>

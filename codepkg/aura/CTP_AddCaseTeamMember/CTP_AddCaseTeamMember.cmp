@@ -1,0 +1,60 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="CTP_CaseTeamMember" access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="appEvent" type="c:CTP_AddMember"/>
+    <aura:registerEvent name="refreshEvent" type="c:CTP_RefreshChild"/>
+
+    <aura:attribute name="objNew" type="User[]" />
+    <aura:attribute name="messageFromEvent" type="String"/>
+    <aura:attribute name="addMemCase" type="String"/>
+    <aura:attribute name="userId" type="String"/>
+    <aura:attribute name="test" type="String"/>
+
+    <aura:attribute name="caseTeamR" type="CaseTeamRole[]"/>
+    
+    
+    <lightning:buttonIcon iconName="utility:close" variant="bare" alternativeText="Settings"  iconClass="dark" onclick="{! c.closeModal }"/>    
+    <div class="slds-modal__header">
+        <h2 id="header43" class="slds-text-heading--small">{!$Label.c.CTP_AddTeamMember}</h2>
+    </div>
+    <span style="color:rgb(194, 57, 52)"><ui:outputText value="" aura:id="errorMessage" /></span>
+    <table class="slds-table">
+        <tbody>
+            
+            <tr >    
+                
+                <td >
+                    <div class="slds-form-element">
+                        <span style="color:rgb(194, 57, 52)">*</span>{!$Label.c.CTP_SelectUser}
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right ">
+                            <input  type="text" required="true" id="search" aura:id="searchInput"  placeholder="{!$Label.c.CTP_SelectUser}" class="slds-input searchKey" onkeyup="{!c.searchKeyChange}"   />
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div  title="{!$Label.c.CTP_SelectAccess}">
+                        <lightning:select name="Access" aura:id="Access" label="{!$Label.c.CTP_SelectAccess}" value="{!v.caseTeamR[0].Id}" required="true">
+                            <aura:iteration items="{!v.caseTeamR}" var="tRole">
+                                <option value="{!tRole.Id}" text="{!tRole.Name}"></option>
+                            </aura:iteration>
+                        </lightning:select>
+                    </div>
+                </td>
+                <td >
+                    <lightning:button variant="brand" label="{!$Label.c.CTP_AddUser}" onclick="{!c.addUserToTeam}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <aura:iteration items="{!v.objNew}" var="usr">
+        <ul class="slds-has-dividers_around-space">
+            <li class="slds-item" style="cursor:pointer;">
+                <div onclick="{!c.passUserId}" id="{!usr.Id}" value="{!v.userId}" data-name="{!usr.Name}">
+                    <div class="row">
+                        <p>{!usr.Name}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </aura:iteration>    
+</aura:component>

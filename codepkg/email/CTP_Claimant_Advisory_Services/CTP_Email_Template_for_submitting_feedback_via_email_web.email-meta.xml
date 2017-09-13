@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Auto-response email for feedback submission via email/web</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CTP Email Template for submitting feedback via email/web</name>
+    <style>none</style>
+    <subject>Your Case {!Case.CaseNumber} has been recieved</subject>
+    <type>text</type>
+</EmailTemplate>

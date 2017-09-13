@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div><font face="arial"><br></font></div><div><font face="arial">We acknowledge receipt of additional information in relation to an application for merit review received</font></div><div><font face="arial">by the Merit Review Service on {!CaseItem__c.CreatedDate} submitted by {!CaseItem__c.SubmittedByName__c} (Insurer Triager).</font></div><div><font face="arial"><br></font></div><div><font face="arial">If you have any queries, please contact mrs@sira.nsw.gov.au or call us on (02 9284 2284)</font></div><div><font face="arial"><br></font></div><div><font face="arial">.</font></div><div><font face="arial">Yours sincerely</font></div><div><font face="arial">Merit Review Service</font></div>]]></td>
+</tr>
+</table>

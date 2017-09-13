@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>ADR_Outcome</fullName>
+        <active>true</active>
+        <description>To be used for CTP project - &quot;ADR Outcome&quot; activity</description>
+        <label>ADR Outcome</label>
+        <picklistValues>
+            <picklist>CTP_ADR_Outcome__c</picklist>
+            <values>
+                <fullName>ADR not successful - Allocate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADR successful - Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More ADR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_CallSubject__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchange with other party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Triage_Outcome_Reason__c</picklist>
+            <values>
+                <fullName>Allocated to Decision maker - no hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated to Decision maker - with hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applicant withdraws</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant has died since application made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant no longer pursuing the claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispute not ready for assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispute suitable for ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disputes not agreed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further Information Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No jurisdiction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity for the parties to settle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Reason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Triage_Outcome__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More triage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_TypeCallType__c</picklist>
+            <values>
+                <fullName>Face to face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiparty teleconference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiparty video conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Video conference</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Additional Information Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchange with other party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Additional Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply to an application for merit review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CTP_Assist_Task</fullName>
+        <active>true</active>
+        <description>Record type created as part of DCR-805 for CTP reform project</description>
+        <label>CTP Assist Task</label>
+        <picklistValues>
+            <picklist>CTP_ADR_Outcome__c</picklist>
+            <values>
+                <fullName>ADR not successful - Allocate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADR successful - Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More ADR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_CallSubject__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchange with other party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Triage_Outcome_Reason__c</picklist>
+            <values>
+                <fullName>Allocated to Decision maker - no hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated to Decision maker - with hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applicant withdraws</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant has died since application made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant no longer pursuing the claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispute not ready for assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispute suitable for ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disputes not agreed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further Information Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No jurisdiction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity for the parties to settle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Reason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Triage_Outcome__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More triage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_TypeCallType__c</picklist>
+            <values>
+                <fullName>Face to face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiparty teleconference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiparty video conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Video conference</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Additional Information Required</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Additional Information</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reply to an application for merit review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CTP_LogActivity</fullName>
+        <active>true</active>
+        <description>This record type is used to log a activity such as meeting, call, etc DCR-287</description>
+        <label>Log Activity</label>
+        <picklistValues>
+            <picklist>CTP_ADR_Outcome__c</picklist>
+            <values>
+                <fullName>ADR not successful - Allocate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADR successful - Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More ADR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_CallSubject__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchange with other party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Triage_Outcome_Reason__c</picklist>
+            <values>
+                <fullName>Allocated to Decision maker - no hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated to Decision maker - with hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applicant withdraws</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant has died since application made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant no longer pursuing the claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispute not ready for assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispute suitable for ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disputes not agreed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further Information Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No jurisdiction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity for the parties to settle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Reason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Triage_Outcome__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More triage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_TypeCallType__c</picklist>
+            <values>
+                <fullName>Face to face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiparty teleconference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiparty video conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Video conference</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Additional Information Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchange with other party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Additional Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply to an application for merit review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Triage_Outcome</fullName>
+        <active>true</active>
+        <description>To be used for CTP project - &quot;Triage Outcome&quot; activity</description>
+        <label>Triage Outcome</label>
+        <picklistValues>
+            <picklist>CTP_ADR_Outcome__c</picklist>
+            <values>
+                <fullName>ADR not successful - Allocate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADR successful - Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More ADR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_CallSubject__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchange with other party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Triage_Outcome_Reason__c</picklist>
+            <values>
+                <fullName>Allocated to Decision maker - no hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated to Decision maker - with hearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applicant withdraws</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant has died since application made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claimant no longer pursuing the claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispute not ready for assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispute suitable for ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disputes not agreed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further Information Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No jurisdiction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity for the parties to settle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Reason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_Triage_Outcome__c</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More triage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CTP_TypeCallType__c</picklist>
+            <values>
+                <fullName>Face to face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiparty teleconference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiparty video conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Video conference</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>ADR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Additional Information Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchange with other party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Additional Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply to an application for merit review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+	    <recordTypes>
+        <fullName>Case_Item_Task</fullName>
+        <active>true</active>
+        <description>MRS - Information Requests</description>
+        <label>Case Item Task</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Additional Information Required</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Additional Information</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reply to an application for merit review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>CTP_Attending_Parties_Mandatory</fullName>
+        <active>true</active>
+        <description>User should provide attending parties when logging an activity</description>
+        <errorConditionFormula>RecordType.DeveloperName=&apos;CTP_LogActivity&apos; &amp;&amp; ISBLANK(WhoId)</errorConditionFormula>
+        <errorDisplayField>WhoId</errorDisplayField>
+        <errorMessage>Please provide attending parties</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CTP_DueDateValidation</fullName>
+        <active>true</active>
+        <description>If Triage outcome = &quot;More triage&quot; the Next triage due date is mandatory</description>
+        <errorConditionFormula>AND(ISPICKVAL(CTP_Triage_Outcome__c,&apos;More triage&apos;),ISNULL( CTP_Next_Triage_Due_date__c ))</errorConditionFormula>
+        <errorDisplayField>CTP_Next_Triage_Due_date__c</errorDisplayField>
+        <errorMessage>Next Triage Due Date is mandatory when Triage Outcome is &apos;More triage&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CTP_NextADRDueDate</fullName>
+        <active>true</active>
+        <description>IF ADR Outcome = &quot;More ADR&quot; then &apos;Next ADR Due date&apos; can&apos;t be blank.</description>
+        <errorConditionFormula>AND(ISPICKVAL(CTP_ADR_Outcome__c,&apos;More ADR&apos;),ISNULL(CTP_Next_ADR_Due_date__c))</errorConditionFormula>
+        <errorDisplayField>CTP_Next_ADR_Due_date__c</errorDisplayField>
+        <errorMessage>&apos;Next ADR Due Date&apos; is mandatory when ADR Outcome is &apos;More ADR&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CTP_TaskDateValidation</fullName>
+        <active>true</active>
+        <description>DCR-287</description>
+        <errorConditionFormula>CTP_Date__c &lt; DATE(2017,12,1)</errorConditionFormula>
+        <errorDisplayField>CTP_Date__c</errorDisplayField>
+        <errorMessage>Date cannot be prior to Dec 1 2017</errorMessage>
+    </validationRules>
+</CustomObject>

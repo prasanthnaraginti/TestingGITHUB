@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CTP_DisputeCategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Dispute Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Merit review</fullName>
+                    <default>false</default>
+                    <label>Merit review</label>
+                </value>
+                <value>
+                    <fullName>Medical assessment</fullName>
+                    <default>false</default>
+                    <label>Medical assessment</label>
+                </value>
+                <value>
+                    <fullName>Claims assessment</fullName>
+                    <default>false</default>
+                    <label>Claims assessment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CTP_DisputeType__c</fullName>
+        <externalId>false</externalId>
+        <label>Dispute Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Weekly Payments</fullName>
+                    <default>false</default>
+                    <label>Weekly Payments</label>
+                </value>
+                <value>
+                    <fullName>Funeral Expenses</fullName>
+                    <default>false</default>
+                    <label>Funeral Expenses</label>
+                </value>
+                <value>
+                    <fullName>Cessation re Pending Damages Claim</fullName>
+                    <default>false</default>
+                    <label>Cessation re Pending Damages Claim</label>
+                </value>
+                <value>
+                    <fullName>Retirement age termination</fullName>
+                    <default>false</default>
+                    <label>Retirement age termination</label>
+                </value>
+                <value>
+                    <fullName>Suspension re medical evidence</fullName>
+                    <default>false</default>
+                    <label>Suspension re medical evidence</label>
+                </value>
+                <value>
+                    <fullName>Suspension re work fitness evidence</fullName>
+                    <default>false</default>
+                    <label>Suspension re work fitness evidence</label>
+                </value>
+                <value>
+                    <fullName>Suspension re rehabilitation</fullName>
+                    <default>false</default>
+                    <label>Suspension re rehabilitation</label>
+                </value>
+                <value>
+                    <fullName>Insurer notice periods</fullName>
+                    <default>false</default>
+                    <label>Insurer notice periods</label>
+                </value>
+                <value>
+                    <fullName>Recoverable statutory benefits</fullName>
+                    <default>false</default>
+                    <label>Recoverable statutory benefits</label>
+                </value>
+                <value>
+                    <fullName>Refund of weekly payments</fullName>
+                    <default>false</default>
+                    <label>Refund of weekly payments</label>
+                </value>
+                <value>
+                    <fullName>Weekly benefits outside Australia</fullName>
+                    <default>false</default>
+                    <label>Weekly benefits outside Australia</label>
+                </value>
+                <value>
+                    <fullName>Variation of weeklies</fullName>
+                    <default>false</default>
+                    <label>Variation of weeklies</label>
+                </value>
+                <value>
+                    <fullName>Cost of treatment and care</fullName>
+                    <default>false</default>
+                    <label>Cost of treatment and care</label>
+                </value>
+                <value>
+                    <fullName>Gratuitous service</fullName>
+                    <default>false</default>
+                    <label>Gratuitous service</label>
+                </value>
+                <value>
+                    <fullName>Verification of expenses</fullName>
+                    <default>false</default>
+                    <label>Verification of expenses</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care within time</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care within time</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care authorised</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care authorised</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care compensated</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care compensated</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care amount payable</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care amount payable</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care limits</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care limits</label>
+                </value>
+                <value>
+                    <fullName>Treatment &amp; care outside Australia</fullName>
+                    <default>false</default>
+                    <label>Treatment &amp; care outside Australia</label>
+                </value>
+                <value>
+                    <fullName>Excluded treatment &amp; care</fullName>
+                    <default>false</default>
+                    <label>Excluded treatment &amp; care</label>
+                </value>
+                <value>
+                    <fullName>Benefits reduced re Death</fullName>
+                    <default>false</default>
+                    <label>Benefits reduced re Death</label>
+                </value>
+                <value>
+                    <fullName>No Benefits if WC payable</fullName>
+                    <default>false</default>
+                    <label>No Benefits if WC payable</label>
+                </value>
+                <value>
+                    <fullName>No Benefits if vehicle uninsured</fullName>
+                    <default>false</default>
+                    <label>No Benefits if vehicle uninsured</label>
+                </value>
+                <value>
+                    <fullName>Mental harm limits on benefits</fullName>
+                    <default>false</default>
+                    <label>Mental harm limits on benefits</label>
+                </value>
+                <value>
+                    <fullName>Damages impacts on benefits</fullName>
+                    <default>false</default>
+                    <label>Damages impacts on benefits</label>
+                </value>
+                <value>
+                    <fullName>Return to work benefits</fullName>
+                    <default>false</default>
+                    <label>Return to work benefits</label>
+                </value>
+                <value>
+                    <fullName>Overpayment of benefits</fullName>
+                    <default>false</default>
+                    <label>Overpayment of benefits</label>
+                </value>
+                <value>
+                    <fullName>Good faith duties</fullName>
+                    <default>false</default>
+                    <label>Good faith duties</label>
+                </value>
+                <value>
+                    <fullName>Just &amp; expeditious duties</fullName>
+                    <default>false</default>
+                    <label>Just &amp; expeditious duties</label>
+                </value>
+                <value>
+                    <fullName>Claimants duty to minimise loss</fullName>
+                    <default>false</default>
+                    <label>Claimants duty to minimise loss</label>
+                </value>
+                <value>
+                    <fullName>Insurer delaying offer</fullName>
+                    <default>false</default>
+                    <label>Insurer delaying offer</label>
+                </value>
+                <value>
+                    <fullName>Claimants duty to cooperate</fullName>
+                    <default>false</default>
+                    <label>Claimants duty to cooperate</label>
+                </value>
+                <value>
+                    <fullName>Claimants duty to give particulars</fullName>
+                    <default>false</default>
+                    <label>Claimants duty to give particulars</label>
+                </value>
+                <value>
+                    <fullName>Insurer direction re particulars</fullName>
+                    <default>false</default>
+                    <label>Insurer direction re particulars</label>
+                </value>
+                <value>
+                    <fullName>Reinstatement of a claim</fullName>
+                    <default>false</default>
+                    <label>Reinstatement of a claim</label>
+                </value>
+                <value>
+                    <fullName>Review of a Merit Review</fullName>
+                    <default>false</default>
+                    <label>Review of a Merit Review</label>
+                </value>
+                <value>
+                    <fullName>Legal costs</fullName>
+                    <default>false</default>
+                    <label>Legal costs</label>
+                </value>
+                <value>
+                    <fullName>treatment and care</fullName>
+                    <default>false</default>
+                    <label>treatment and care</label>
+                </value>
+                <value>
+                    <fullName>treatment improving recovery</fullName>
+                    <default>false</default>
+                    <label>treatment improving recovery</label>
+                </value>
+                <value>
+                    <fullName>earning, capacity and impairment</fullName>
+                    <default>false</default>
+                    <label>earning, capacity and impairment</label>
+                </value>
+                <value>
+                    <fullName>minor injury</fullName>
+                    <default>false</default>
+                    <label>minor injury</label>
+                </value>
+                <value>
+                    <fullName>Permanent impairment</fullName>
+                    <default>false</default>
+                    <label>Permanent impairment</label>
+                </value>
+                <value>
+                    <fullName>Interim permanent impairment</fullName>
+                    <default>false</default>
+                    <label>Interim permanent impairment</label>
+                </value>
+                <value>
+                    <fullName>further medical assessment</fullName>
+                    <default>false</default>
+                    <label>further medical assessment</label>
+                </value>
+                <value>
+                    <fullName>reviews of medical assessment</fullName>
+                    <default>false</default>
+                    <label>reviews of medical assessment</label>
+                </value>
+                <value>
+                    <fullName>Non binding opinions</fullName>
+                    <default>false</default>
+                    <label>Non binding opinions</label>
+                </value>
+                <value>
+                    <fullName>claims settlement approval</fullName>
+                    <default>false</default>
+                    <label>claims settlement approval</label>
+                </value>
+                <value>
+                    <fullName>exemptions from damages assessment</fullName>
+                    <default>false</default>
+                    <label>exemptions from damages assessment</label>
+                </value>
+                <value>
+                    <fullName>damages and liability</fullName>
+                    <default>false</default>
+                    <label>damages and liability</label>
+                </value>
+                <value>
+                    <fullName>further damages assessment</fullName>
+                    <default>false</default>
+                    <label>further damages assessment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CTP_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+</CustomObject>

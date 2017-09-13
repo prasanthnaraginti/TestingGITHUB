@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CTP_ADR_Outcome__c</fullName>
+        <externalId>false</externalId>
+        <label>ADR Outcome</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>More ADR</fullName>
+                    <default>false</default>
+                    <label>More ADR</label>
+                </value>
+                <value>
+                    <fullName>ADR not successful - Allocate</fullName>
+                    <default>false</default>
+                    <label>ADR not successful - Allocate</label>
+                </value>
+                <value>
+                    <fullName>ADR successful - Resolved</fullName>
+                    <default>false</default>
+                    <label>ADR successful - Resolved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_CallSubject__c</fullName>
+        <description>DCR-287</description>
+        <externalId>false</externalId>
+        <label>Call Subject</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Initial contact</fullName>
+                    <default>false</default>
+                    <label>Initial contact</label>
+                </value>
+                <value>
+                    <fullName>Triage</fullName>
+                    <default>false</default>
+                    <label>Triage</label>
+                </value>
+                <value>
+                    <fullName>ADR</fullName>
+                    <default>false</default>
+                    <label>ADR</label>
+                </value>
+                <value>
+                    <fullName>Request for information</fullName>
+                    <default>false</default>
+                    <label>Request for information</label>
+                </value>
+                <value>
+                    <fullName>Exchange with other party</fullName>
+                    <default>false</default>
+                    <label>Exchange with other party</label>
+                </value>
+                <value>
+                    <fullName>Others</fullName>
+                    <default>false</default>
+                    <label>Others</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_Date_Of_Triage__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Of Triage</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Date__c</fullName>
+        <description>DCR-287 -Date of activity</description>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Date_of_ADR__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of ADR</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Location__c</fullName>
+        <description>DCR-287-DRO logs their activities in Salesforce</description>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CTP_NextSteps__c</fullName>
+        <description>DCR-287-DRO logs their activities in Salesforce</description>
+        <externalId>false</externalId>
+        <label>Next steps</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Next_ADR_Due_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Next ADR Due date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Next_Triage_Due_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Triage Due date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Parties_Notified_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Parties Notified Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_StartTime__c</fullName>
+        <description>DCR-287-DRO logs their activities in Salesforce</description>
+        <externalId>false</externalId>
+        <label>Start Time</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Triage_Outcome_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Triage Outcome Reason</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>CTP_Triage_Outcome__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Allocated to Decision maker - with hearing</fullName>
+                    <default>false</default>
+                    <label>Allocated to Decision maker - with hearing</label>
+                </value>
+                <value>
+                    <fullName>Allocated to Decision maker - no hearing</fullName>
+                    <default>false</default>
+                    <label>Allocated to Decision maker - no hearing</label>
+                </value>
+                <value>
+                    <fullName>Further Information Required</fullName>
+                    <default>false</default>
+                    <label>Further Information Required</label>
+                </value>
+                <value>
+                    <fullName>Disputes not agreed</fullName>
+                    <default>false</default>
+                    <label>Disputes not agreed</label>
+                </value>
+                <value>
+                    <fullName>Opportunity for the parties to settle</fullName>
+                    <default>false</default>
+                    <label>Opportunity for the parties to settle</label>
+                </value>
+                <value>
+                    <fullName>Other Reason</fullName>
+                    <default>false</default>
+                    <label>Other Reason</label>
+                </value>
+                <value>
+                    <fullName>Dispute suitable for ADR</fullName>
+                    <default>false</default>
+                    <label>Dispute suitable for ADR</label>
+                </value>
+                <value>
+                    <fullName>Settled</fullName>
+                    <default>false</default>
+                    <label>Settled</label>
+                </value>
+                <value>
+                    <fullName>Applicant withdraws</fullName>
+                    <default>false</default>
+                    <label>Applicant withdraws</label>
+                </value>
+                <value>
+                    <fullName>No jurisdiction</fullName>
+                    <default>false</default>
+                    <label>No jurisdiction</label>
+                </value>
+                <value>
+                    <fullName>Dispute not ready for assessment</fullName>
+                    <default>false</default>
+                    <label>Dispute not ready for assessment</label>
+                </value>
+                <value>
+                    <fullName>Claimant no longer pursuing the claim</fullName>
+                    <default>false</default>
+                    <label>Claimant no longer pursuing the claim</label>
+                </value>
+                <value>
+                    <fullName>Claimant has died since application made</fullName>
+                    <default>false</default>
+                    <label>Claimant has died since application made</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>ADR</controllingFieldValue>
+                <valueName>Dispute suitable for ADR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocated</controllingFieldValue>
+                <valueName>Allocated to Decision maker - with hearing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allocated</controllingFieldValue>
+                <valueName>Allocated to Decision maker - no hearing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>More triage</controllingFieldValue>
+                <valueName>Further Information Required</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>More triage</controllingFieldValue>
+                <valueName>Disputes not agreed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>More triage</controllingFieldValue>
+                <valueName>Opportunity for the parties to settle</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>More triage</controllingFieldValue>
+                <valueName>Other Reason</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dismissed</controllingFieldValue>
+                <valueName>No jurisdiction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dismissed</controllingFieldValue>
+                <valueName>Dispute not ready for assessment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dismissed</controllingFieldValue>
+                <valueName>Claimant no longer pursuing the claim</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dismissed</controllingFieldValue>
+                <valueName>Claimant has died since application made</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resolved</controllingFieldValue>
+                <valueName>Settled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resolved</controllingFieldValue>
+                <valueName>Applicant withdraws</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_Triage_Outcome__c</fullName>
+        <externalId>false</externalId>
+        <label>Triage Outcome</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>More triage</fullName>
+                    <default>false</default>
+                    <label>More triage</label>
+                </value>
+                <value>
+                    <fullName>ADR</fullName>
+                    <default>false</default>
+                    <label>ADR</label>
+                </value>
+                <value>
+                    <fullName>Allocated</fullName>
+                    <default>false</default>
+                    <label>Allocated</label>
+                </value>
+                <value>
+                    <fullName>Resolved</fullName>
+                    <default>false</default>
+                    <label>Resolved</label>
+                </value>
+                <value>
+                    <fullName>Dismissed</fullName>
+                    <default>false</default>
+                    <label>Dismissed</label>
+                </value>
+                <value>
+                    <fullName>Further info</fullName>
+                    <default>false</default>
+                    <label>Further info</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_TypeCallType__c</fullName>
+        <description>DCR-287-DRO logs their activities in Salesforce.</description>
+        <externalId>false</externalId>
+        <label>Type(Call Type)</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Phone call</fullName>
+                    <default>false</default>
+                    <label>Phone call</label>
+                </value>
+                <value>
+                    <fullName>Video conference</fullName>
+                    <default>false</default>
+                    <label>Video conference</label>
+                </value>
+                <value>
+                    <fullName>Face to face</fullName>
+                    <default>false</default>
+                    <label>Face to face</label>
+                </value>
+                <value>
+                    <fullName>Multiparty video conference</fullName>
+                    <default>false</default>
+                    <label>Multiparty video conference</label>
+                </value>
+                <value>
+                    <fullName>Multiparty teleconference</fullName>
+                    <default>false</default>
+                    <label>Multiparty teleconference</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+</CustomObject>

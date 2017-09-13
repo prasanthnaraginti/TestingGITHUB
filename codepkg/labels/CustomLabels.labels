@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CTP_Access</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Access</shortDescription>
+        <value>User Role</value>
+    </labels>
+    <labels>
+        <fullName>CTP_AddTeamMember</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_AddTeamMember</shortDescription>
+        <value>Add Case Team</value>
+    </labels>
+    <labels>
+        <fullName>CTP_AddUser</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_AddUser</shortDescription>
+        <value>Add User</value>
+    </labels>
+    <labels>
+        <fullName>CTP_ApprovalComment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_ApprovalComment</shortDescription>
+        <value>Submitting request for approval</value>
+    </labels>
+    <labels>
+        <fullName>CTP_ApprovalProcessName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_ApprovalProcessName</shortDescription>
+        <value>CTP_Lightning_Knowledge_Article_Approval</value>
+    </labels>
+    <labels>
+        <fullName>CTP_CASFeedbackQueueId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_CASFeedbackQueueId</shortDescription>
+        <value>00G0k000000h2m4</value>
+    </labels>
+    <labels>
+        <fullName>CTP_CaseStatus_ADR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_CaseStatus_ADR</shortDescription>
+        <value>Appropriate Dispute resolution</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Complaint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Complaint</shortDescription>
+        <value>Complaint</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Compliment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Compliment</shortDescription>
+        <value>Compliment</value>
+    </labels>
+    <labels>
+        <fullName>CTP_ContactUs</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_ContactUs</shortDescription>
+        <value>Contact Us</value>
+    </labels>
+    <labels>
+        <fullName>CTP_DRSFeedbackQueueId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_DRSFeedbackQueueId</shortDescription>
+        <value>00G0k000000h2m9</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Declaration</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Declaration</shortDescription>
+        <value>I declare that the information I have supplied in this form, and any attachments to this form, is true and correct to the best of my knowledge. I understand that
+making a false or misleading claim or false and misleading statement in support of the claim in punishable
+by law and that I may be prosecuted.</value>
+    </labels>
+    <labels>
+        <fullName>CTP_DefaultFromEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_DefaultFromEmail</shortDescription>
+        <value>Claimant Advisory Services &lt;nandu.s@capgemini.com&gt;</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Draft</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Draft</shortDescription>
+        <value>Draft</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Email</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Enquiry</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Enquiry</shortDescription>
+        <value>Enquiry</value>
+    </labels>
+    <labels>
+        <fullName>CTP_EnterClaimnumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enter Claim number</shortDescription>
+        <value>Please enter your claim number</value>
+    </labels>
+    <labels>
+        <fullName>CTP_ErrorTeamAdd1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_ErrorTeamAdd1</shortDescription>
+        <value>Please Select User From The List</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Feedback</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Feedback</shortDescription>
+        <value>Feedback</value>
+    </labels>
+    <labels>
+        <fullName>CTP_FeedbackCaseRecordId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_FeedbackCaseRecordId</shortDescription>
+        <value>0120k0000000PHe</value>
+    </labels>
+    <labels>
+        <fullName>CTP_FeedbackDescription</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_FeedbackDescription</shortDescription>
+        <value>Please provide a description of your submission</value>
+    </labels>
+    <labels>
+        <fullName>CTP_FeedbackSubType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_FeedbackSubType</shortDescription>
+        <value>In Regards to:</value>
+    </labels>
+    <labels>
+        <fullName>CTP_FeedbackType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_FeedbackType</shortDescription>
+        <value>I would like to submit a:</value>
+    </labels>
+    <labels>
+        <fullName>CTP_HelpTextToDisagreeReason</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text for Claimant Application Page Field</shortDescription>
+        <value>Outline what it is that you don&apos;t agree with in the Insurer&apos;s Internal Review Decision and how you think it should be different.</value>
+    </labels>
+    <labels>
+        <fullName>CTP_LoginURLto_Public_Community</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Login URL to Public Community</shortDescription>
+        <value>https://ctpdev04-ctpdev04.cs57.force.com/public</value>
+    </labels>
+    <labels>
+        <fullName>CTP_MeritReview</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_MeritReview</shortDescription>
+        <value>Merit review</value>
+    </labels>
+    <labels>
+        <fullName>CTP_MeritReview_Allocation_UserProfile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_MeritReview_Allocation_UserProfile</shortDescription>
+        <value>External Assessor</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Proceed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Proceed</shortDescription>
+        <value>Proceed</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Rejected</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Rejected</shortDescription>
+        <value>Rejected</value>
+    </labels>
+    <labels>
+        <fullName>CTP_ResponseRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_ResponseRequired</shortDescription>
+        <value>Would you like to be contacted in relation to this?</value>
+    </labels>
+    <labels>
+        <fullName>CTP_SelectAccess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_SelectAccess</shortDescription>
+        <value>Select Access</value>
+    </labels>
+    <labels>
+        <fullName>CTP_SelectUser</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_SelectUser</shortDescription>
+        <value>Select User</value>
+    </labels>
+    <labels>
+        <fullName>CTP_StartClaim</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_StartClaim</shortDescription>
+        <value>Start New Application</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Submit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>CTP_SubmitForApproval</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_SubmitForApproval</shortDescription>
+        <value>Submit For Approval</value>
+    </labels>
+    <labels>
+        <fullName>CTP_TeamHeading</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_TeamHeading</shortDescription>
+        <value>CTP Case Team</value>
+    </labels>
+    <labels>
+        <fullName>CTP_ThankYou</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ThankYou</shortDescription>
+        <value>Thank you for submitting your application. Your case number is</value>
+    </labels>
+    <labels>
+        <fullName>CTP_ThankYouMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ThankYou</shortDescription>
+        <value>An email has been sent to</value>
+    </labels>
+    <labels>
+        <fullName>CTP_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_User</shortDescription>
+        <value>REMOVE</value>
+    </labels>
+    <labels>
+        <fullName>CTP_UserName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_UserName</shortDescription>
+        <value>User Name</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CTP_Claim_Number__c</fullName>
+        <description>This field is created as part of DCR-268</description>
+        <externalId>false</externalId>
+        <label>Claim Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Claimant_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Claimant Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Comments__c</fullName>
+        <description>This field is created as part of DCR-268</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_DRO_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>DRO Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CTP_Date_Time__c</fullName>
+        <defaultValue>NOW()</defaultValue>
+        <externalId>false</externalId>
+        <label>Date &amp; Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Declaration__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>I declare that the information I have supplied in this form is true and correct to the best of my knowledge. I understand that
+ making a false or misleading claim or false and misleading statement in support of the claim</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I declare that the information I have supplied in this form is true and correct to the best of my knowledge. I understand that
+ making a false or misleading claim or false and misleading statement in support of the claim</inlineHelpText>
+        <label>Declaration</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CTP_Do_you_want_to_submit_your_reply__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Do you want to submit your reply?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Email_sent_on_Successful_Submission__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( CTP_Do_you_want_to_submit_your_reply__c==true , 
+IMAGE(&quot;/img/samples/color_green.gif&quot;, &quot;green&quot;, 30, 30),
+IMAGE(&quot;/img/samples/color_red.gif&quot;, &quot;red&quot;, 30, 30) 
+)</formula>
+        <label>Email sent on Successful Submission</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Insurer_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Insurer Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Insurer_s_original_decision_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Insurer&apos;s original decision date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Internal_review_lodgement_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Internal review lodgement date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Internal_reviewdecision_notification__c</fullName>
+        <externalId>false</externalId>
+        <label>Internal review notification date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_ReplyDueByDate__c</fullName>
+        <description>DCR-331</description>
+        <externalId>false</externalId>
+        <label>Reply due by date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CTP_Reply_Successfully_Submitted__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( CTP_Do_you_want_to_submit_your_reply__c==true, 
+IMAGE(&quot;/img/samples/color_green.gif&quot;, &quot;green&quot;, 30, 30),
+IMAGE(&quot;/img/samples/color_red.gif&quot;, &quot;red&quot;, 30, 30)
+)</formula>
+        <label>Reply Successfully Submitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Reply__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/insurer/s/detail/&apos;+Id, &apos;Reply&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reply</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Reply_due_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ISPICKVAL(Status__c,&apos;Submitted&apos;) , IMAGE(&quot;/img/samples/color_green.gif&quot;, &quot;red&quot;, 30, 30),IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;red&quot;, 30, 30))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reply due Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Subject__c</fullName>
+        <defaultValue>&apos;Request for Reply&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Your_reply__c</fullName>
+        <externalId>false</externalId>
+        <label>Insurer reply</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CTP_declaration_submission__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>I declare that the information I have supplied in this form,
+and any attachments to this form, is true and correct to the best of my knowledge. I understand that
+making a false or misleading claim or false and misleading statement in support of the claim in punishable
+by law and that I may be prosecuted</description>
+        <externalId>false</externalId>
+        <label>All My Submission Information Holds True</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CommunityPageURL__c</fullName>
+        <description>The URL suffix of the community page on which the Case Item should be visible</description>
+        <externalId>false</externalId>
+        <label>Community Page URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RoleGroup__c</fullName>
+        <description>The intended audience of the Case Item to provide the required information.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The person who you are requesting the Additional Information from. Note: This will be made visible to all Case Team Members, but editable only by the people in the Role Group selected.</inlineHelpText>
+        <label>Role Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Insurer</fullName>
+                    <default>false</default>
+                    <label>Insurer</label>
+                </value>
+                <value>
+                    <fullName>Claimant</fullName>
+                    <default>false</default>
+                    <label>Claimant</label>
+                </value>
+                <value>
+                    <fullName>Worker/Worker Rep</fullName>
+                    <default>false</default>
+                    <label>Worker/Worker Rep</label>
+                </value>
+                <value>
+                    <fullName>Legal Firm</fullName>
+                    <default>false</default>
+                    <label>Legal Firm</label>
+                </value>
+                <value>
+                    <fullName>Sole Practitioner</fullName>
+                    <default>false</default>
+                    <label>Sole Practitioner</label>
+                </value>
+                <value>
+                    <fullName>Merit Review Service</fullName>
+                    <default>false</default>
+                    <label>Merit Review Service</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>The status of the Case Item</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>false</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                    <label>Expired</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Archived</fullName>
+                    <default>false</default>
+                    <label>Archived</label>
+                </value>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <label>Accepted</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>Pending_Claimant_Reply</fullName>
+        <columns>NAME</columns>
+        <columns>DueDate__c</columns>
+        <columns>ExpiryDate__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CaseItem__c.Claimant</value>
+        </filters>
+        <label>Pending Claimant Reply</label>
+    </listViews>
+    <listViews>
+        <fullName>Pending_Insurer_Reply</fullName>
+        <columns>CTP_Reply__c</columns>
+        <columns>CTP_Reply_due_Status__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>ExpiryDate__c</columns>
+        <columns>CTP_Claim_Number__c</columns>
+        <columns>CTP_ReplyDueByDate__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Pending Insurer Reply</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Claimant</fullName>
+        <active>true</active>
+        <description>This record type is for Claimant</description>
+        <label>Claimant</label>
+        <picklistValues>
+            <picklist>RoleGroup__c</picklist>
+            <values>
+                <fullName>Claimant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Archived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Insurer</fullName>
+        <active>true</active>
+        <description>This record type is for Insurer</description>
+        <label>Insurer</label>
+        <picklistValues>
+            <picklist>RoleGroup__c</picklist>
+            <values>
+                <fullName>Claimant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurer</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Read_Only</fullName>
+        <active>true</active>
+        <label>Read Only</label>
+        <picklistValues>
+            <picklist>RoleGroup__c</picklist>
+            <values>
+                <fullName>Claimant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurer</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>
