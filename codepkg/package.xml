@@ -12,11 +12,9 @@
         <members>CTP_UCDDetailsController</members>
         <members>CTP_UCDDetailsController</members>
         <members>CTP_UDCResponseWrapper</members>
-        <members>ClaimaintsActivityHistory</members>
+        <members>CTP_ClaimaintsActivityHistory</members>
         <members>DRS_CaseItemTriggerHandler</members>
-        <members>DRS_CaseItem_Reply</members>
-        <members>DRS_Case_CC</members>
-        <members>DRS_ClaimantsCommunityService</members>
+        <members>CTP_ClaimantsCommunityService</members>
         <name>ApexClass</name>
     </types>
     <types>
