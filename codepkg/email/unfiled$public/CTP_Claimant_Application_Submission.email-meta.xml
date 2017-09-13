@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Claimant submits an application in Customer portal and receives an email notification confirming submission</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Claimant Application Submission</name>
+    <style>none</style>
+    <subject>Application received</subject>
+    <type>text</type>
+</EmailTemplate>

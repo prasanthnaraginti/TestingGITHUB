@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Officer of DRS emails Claimant at the end of successful application screening</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SIRA_Letterhead</letterhead>
+    <name>CTP_DRS_Successful_Screening_Communication_to_Claimant1</name>
+    <style>newsletter</style>
+    <subject>Application Number {!Case.CaseNumber} Acceptance Confirmation</subject>
+    <textOnly>Dear {!Case.Contact}, 
+
+Thank you for submitting your application (reference:{!Case.CaseNumber}). My name is {!Case.OwnerFullName} and I am your Dispute Resolution Officer. 
+
+I have asked the insurer to reply to your application, and they have until {!Case.Duedate} to send their reply to me. 
+
+I have reviewed the information you submitted with your application and I will review this application again when I received the insurer&apos;s reply. 
+
+If you have any questions about your application please contact me. 
+
+Regards, 
+{!Case.OwnerTitle} {!Case.OwnerFullName} 
+L19 / 1 Oxford St, Sydney NSW 2000 
+{!Case.OwnerPhone}</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Custom setting to store Case Type and its field mapping</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>CTP_Case_Type__c</fullName>
+        <description>Field to store case type values</description>
+        <externalId>false</externalId>
+        <label>Case Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Origin__c</fullName>
+        <description>Field to store origin value</description>
+        <externalId>false</externalId>
+        <label>Origin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Priority__c</fullName>
+        <description>Field to store priority value</description>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_RecordType__c</fullName>
+        <description>Field to store record type of case</description>
+        <externalId>false</externalId>
+        <label>RecordType</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Status__c</fullName>
+        <description>Field to store Feedback Status</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>CaseTypeMapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

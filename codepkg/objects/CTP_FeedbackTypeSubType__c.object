@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Custom Setting to store feedback type and feedback sub type</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>CTP_Case_Type__c</fullName>
+        <description>Field to store the case type</description>
+        <externalId>false</externalId>
+        <label>Case Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Feedback_SubType__c</fullName>
+        <description>Field to store feedbackSubType for Custom Setting</description>
+        <externalId>false</externalId>
+        <label>Feedback SubType</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Feedback_Type__c</fullName>
+        <description>Field to store feedback type for custom setting</description>
+        <externalId>false</externalId>
+        <label>Feedback Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>FeedbackTypeSubTypeMapping</label>
+    <visibility>Public</visibility>
+</CustomObject>
