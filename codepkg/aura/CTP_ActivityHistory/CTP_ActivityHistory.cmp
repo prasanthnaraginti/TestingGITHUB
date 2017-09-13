@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="ClaimaintsActivityHistory">
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="CTP_ClaimaintsActivityHistory">
 	<aura:handler name="init" value="{!this}" action="{!c.doOnload}"/>
     <aura:attribute name="recordId" type="Id"/> 
     <aura:attribute name="caseItems" type="CaseItem__c[]" />
