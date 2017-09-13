@@ -1,13 +1,381 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>SampleDeployClass</members>
-        <members>SampleFailingTestClass</members>
+        <members>CTP_AcceptCaseController</members>
+        <members>CTP_AcceptCaseController_Test</members>
+        <members>CTP_CaseTriggerHandler</members>
+        <members>CTP_CaseTriggerhandler_Test</members>
+        <members>CTP_ContactTriggerHandler</members>
+        <members>CTP_CreateArticleOnCaseController</members>
+        <members>CTP_CreateArticleOnCaseController_Test</members>
+        <members>CTP_FetchFeedbackFormController</members>
+        <members>CTP_FetchFeedbackFormController_Test</members>
+        <members>CTP_SubmitForApprovalController</members>
+        <members>CTP_SubmitForApprovalController_Test</members>
+        <members>CTP_UserTriggerHandler</members>
+        <members>CTP_UserTriggerHandler_Test</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>SampleAccountTrigger</members>
+        <members>CTP_CaseTrigger</members>
+        <members>CTP_ContactBeforeUpdate</members>
         <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Article__kav.CTP_Lightning_Knowledge_Article_Approval</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <types>
+        <members>Case.CTP Case Assignment Rule</members>
+        <name>AssignmentRule</name>
+    </types>
+    <types>
+        <members>CTP_AcceptButton</members>
+        <members>CTP_CreateArticle</members>
+        <members>CTP_FeedbackForm</members>
+        <members>CTP_SubmitForApproval</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Case.CTP  Case Auto-Response Rule</members>
+        <name>AutoResponseRule</name>
+    </types>
+    <types>
+        <members>Case.Application level</members>
+        <members>Case.Claims</members>
+        <members>Case.Dispute level</members>
+        <members>Case.Feedback</members>
+        <name>BusinessProcess</name>
+    </types>
+    <types>
+        <members>Article__kav.CTP_HighLightForArticle</members>
+        <members>Case.CTP_ApplicationHighlight</members>
+        <members>Case.CTP_DisputeCompactLayout</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>Activity.CTP_Date_of_ADR__c</members>
+        <members>Article__kav.CTP_Answer__c</members>
+        <members>Article__kav.CTP_Discussion_Topic__c</members>
+        <members>Article__kav.CTP_Question__c</members>
+        <members>Article__kav.CTP_Steps__c</members>
+        <members>Article__kav.CTP_Talking_Points__c</members>
+        <members>Attachment__c.CTP_View_Attachment_Appl__c</members>
+        <members>CTP_CaseTypeMapping__c.CTP_Origin__c</members>
+        <members>CTP_FeedbackTypeSubType__c.CTP_Feedback_SubType__c</members>
+        <members>CTP_FeedbackTypeSubType__c.CTP_Feedback_Type__c</members>
+        <members>Case.CTP_ActionAndOutcome__c</members>
+        <members>Case.CTP_ActionDueDate__c</members>
+        <members>Case.CTP_CaseSubStatus__c</members>
+        <members>Case.CTP_CaseType__c</members>
+        <members>Case.CTP_ClaimNumber__c</members>
+        <members>Case.CTP_Closed_Comment__c</members>
+        <members>Case.CTP_Date_Finalised__c</members>
+        <members>Case.CTP_Date_of_Common_Law_Notification__c</members>
+        <members>Case.CTP_Date_of_accident__c</members>
+        <members>Case.CTP_Date_rejected__c</members>
+        <members>Case.CTP_DaysSinceReceived__c</members>
+        <members>Case.CTP_Details_of_incorrect_data__c</members>
+        <members>Case.CTP_DisputeCategories__c</members>
+        <members>Case.CTP_DisputeTypes__c</members>
+        <members>Case.CTP_DoNotContactReason__c</members>
+        <members>Case.CTP_DoNotContact__c</members>
+        <members>Case.CTP_DueDate__c</members>
+        <members>Case.CTP_Feedback_Sub_type__c</members>
+        <members>Case.CTP_Feedback_Type__c</members>
+        <members>Case.CTP_InjuredPersonAccount__c</members>
+        <members>Case.CTP_InjuredPersonContact__c</members>
+        <members>Case.CTP_InsurerInternalReviewDone__c</members>
+        <members>Case.CTP_InsurerRepresentative__c</members>
+        <members>Case.CTP_Insurer_Application__c</members>
+        <members>Case.CTP_LodgementDate__c</members>
+        <members>Case.CTP_Next_Action_Status__c</members>
+        <members>Case.CTP_Number_Of_Violations__c</members>
+        <members>Case.CTP_OtherRelationshipDescription__c</members>
+        <members>Case.CTP_RepresentativeAccount__c</members>
+        <members>Case.CTP_RepresentativeContact__c</members>
+        <members>Case.CTP_RepresentativeRelationship__c</members>
+        <members>Case.CTP_Response_Required__c</members>
+        <members>Case.CTP_SLAViolation__c</members>
+        <members>Case.CTP_ScreeningResult__c</members>
+        <members>Case.CTP_SeverityColor__c</members>
+        <members>Case.CTP_Severity__c</members>
+        <members>Case.Case_Closed_Reason__c</members>
+        <members>Case.Claimant_Name__c</members>
+        <members>Case.Close_Case_QuickAction__c</members>
+        <members>Case.Origin</members>
+        <members>Case.Priority</members>
+        <members>Case.Reason</members>
+        <members>Case.Type</members>
+        <members>Case.UCD_no_result__c</members>
+        <members>CaseItem__c.CTP_Claim_Number__c</members>
+        <members>CaseItem__c.CTP_Date_of_accident__c</members>
+        <members>CaseItem__c.CTP_Declined_Accepted__c</members>
+        <members>Contact.AdminUser__c</members>
+        <members>Contact.Birthdate</members>
+        <members>Contact.CTP_Accessibility__c</members>
+        <members>Contact.CTP_AdditionalInformation__c</members>
+        <members>Contact.CTP_ContactMethod__c</members>
+        <members>Contact.CTP_ContactTime__c</members>
+        <members>Contact.CTP_Elderly__c</members>
+        <members>Contact.CTP_Financial_Hardship__c</members>
+        <members>Contact.CTP_Homeless__c</members>
+        <members>Contact.CTP_LTC_Status__c</members>
+        <members>Contact.CTP_Major_Injury_Comments__c</members>
+        <members>Contact.CTP_Major_Injury__c</members>
+        <members>Contact.CTP_Minor__c</members>
+        <members>Contact.CTP_Opt_Out_of_Case_Email_Updates__c</members>
+        <members>Contact.CTP_Physiological_Conditions_Comments__c</members>
+        <members>Contact.CTP_Physiological_Injuries_Disabilities__c</members>
+        <members>Contact.CTP_PrimaryPhone__c</members>
+        <members>Contact.CTP_RelationshipDescription__c</members>
+        <members>Contact.CTP_Relationship__c</members>
+        <members>Contact.CTP_RepresentativeRelationship__c</members>
+        <members>Contact.CTP_SecondaryPhone__c</members>
+        <members>Contact.ContactPreference__c</members>
+        <members>Contact.DuplicateFlag__c</members>
+        <members>Contact.DuplicateStatus__c</members>
+        <members>Contact.IPM_Other_Specialist_Area__c</members>
+        <members>Contact.IPM_Role__c</members>
+        <members>Contact.IPM_Status__c</members>
+        <members>Contact.IdentificationNumber__c</members>
+        <members>Contact.IdentificationValidFrom__c</members>
+        <members>Contact.IdentificationValidTo__c</members>
+        <members>Contact.InterpreterRequired__c</members>
+        <members>Contact.KnownWorkerDisabilities__c</members>
+        <members>Contact.Language__c</members>
+        <members>Contact.Role__c</members>
+        <members>Contact.Type__c</members>
+        <members>User.CTP_Opt_Out_of_Case_Email_Updates__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>CTP_CaseRecordTypeEntitlementMapping__c</members>
+        <members>CTP_CaseTypeMapping__c</members>
+        <members>CTP_FeedbackTypeSubType__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Article__kav</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>CTP_Assist</members>
+        <members>CTP_Assist/CTP_DRS_Successful_Screening_Communication_to_Claimant1</members>
+        <members>CTP_Assist/CTP_Email_Template_for_Feedback_Case_Escalation</members>
+        <members>CTP_Assist/CTP_Email_Template_for_Knowledge_Article_Rejection</members>
+        <members>CTP_Assist/CTP_Email_Template_for_Knowledge_Published</members>
+        <members>CTP_Assist/CTP_Email_Template_for_Knowledge_Review</members>
+        <members>CTP_Assist/CTP_Email_Template_for_Knowledge_Submitted</members>
+        <members>CTP_Assist/CTP_Email_Template_for_submitting_feedback_via_email_web</members>
+        <members>unfiled$public/CTP_Claimant_Application_Submission</members>
+        <members>unfiled$public/CTP_Static_successful_application_screening_DRS_To_Claimant</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
+        <members>ctp feedback v1</members>
+        <members>ctp non-damages entitlement</members>
+        <name>EntitlementProcess</name>
+    </types>
+    <types>
+        <members>CTP_Claims_Case_Page_Layout</members>
+        <members>CTP_Discussion_Guide_Lightning_Knowledge_Article</members>
+        <members>CTP_FAQ_Lightning_Knowledge_Article</members>
+        <members>CTP_Feedback_Case_Page_Layout</members>
+        <members>CTP_How_To_Lightning_Knowledge_Article</members>
+        <members>Claims_Advisory_Services_UtilityBar</members>
+        <members>Contact_Record_Page</members>
+        <members>Contact_Record_Page1</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>CTP_Assist_Member</members>
+        <name>Group</name>
+    </types>
+    <types>
+        <members>Article__kav-CTP Discussion Guide</members>
+        <members>Article__kav-CTP FAQ</members>
+        <members>Article__kav-CTP How To</members>
+        <members>Case-CTP Claims Case Page Layout</members>
+        <members>Case-CTP Feedback Case Page Layout</members>
+        <members>Contact-CTP Public Page Layout</members>
+        <members>Event-CTP Set Reminders</members>
+        <members>Task-CTP_Assist _Task</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Article__kav.All_Articles</members>
+		<members>Article__kav.archived_articles</members>
+        <members>Article__kav.draft_articles</members>
+        <members>Article__kav.published_articles</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>CTP Milestone 1 Non-Damages Entitlement</members>
+        <members>CTP Milestone 2 Non-Damages Entitlement</members>
+        <members>CTP Milestone 3 Non-Damages Entitlement</members>
+        <members>CTP Milestone 4 Non-Damages Entitlement</members>
+        <members>Case Assignment</members>
+        <name>MilestoneType</name>
+    </types>
+    <types>
+        <members>CTP_Email_Template_Administration</members>
+        <members>CTP_Knowledge_User</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>CTP Assist</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>CTP_Applications</members>
+        <members>CTP_Assist_Feedback</members>
+        <members>CTP_DRS_Feedback</members>
+        <members>DRS_Queue_for_Screening</members>
+		<members>Knowledge_Manager</members>
+        <members>Legal_Team_Knowledge_Article_Reviewers</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>Case.CTP_Assist_Task</members>
+        <members>Case.Close_Case</members>
+        <members>Case.Log_a_Call</members>
+        <members>IPM_SendEmail</members>
+        <members>LogACall</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Article__kav.CTP_Discussion_Guide</members>
+        <members>Article__kav.CTP_FAQ</members>
+        <members>Article__kav.CTP_How_To</members>
+        <members>Case.CTP_Application</members>
+        <members>Case.CTP_AssistClaimantSupport</members>
+        <members>Case.CTP_Dispute</members>
+        <members>Case.Feedback</members>
+        <members>Case.Merit_Review_Service</members>
+        <members>Contact.CTP_Assessor</members>
+        <members>Contact.CTP_Insurer</members>
+        <members>Contact.CTP_Professional_Representative</members>
+        <members>Contact.CTP_Public</members>
+        <members>Task.ADR_Outcome</members>
+        <members>Task.CTP_Assist_Task</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>Auditor</members>
+        <members>CTP_Assist</members>
+        <members>CTP_Assist_Manager</members>
+        <members>Compliance</members>
+        <members>DRS</members>
+        <members>DRS_Agent</members>
+        <members>DRS_Manager</members>
+        <members>SIRA_CEO</members>
+        <name>Role</name>
+    </types>
+    <types>
+        <members>Case.CAS_ReadOnly_Case_Level_Access</members>
+        <members>Case.CAS_Read_Write_Case_Level_Access</members>
+        <name>SharingCriteriaRule</name>
+    </types>
+    <types>
+        <members>CaseOrigin</members>
+        <members>CasePriority</members>
+        <members>CaseReason</members>
+        <members>CaseStatus</members>
+        <name>StandardValueSet</name>
+    </types>
+    <types>
+        <members>CTP_Light_Green</members>
+        <members>CTP_Light_Red</members>
+        <members>CTP_Light_Yellow</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Article__kav.CTP_Discussion_Guide_Mandatory_Fields</members>
+        <members>Article__kav.CTP_FAQ_Article_Mandatory_Fields</members>
+        <members>Article__kav.CTP_How_To_Article_Mandatory_Fields</members>
+        <members>Case.CTP_DoNotContacted</members>
+        <members>Case.CTP_Entitlement_Case_Mapping</members>
+        <members>Case.CTP_MandatoryForRepresentativeOther</members>
+        <members>Case.CTP_Representative_None</members>
+        <members>Contact.CTP_LanugageIfInterpreterRequired</members>
+        <members>Task.CTP_Assist_Task_Relate_To_Record</members>
+        <members>Task.CTP_Check_Subject_as_Mandatory_field</members>
+        <name>ValidationRule</name>
+    </types>
+    <types>
+        <members>Article__kav.ApprovalRequiredLegal</members>
+        <members>Article__kav.Email_Article_Approval</members>
+        <members>Article__kav.Email_Knowledge_Article_Rejection</members>
+        <members>Article__kav.Email_Knowledge_Article_Rejection_Legal</members>
+        <members>Article__kav.Email_To_Creator_Submitted_for_approval</members>
+        <members>Article__kav.Notify_Knowledge_Manager_Require_Approval</members>
+        <members>Article__kav.Notify_Knowledge_Manager_Require_Approval</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>Article__kav.CTP_Set_Validation_Status_to_Pending</members>
+        <members>Article__kav.ValidationRejected</members>
+        <members>Article__kav.ValidationStatusA</members>
+        <members>Case.CTP_SetActionOnCase</members>
+        <members>Case.CTP_SetCaseEscalated</members>
+        <members>Case.CTP_SetCaseEscalatedToFalse</members>
+        <members>Case.CTP_SetCasePriorityToHigh</members>
+        <members>Case.CTP_SetCaseSeverityToGreen</members>
+        <members>Case.CTP_SetCaseSeverityToRed</members>
+        <members>Case.CTP_SetDueDateToNull</members>
+        <members>Case.CTP_SetNumOfViolations</members>
+        <members>Case.CTP_SetPriorityToStandard</members>
+        <members>Case.CTP_SetSLAViolationToNo</members>
+        <members>Case.CTP_SetSLAViolationToYes</members>
+        <members>Case.CTP_SetSeverityToYellow</members>
+        <members>Case.CTP_Set_Action_Due_Date_For_75_week</members>
+        <members>Case.CTP_Set_Case_Status_to_20_month_call</members>
+        <members>Case.CTP_Set_Case_Type</members>
+        <members>Case.CTP_Set_Expedited_Priority</members>
+        <members>Case.CTP_Update_Case_Status_10W</members>
+        <members>Case.CTP_Update_Case_Status_23W</members>
+        <members>Case.CTP_Update_Case_Status_75W</members>
+        <members>Case.CTP_Update_Case_Status_Intro_Call</members>
+        <members>Case.CTP_Update_Due_Date_Accident_M2</members>
+        <members>Case.CTP_Update_Due_Date_Accident_M3</members>
+        <members>Case.CTP_Update_Due_Date_Lodgement</members>
+        <members>Case.CTP_Update_Next_Action_StatusMC</members>
+        <members>Case.CTP_Update_Next_Action_StatusNA</members>
+        <members>EmailMessage.CTP_SetCaseCloseCommentsToNone</members>
+        <members>EmailMessage.SetCaseClosedReasonToNone</members>
+        <members>EmailMessage.Set_Status_to_Re_Open</members>
+        <name>WorkflowFieldUpdate</name>
+    </types>
+    <types>
+        <members>Article__kav.Publish</members>
+        <name>WorkflowKnowledgePublish</name>
+    </types>
+    <types>
+        <members>Case.CTP Claims Assist Non-Damages Entitlement Milestone 1</members>
+        <members>Case.CTP Claims Assist Non-Damages Entitlement Milestone 1 Test</members>
+        <members>Case.CTP Claims Assist Non-Damages Entitlement Milestone 2</members>
+        <members>Case.CTP Claims Assist Non-Damages Entitlement Milestone 2 Test</members>
+        <members>Case.CTP Claims Assist Non-Damages Entitlement Milestone 3</members>
+        <members>Case.CTP Claims Assist Non-Damages Entitlement Milestone 3 Test</members>
+        <members>Case.CTP Claims Assist Non-Damages Entitlement Milestone 4</members>
+        <members>Case.CTP_Set Case Type for Email to Case</members>
+        <members>Case.deleteme</members>
+        <members>EmailMessage.CTP_Reopen Case on Reply</members>
+        <name>WorkflowRule</name>
+    </types>
+    <types>
+        <members>Case.CTP</members>
+        <members>Case.CTP_Assist_Task_Created_10_week_Call</members>
+        <members>Case.CTP_Assist_Task_Created_23_week_Call</members>
+        <members>Case.CTP_Assist_Task_Created_Introduction_Call</members>
+        <members>Case.CTP_New_Task_has_been_assigned_to_you</members>
+        <name>WorkflowTask</name>
     </types>
     <version>39.0</version>
 </Package>
