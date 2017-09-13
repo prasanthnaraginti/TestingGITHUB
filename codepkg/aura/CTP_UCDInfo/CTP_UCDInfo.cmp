@@ -1,0 +1,161 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" controller="CTP_UCDDetailsController">
+    
+    <ltng:require styles="/resource/SLDS100/assets/styles/salesforce-lightning-design-system-vf.css" />
+    <aura:attribute name="Claimnumber" type="String" />
+    <aura:attribute name="ClaimnumberNew" type="String" />
+    <aura:attribute name="CaseNumber" type="String" />
+    <aura:attribute name="caseId" type="Id" />
+    <aura:attribute name="UCDResponse" type="CTP_UDCResponseWrapper" />
+    <aura:attribute name="ReviewCompletion" type="Date" />
+    <aura:attribute name="ReviewRecept" type="Date" />
+    <aura:attribute name="typeOfError" type="String"/>
+    <aura:attribute name="caseCreated" type="boolean" default="true"/>
+    <aura:attribute name="disagreementReason" type="String" description="Used to store reason of Disagreement text area value."/>
+    <aura:attribute name="isTrue" type="Boolean" default="false" description="Used to hide and show modal dialog" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    <!-- <aura:handler name="change" value="{! v.ReviewCompletion}" action="{! c.disableKeydate1}"/>
+    <aura:handler name="change" value="{! v.ReviewRecept}" action="{! c.disableKeydate2}"/> -->
+    <aura:method name="validateDate2" action="{! c.validateD2}"/>
+    <aura:if isTrue="{! not(v.caseCreated)}">
+    <div class="slds-form slds-form_horizontal">
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Claim Number : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.ClaimnumberNew}" />
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Claimant Name : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.UCDResponse.Claimantname}" />
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Date of Accident : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.UCDResponse.Dateofaccident}" />
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Accident Location : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.UCDResponse.Locationofaccident}" />
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Insurer Name : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.UCDResponse.InsurerName}" />
+            </div>
+        </div>
+        <fieldset class="slds-form-element">
+            <legend class="slds-form-element__legend slds-form-element__label" style="font-weight:bold">Is this your claim? : </legend>
+            <div class="slds-form-element__control">
+                <ui:inputRadio labelClass="noLabelBold" aura:id="claimYes" text="Yes" label="Yes, this is my claim" name="yourClaim" change="{!c.confimReview}" />
+                <ui:inputRadio aura:id="claimNo" labelClass="noLabelBold" text="No" label="The claim details are incorrect" name="yourClaim" change="{!c.confimReview}" />
+            </div>
+        </fieldset>
+        <div><br/></div>
+        <div class="slds-hidden" aura:id="confirmReviewchoiceNew">
+            <fieldset class="slds-form-element">
+                <legend class="slds-form-element__legend slds-form-element__label" style="font-weight:bold">Has the insurer done an insurer internal review? : </legend>
+                <div class="slds-form-element__control">
+                    <ui:inputRadio aura:id="reviewYes" labelClass="noLabelBold" text="Yes" label="Yes" name="internalReview" change="{!c.showinputDate}" />
+                    <ui:inputRadio aura:id="reviewNo" labelClass="noLabelBold" text="No" label="No&nbsp;" name="internalReview" change="{!c.showinputDate}"/>
+                </div>
+            </fieldset>
+            <div><br/></div>
+            <div class="slds-hidden" aura:id="inputDateNew">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="date1">Date of insurer internal review : </label>
+                    <div class="slds-form-element__control">
+                         <ui:inputDate format="dd/MM/yyyy" class="field borderClass" aura:id="date1" value="{!v.ReviewCompletion}" displayDatePicker="true" focus="{! c.focusIsthereD1}"  blur="{!c.validateD1}"/>
+                       <!-- <lightning:input formatter="dd/MM/yyyy" value="{!v.ReviewCompletion}" required="true" type="date" label="Birthday" name="date" /> -->
+
+                        <div class="slds-form-element__help slds-hidden" id="errorMsgText" style="color:red;" aria-live="assertive" aura:id="date1ErrorMsg">This field is required.</div>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="date2">Date of insurer internal review receipt : 
+                        <div class="slds-form-element__icon" onmouseover="{! c.internalReviewHelp}" onmouseout="{! c.internalReviewHelp}">
+                            <button aria-describedby="internalReviewHelp" class="slds-button slds-button_icon">
+                                <lightning:icon iconName="utility:info" size="xx-small" alternativeText="Help"/>
+                                <span class="slds-assistive-text">Help</span>
+                            </button>
+                        </div></label>
+                    <div class="slds-form-element__control">
+                        <ui:inputDate class="field borderClass" format="dd/MM/yyyy" aura:id="date2" value="{!v.ReviewRecept}" displayDatePicker="true" focus="{! c.focusIsthereD2}" blur="{!c.validateD2}" />
+                        <div class="slds-form-element__help slds-hidden" id="errorMsgText1" style="color:red;display:inline-block;" aria-live="assertive" aura:id="date2ErrorMsg1" >
+                            This field is required.
+                            </div>
+                            <div class="slds-form-element__help slds-hidden" id="errorMsgText2" style="color:red;display:inline-block;" aria-live="assertive" aura:id="date2ErrorMsg2" >
+                            Receipt Date should be greater than Review Date.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="slds-hidden" id="disagreementReasonNew" aura:id="disagreementReasonNew">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="comments">How do you disagree with the insurer? 
+                        <div class="slds-form-element__icon" onmouseover="{! c.displayDisagreementHelp}" onmouseout="{! c.displayDisagreementHelp}">
+                            <button aria-describedby="disagreementHelp" class="slds-button slds-button_icon">
+                                <lightning:icon iconName="utility:info" size="xx-small" alternativeText="Help"/>
+                                <span class="slds-assistive-text">Help</span>
+                            </button>
+                        </div></label>
+                    <div class="slds-form-element__control">
+                        <ui:inputTextArea class="borderClass" updateon="keyup" value="{!v.disagreementReason}" aura:id="comments" rows="5" />
+                        <div class="slds-form-element__help slds-hidden" id="errorMsgText" style="color:red;" aria-live="assertive" aura:id="textareaErrorMsg">This field is required.</div>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <span class="slds-checkbox">
+                            <input type="checkbox" name="options" id="checkbox-1" value="on" onclick="{! c.Submit}"/>
+                                <label class="slds-checkbox__label" for="checkbox-1">
+                                    <span class="slds-checkbox_faux borderClass"></span>
+                                    <span class="slds-form-element__label">{!$Label.c.CTP_Declaration}</span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                <br/><br/>
+                    <div class="" aura:id="proceedAppNew">
+                       <!-- <ui:button aura:id="proceedBtn" label="{!$Label.c.CTP_Proceed}" class="slds-button slds_button-brand slds-hidden" press="{!c.ProceedApplication}" />  -->
+                        <button aura:id="proceedBtn" id="proceedBtn" class="slds-button slds-button_brand slds-hidden" onclick="{!c.ProceedApplication}">{!$Label.c.CTP_Submit}</button> 
+                    </div>
+                </div>
+                <div class="slds-popover slds-popover--tooltip slds-nubbin--left-top slds-hidden" role="tooltip" id="disagreementHelp" style="top: -363px;left: -120px;position:relative" aura:id="disagreementHelp">
+                    <div class="slds-popover__body slds-text-longform" style="text-align: start;"> Outline what it is that you don't agree with in the Insurer's Internal Review Decision and how you think it should be different.</div>
+                </div>
+                <div class="slds-popover slds-popover_tooltip slds-nubbin_left slds-hidden" id="internalReviewHelp" aura:id="internalReviewHelp" role="tooltip" style="top: -483px;left: -440px;position:relative">
+                    <div class="slds-popover__body slds-text-longform" style="text-align: start;">
+                        When did you receive the insurer review?
+                    </div>
+                </div>
+            </div>
+            <aura:if isTrue="{! v.isTrue}">
+                <div class="slds-hidden" aura:id="myModal" style="height: 640px;">
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-slide-up-saving">
+                        <div class="slds-modal__container" style="width:50px;">
+                            <div class="slds-modal__content" style="text-align:start;padding:10px;border-top-left-radius:3px;border-top-right-radius:3px;">
+                                Do you want to submit your application?
+                            </div>
+                            <footer class="slds-modal__footer">
+                                <button class="slds-button slds-button--brand" onclick="{!c.createCase}">Yes</button>
+                                <button class="slds-button slds-button--destructive" onclick="{!c.modalCancel}">No</button>
+                               <!-- <ui:button aura:id="cancelBtn" label="Cancel" class="slds-button" press="{!c.modalCancel}" /> -->
+                               <!-- <ui:button aura:id="submitBtn" label="{!$Label.c.CTP_Submit}" class="slds-button slds-button-brand" press="{!c.modalCancel}" /> -->
+                            </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+            </aura:if>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{! v.caseCreated}">
+        <c:CTP_UCDInfoFileAttachClone parentId="5000k000002WgMl"/>
+    </aura:if>
+    </aura:component>

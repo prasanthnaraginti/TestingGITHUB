@@ -1,0 +1,10 @@
+.THIS {
+ 	/*background-color : rgba(99, 102, 106, 1);   */
+}
+
+.THIS .borderClass{
+    border: 1px solid gray;
+}
+.THIS .noLabelBold{
+    font-weight : normal;
+}

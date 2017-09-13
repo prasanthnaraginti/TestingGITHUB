@@ -1,0 +1,69 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="CTP_DisputeRecord_Creation_Allocation_CC">
+  <aura:attribute name="suitableAssessorList" type="CTP_DipsuteCase_UserWrapperClass_CC[]" description="Stores the list of suitable assessor"/>
+  <aura:attribute name="noRecords" type="Boolean"/>
+  <aura:registerEvent name="cancelAllocation" type="c:CTP_CreateDisputeEvent" />
+  
+  
+    
+  <aura:if isTrue="{!v.noRecords}">
+  	<ui:message severity="info">
+     	No User returned as per the search result for allocation
+  	</ui:message>
+  
+  <aura:set attribute="else">
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout">
+        <thead>
+            <tr class="slds-text-title_caps">
+                <th scope="col">
+                    <div class="slds-truncate" title="Select">Select</div>
+                </th>  
+                <th scope="col" class="slds-is-sortable">
+                    <div class="slds-truncate" title="Name">Name</div>
+                </th>  
+                <th scope="col">
+                    <div class="slds-truncate" title="Address">Address</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Notes">Notes</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Dipsute Category">Dipsute Category</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Dispute Type">Dispute Type</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Phone">Phone</div>
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <aura:iteration items="{!v.suitableAssessorList}" var="assessor">    
+                
+                <!--<tr>
+                      <th scope="row" data-label="Case Number">
+                          <div class="slds-truncate" title="radio"><ui:inputRadio value="{!assessor.isSelected}"/></div>
+                      </th>  
+                      <th scope="row" data-label="Case Number">
+                          <div class="slds-truncate" title="{!assessor.userRecord.Name}">{!assessor.userRecord.Name}</div>
+                      </th>
+                      <th scope="row" data-label="Dispute Categories">
+                          <div class="slds-truncate" title="{!assessor.userRecord.Address}">{!concat(assessor.userRecord.City,assessor.userRecord.Street)}</div>
+                      </th>
+                      <td data-label="Dispute Type">
+                          <div class="slds-truncate" title="{!assessor.userRecord.CTP_Notes__c}">{!assessor.userRecord.CTP_Notes__c}</div>
+                      </td>
+                  </tr>-->
+                
+                <c:CTP_DisputeAllocation_UserList assessor="{!assessor}"/>  
+                
+            </aura:iteration>  
+            
+        </tbody>
+    </table>  
+  </aura:set>
+ </aura:if> 
+ <ui:button label="Cancel" press="{!c.cancel}" class="slds-button slds-button--brand"/> 
+</aura:component>

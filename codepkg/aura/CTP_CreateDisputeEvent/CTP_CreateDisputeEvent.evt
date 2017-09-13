@@ -1,0 +1,5 @@
+<aura:event type="Component" description="Event template">
+    <aura:attribute name="newDisputeRecord" type="CTP_CaseWrapperClass_CC"/>
+    <aura:attribute name="selectedDisiputeRec" type="CTP_CaseWrapperClass_CC"/>
+    <aura:attribute name="suitableAssessor" type="CTP_DipsuteCase_UserWrapperClass_CC"/>
+</aura:event>

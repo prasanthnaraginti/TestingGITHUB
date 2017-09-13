@@ -1,0 +1,119 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="CTP_DisputeRecord_Creation_Allocation_CC">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    <!--<aura:registerEvent name="disputeAllocation" type="c:CTP_DisputeAllocationEvent" />-->
+    <aura:handler name="newDisputeRecord" event="c:CTP_CreateDisputeEvent" action="{!c.addNewDisputeRecord}" />
+    <aura:handler name="getSelectedDispute" event="c:CTP_CreateDisputeEvent" action="{!c.getSelectedDispueRec}" />
+    <aura:handler name="getSuitableAssessor" event="c:CTP_CreateDisputeEvent" action="{!c.allocateDisputeRecs}" />
+    <aura:handler name="cancelAllocation" event="c:CTP_CreateDisputeEvent" action="{!c.cancelAllocation}" />
+    
+    <aura:attribute name="disputeList" type="CTP_CaseWrapperClass_CC[]" description="Stores all the related dispute records"/>
+    <aura:attribute name="recordId" type="String" description="Stores the Parent Record Id"/>
+    <aura:attribute name="recordTypeId" type="String" description="Stores the Dispute RecordTypeId"/>
+    <aura:attribute name="title" type="String" description="Stores the title"/>
+    <aura:attribute name="recordsForallocation" type="CTP_CaseWrapperClass_CC[]" description="Stores the list of dispute records selected for allocation"/>
+    <aura:attribute name="suitableAssessorList" type="CTP_DipsuteCase_UserWrapperClass_CC[]" description="Stores the list of suitable assessor"/>
+    <aura:attribute name="noRecords" type="Boolean" default="false"/>
+    
+    <article class="slds-card toggleHide" aura:id="create-dispute">
+    	<c:CTP_CreateDisputeRecord parentId="{!v.recordId}" recordTypeId="{!v.recordTypeId}"/>
+    </article> 
+    
+    
+    <article class="slds-card toggleHide" aura:id="user-list">
+    	<c:CTP_SuitableAssessor_DisputeAllocation suitableAssessorList="{!v.suitableAssessorList}" noRecords="{!v.noRecords}"/>
+    </article> 
+    
+    <!-- PAGE HEADER -->
+  <div class="toggleShow" aura:id="dipsute-listview">  
+    <div class="slds-page-header" role="banner">
+      <div class="slds-grid">
+        <div class="slds-col">
+          
+          <h1 class="slds-text-heading--small">Disputes</h1>  
+        </div>
+		<div class="slds-col" align="right">
+          <lightning:buttonIcon iconName="utility:add" variant="border" onclick="{!c.createDisputeRecord}" alternativeText="Add" />
+            <ui:button label="Allocate" press="{!c.searchSuitableAssessor}"/> 
+          </div> 
+      </div>
+    </div>
+    <!-- / PAGE HEADER -->
+
+    <!-- NOTE: Can potentially use a Lightning ListView here!!  -->
+<!--Table to display list of related Dispute Records-->
+  
+<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_resizable-cols slds-table_fixed-layout">
+  <thead>
+    <tr class="slds-text-title_caps">
+      <th scope="col">
+        <div class="slds-truncate" title="Select">Select</div>
+      </th>  
+      <th scope="col" class="slds-is-sortable">
+        <div class="slds-truncate" title="Case Number">Case Number</div>
+      </th>  
+      <th scope="col">
+        <div class="slds-truncate" title="Category">Category</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Type">Type</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Assigned to">Status</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Status">Sub-Status</div>
+      </th>
+      
+    </tr>
+  </thead>
+  <tbody>
+ 
+      <aura:iteration items="{!v.disputeList}" var="dispute">    
+     
+              
+              <!--td data-label="Access">
+                <div class="slds-truncate" title="Actions"><lightning:button variant="neutral" label="Allocate" iconName="utility:adduser" iconPosition="left" onclick="" /></div>
+              </td-->
+           <!--<c:CTP_DisputeRecordList disputeRec="{!dispute}"/>--> 
+           <tr>
+                <td data-label="Select">
+                    <div class="slds-truncate" title="Select">
+                        <aura:if isTrue="{!dispute.isStatusADR}">
+                            
+                            <ui:inputCheckbox value="{!dispute.isChecked}" change="{!c.getDisputeRec}"/>
+                           
+                        </aura:if>
+                        
+                    </div>
+                </td>
+                <th scope="row" data-label="Case Number">
+                    <div class="slds-truncate" title="{!dispute.caseRecord.CaseNumber}"><a href="{!'/one/one.app?source=aloha#/sObject/'+dispute.caseRecord.Id+ '/view'}">{!dispute.caseRecord.CaseNumber}</a></div>
+                </th>
+                <th scope="row" data-label="Dispute Categories">
+                    <div class="slds-truncate" title="{!dispute.caseRecord.CTP_DisputeCategories__c}">{!dispute.caseRecord.CTP_DisputeCategories__c}</div>
+                </th>
+                <td data-label="Dispute Type">
+                    <div class="slds-truncate" title="{!dispute.caseRecord.CTP_DisputeTypes__c}">{!dispute.caseRecord.CTP_DisputeTypes__c}</div>
+                </td>
+                <td data-label="Status">
+                    <div class="slds-truncate" title="{!dispute.caseRecord.Status}">{!dispute.caseRecord.Status}</div>
+                </td>
+                <td data-label="Case Sub Status">
+                    <div class="slds-truncate" title="{!dispute.caseRecord.CTP_CaseSubStatus__c}">{!dispute.caseRecord.CTP_CaseSubStatus__c}</div>
+                </td>
+                
+            </tr>    
+                  
+    
+      </aura:iteration>  
+      <tr>
+          <td><img src="{!$Resource.CTP_SubRow_Icon}"/><ui:inputCheckbox class="placement"/></td>
+      </tr>
+  </tbody>
+</table>
+</div>      
+    <!--/Table to display list of related Dispute Records-->     
+ 
+
+</aura:component>

@@ -1,0 +1,213 @@
+<aura:component controller="DRS_CaseItemForm_CC">
+    <ltng:require scripts="/resource/jquery" />
+    <aura:attribute name="parentId" type="Id" description="mandatory id to load the component"/>
+    <aura:attribute name="caseItemId" type="Id" description="case item id if any item exist against this application"/>
+    <aura:attribute name="uploadForm" type="String" description="String used to send JSON to apex class which will insert Attachment record and return relative URL for AWS S3 service"/>
+    <aura:attribute name="pageName" type="String"/>
+    <aura:attribute name="uploadedUnCatFiles" type="Object[]"/>
+    <aura:attribute name="progressPercentage" type="Integer" default="0" description="integer value used in progress bar"/>
+    <aura:attribute name="AttachmentWrapper" type="UCDInfoAttachmkentWrapper[]"/>
+    <aura:attribute name="isTrue" type="Boolean" default="false"/>
+    <aura:attribute name="fileUploadValidationError" type="Boolean"/>
+    <aura:attribute name="description" type="String"/>
+    <aura:attribute name="author" type="String"/>
+    <aura:attribute name="insertDate" type="Date"/>
+    <aura:attribute name="fileName" type="String"/>
+    <aura:attribute name="targetFile" type="Object"/>
+    <aura:attribute name="content" type="string"/>
+    <aura:attribute name="parent" type="Object"/>
+    <aura:attribute name="attachment" type="Attachment__c"/>
+    <aura:attribute name="isCategorize" type="boolean" default="false"/>
+    <aura:method name="Submitfiles" action="{! c.Submitfiles}" access="PUBLIC"/>
+    <aura:handler name="init" value="{! this}" action="{! c.doInit}"/>
+    <div class="progress">
+    <div class="bar"></div >
+    <div class="percent">0%</div >
+</div>
+    <br/><br/>
+    <div id="status"></div>
+    <br/><br/>
+    <div class="slds-form slds-form_horizontal">
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Claim Number : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.parent.no}" />99999
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Claimant Name : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.parent.no}" />Ashish Sharma
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Date of Accident : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.parent.no}" />20/12/2017
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Accident Location : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.parent.no}" />NSW 002
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Insurer Name : </label>
+            <div class="slds-form-element__control">
+                <ui:outputText value="{!v.parent.no}" />Ashish Sharma
+            </div>
+        </div>
+    </div>
+    <aura:if isTrue="{! and(v.pageName == 'public homepage',and(v.uploadedUnCatFiles.length > 0, true),false) }">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered slds-table_striped">
+            <thead>
+                <th scope="col" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                    <div class="slds-truncate" title="File Name">Action</div>
+                </th>
+                <th scope="col" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                    <div class="slds-truncate" title="File Name">File Name</div>
+                </th>
+                <th scope="col" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                    <div class="slds-truncate" title="File Name">Description</div>
+                </th>
+            </thead>
+            <tbody>
+                <aura:iteration items="{! v.uploadedUnCatFiles}" var="file">
+                    <tr>
+                        <td data-label="Action" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                            <div class="slds-truncate">
+                                <button aura:id="{! file.index}" id="{! file.index}" class="slds-button slds-button_destructive" onclick="{! c.removeAttachment}">REMOVE
+                                    <lightning:icon iconName="utility:close" size="xx-small" variant="inverse"/>
+                                </button>
+                            </div>
+                        </td>
+                        <td data-label="File Name" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                            <div class="slds-truncate" title="{! file.file.name}">{! file.file.name}</div>
+                        </td>
+                        <td data-label="File Description" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                            <div class="slds-truncate" title="{! file.description}">{! file.description}</div>
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </aura:if>
+    <aura:if isTrue="{! and(v.pageName == 'insurer portal',and(v.uploadedUnCatFiles.length > 0, true),false) }">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered slds-table_striped">
+            <thead>
+                <th scope="col" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                    <div class="slds-truncate" title="File Name">Action</div>
+                </th>
+                <th scope="col" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                    <div class="slds-truncate" title="File Name">File Name</div>
+                </th>
+                <th scope="col" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                    <div class="slds-truncate" title="File Name">Category</div>
+                </th>
+                <th scope="col" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                    <div class="slds-truncate" title="File Name">Sub-Category</div>
+                </th>
+            </thead>
+            <tbody>
+                <aura:iteration items="{! v.uploadedUnCatFiles}" var="file">
+                    <tr>
+                        <td data-label="Action" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right" >
+                            <div class="slds-truncate">
+                                <button aura:id="{! file.index}" id="{! file.index}" class="slds-button slds-button_destructive" onclick="{! c.removeAttachment}">REMOVE
+                                    <lightning:icon iconName="utility:close" size="xx-small" variant="inverse"/>
+                                </button>
+                            </div>
+                        </td>
+                        <td data-label="File Name" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                            <div class="slds-truncate" title="{! file.file.name}">{! file.file.name}</div>
+                        </td>
+                        <td data-label="File Description" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                            <div class="slds-truncate" title="{! file.description}">{! file.category}</div>
+                        </td>
+                        <td data-label="File Description" class="slds-cell-wrap slds-cell-buffer_left slds-cell-buffer_right">
+                            <div class="slds-truncate" title="{! file.description}">{! file.subCategory}</div>
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </aura:if>
+    <div class="slds-form-element">
+        <span class="slds-form-element__label" id="file-selector-id">Attach all information and evidence that supports your application</span>
+        <div class="slds-form-element__control">
+            <div class="slds-file-selector slds-file-selector--files">
+                <div class="slds-file-selector__dropzone">
+                    <button class="slds-button slds-button_icon slds-button_brand" onclick="{! c.fileButtonClicked}" style="color:white">
+                        <lightning:icon iconName="utility:upload" size="small" variant="inverse" alternativeText="Attach Documents"/>
+                        Attach Documents
+                    </button>
+                    <input type="file" class="slds-hidden" id="fileInput" aria-describedby="file-selector-id" aura:id="fileInput" onchange="{!c.showfile}"/>
+                </div>
+            </div>
+        </div>
+        <button onclick="{! c.submitfiles}">Save to Server</button>
+    </div>
+    <aura:if isTrue="{! v.isTrue}">
+        <div class="slds-hidden" aura:id="myModal" style="height: 640px;">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-slide-up-saving">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Attach File</h2>
+                </header>
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-around--medium" style="text-align:start;padding:10px;border-top-left-radius:3px;border-top-right-radius:3px;">
+                        <p><b>Name:</b>&nbsp;&nbsp;&nbsp;{!v.fileName}</p>
+                        <br/>
+                        <aura:if isTrue="{!v.fileUploadValidationError}">
+                            <div class="alert alert-danger">
+                                Please make sure you have entered all the field(s)
+                            </div>
+                        </aura:if>
+                        <div class="slds-form slds-form_horizontal">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="comments">Author:</label>
+                                <div class="slds-form-element__control">
+                                    <ui:inputText class="borderClass" updateon="keyup" value="{!v.author}" aura:id="author" />
+                                </div>
+                            </div>
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="comments">Description:</label>
+                                <div class="slds-form-element__control">
+                                    <ui:inputTextArea class="borderClass" updateon="keyup" value="{!v.description}" aura:id="description" rows="5" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="comments">Date of Document</label>
+                            <div class="slds-form-element__control">
+                                <ui:inputDate format="dd/MM/yyyy" class="borderClass" value="{!v.insertDate}" aura:id="insertDate" displayDatePicker="true"/>
+                            </div>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <button class="slds-button slds-button--brand" onclick="{!c.addAttachment}">Yes</button>
+                            <button class="slds-button slds-button--destructive" onclick="{!c.Cancel}">No</button>
+                            <!-- <ui:button aura:id="cancelBtn" label="Cancel" class="slds-button" press="{!c.modalCancel}" /> -->
+                            <!-- <ui:button aura:id="submitBtn" label="{!$Label.c.CTP_Submit}" class="slds-button slds-button-brand" press="{!c.modalCancel}" /> -->
+                        </footer>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+    <div class="slds-hidden" id="myModalProgressBar" aura:id="myModalProgressBar" style="height: 640px;">
+        <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal" id="progressBarModal">
+            <div class="slds-modal__container">
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-progress-bar slds-progress-bar_large slds-progress-bar_circular" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
+                        <span class="slds-progress-bar__value" style="{!('width:' + v.progressPercentage + '%;')}">
+                            <span class="slds-assistive-text">{!v.progressPercentage}%</span>
+                        </span>
+                    </div>
+                    <span class="slds-progress-bar-text">{!v.progressPercentage}%</span>
+                </div>
+            </div>
+        </div>        
+        <div class="slds-backdrop" aura:id="backdrop" id="backdrop"></div>
+    </div>
+</aura:component>

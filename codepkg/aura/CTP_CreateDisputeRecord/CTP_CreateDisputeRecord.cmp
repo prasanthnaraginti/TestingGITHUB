@@ -1,0 +1,76 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="CTP_DisputeRecord_Creation_Allocation_CC">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:attribute name="parentId" type="String"/>
+    <aura:attribute name="recordTypeId" type="String"/>
+    <aura:attribute name="case" type="Case" default="{ 'sobjectType': 'Case'}"/>
+    <!--aura:attribute name="selectedDisputeCategory" type="String"/-->
+    <aura:attribute name="optionsDisputeCategory" type="String[]"/>
+    <!--aura:attribute name="selectedDisputeType" type="String"/-->
+    <aura:attribute name="optionsDisputeType" type="String[]"/>
+    <aura:attribute name="disputeTypeDisable" type="Boolean" default="false"/>
+    <aura:attribute name="mapping" type="Map"/>
+    <aura:attribute name="disputeList" type="CTP_CaseWrapperClass_CC"/>
+    <aura:attribute name="defaultCategory" type="String"/>
+    <aura:attribute name="defaultType" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <!--aura:handler event="c:CTP_DisplayCreateDisputeBlock_Event" action="{!c.displayCreatedisputeBlock}" /-->
+    <aura:registerEvent name="newDisputeRecord" type="c:CTP_CreateDisputeEvent" />
+    
+    <!--<article class="slds-card toggleHide" aura:id="create-dispute">-->
+        <div class="demo-only">
+            <div class="slds-form slds-form_compound">
+                <fieldset class="slds-form-element">
+                    <legend class="slds-form-element__label slds-text-title_caps">Create Dispute Record</legend>
+                    <div class="slds-form-element__group">
+                        <div class="slds-form-element__row">
+                              <div class="slds-form-element slds-size_1-of-2">
+                                <!--<lightning:select name="Dispute Category" label="Dispute Category" aura:id="disputeType" value="{!v.case.CTP_DisputeCategories__c}" onchange="{!c.getDisputeTypes}">
+                                    <option text="" value="" />
+                                    <aura:iteration items="{!v.optionsDisputeCategory}" var="item">
+                                        <option text="{!item}" value="{!item}" />
+                                     </aura:iteration> 
+                                    
+                               </lightning:select>-->
+                                  
+                               <ui:inputSelect label="Dispute Category" aura:id="disputeCategory" change="{!c.getDisputeTypes}">
+                                   <aura:iteration items="{!v.optionsDisputeCategory}" var="item">
+                                        <ui:inputSelectOption text="{!item}" label="{!item}"/>
+
+                                     </aura:iteration> 
+                               </ui:inputSelect>    
+                              </div>
+                              <div class="slds-form-element slds-size_1-of-2">
+                                <!--<lightning:select name="Dispute Type" label="Dispute Type" aura:id="disputeType" value="{!v.case.CTP_DisputeTypes__c}"  required="true" disabled="{!v.disputeTypeDisable}">
+                                    <option text="" value="" />
+                                    <aura:iteration items="{!v.optionsDisputeType}" var="item">
+                                        <option text="{!item}" value="{!item}" />
+                                     </aura:iteration>
+                                    
+                               </lightning:select> -->
+                               <ui:inputSelect label="Dispute Type" aura:id="disputeType" disabled="{!v.disputeTypeDisable}">
+                                   <aura:iteration items="{!v.optionsDisputeType}" var="item">
+                                        <ui:inputSelectOption text="{!item}" label="{!item}"/>
+
+                                     </aura:iteration> 
+                               </ui:inputSelect>   
+                             </div>
+                         </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset class="slds-form-element">
+                	<div class="slds-form-element__group">
+                    	<div class="slds-form-element__row">
+                        	<div class="slds-form-element slds-size_1-of-2">
+                                <ui:button label="Save" press="{!c.saveDisputeRecord}"/>
+                            </div>
+                        </div>    
+                    </div>    
+                </fieldset>    
+            </div>    
+        </div>
+   <!--/article-->         
+        
+</aura:component>

@@ -1,0 +1,34 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="Claimnumber" type="String"/>
+    <div class="slds-align_absolute-center" aura:id="startclaim" align="center">
+    <button  class="slds-button slds-button_brand" Style="align:center" onclick="{!c.ShowEnterClaim}">{!$Label.c.CTP_StartClaim}</button>
+    </div>
+    <div class="slds-hidden" aura:id="claiminput">
+    <form class="slds-form--stacked">
+		 <div class="slds-align_absolute-center">
+             <table class="slds-align_absolute-center">
+                 <td>
+                     <tr>
+             <ui:inputText aura:id="claimnum" label="{!$Label.c.CTP_EnterClaimnumber}" class="slds-input borderClass" labelClass="slds-form-element__label"
+                  value="{!v.Claimnumber}" />
+            </tr>
+                     <tr>
+               <!--<ui:button label="{!$Label.c.CTP_Proceed}"
+              class="slds-button slds-button_brand"
+              press="{!c.confirmProceed}"/> -->
+                         <br/>
+                        <!-- <button class="slds-button slds-button-brand" onclick="{!c.confirmProceed}">{!$Label.c.CTP_Proceed}</button>  -->
+                         <button type="button" class="slds-button slds-button_brand" Style="align:center" onclick="{!c.confirmProceed}">{!$Label.c.CTP_Proceed}</button>
+                         </tr>
+                     </td>
+             </table>
+          </div>
+    </form>
+    </div>
+     <div class="slds-hidden" aura:id="ucdcomp">
+     <div class="slds-box" align="centre">
+     <c:CTP_UCDInfo ClaimnumberNew="{!v.Claimnumber}"/>
+     </div> 
+         </div>
+    
+</aura:component>

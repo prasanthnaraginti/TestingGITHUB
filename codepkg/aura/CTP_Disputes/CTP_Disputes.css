@@ -1,0 +1,11 @@
+.THIS.toggleHide
+{
+    display:none;
+}
+.THIS.toggleShow
+{
+	display:block;
+}
+.THIS .placement{
+    float : left;
+}
