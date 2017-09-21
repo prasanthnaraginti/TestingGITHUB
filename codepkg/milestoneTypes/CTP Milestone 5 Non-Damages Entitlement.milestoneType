@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MilestoneType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>CTP Milestone 5 Non Damages Entitlement creates task to review the Case 87 weeks from the  Date of Accident</description>
+    <recurrenceType>recursChained</recurrenceType>
+</MilestoneType>

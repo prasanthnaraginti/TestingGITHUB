@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <emailDefault>false</emailDefault>
-    <excludeButtons>CloseCase</excludeButtons>
+    <customButtons>Request_Additional_Information</customButtons>
     <excludeButtons>Submit</excludeButtons>
     <feedLayout>
         <autocollapsePublisher>false</autocollapsePublisher>
         <compactFeed>false</compactFeed>
         <feedFilterPosition>LeftFixed</feedFilterPosition>
         <feedFilters>
-            <feedFilterType>FeedItemType</feedFilterType>
-            <feedItemType>CallLogPost</feedItemType>
+            <feedFilterType>AllUpdates</feedFilterType>
         </feedFilters>
         <fullWidthFeed>false</fullWidthFeed>
         <hideSidebar>false</hideSidebar>
@@ -35,12 +33,14 @@
                 <field>Priority</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>Origin</field>
+                <behavior>Readonly</behavior>
+                <field>CTP_Late_Claim_Flag__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CTP_CaseType__c</field>
+                <emptySpace>true</emptySpace>
+            </layoutItems>
+            <layoutItems>
+                <emptySpace>true</emptySpace>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -62,46 +62,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>CTP_Closed_Comment__c</field>
+                <field>CTP_Date_Finalised__c</field>
             </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsTopToBottom</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Feedback Details</label>
-        <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>CTP_Feedback_Type__c</field>
+                <behavior>Readonly</behavior>
+                <field>CTP_ActionDueDate__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CTP_SeverityColor__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>OLCN_InsurerCode__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CTP_Response_Required__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>Description</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>CTP_Feedback_Sub_type__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CTP_Internal_Category__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Preferred_Contact_Method__c</field>
+                <field>CTP_ActionAndOutcome__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -110,31 +83,113 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Customer Details</label>
+        <label>Representative Details</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>CTP_RepresentativeContact__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_RepresentativeRelationship__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <emptySpace>true</emptySpace>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_OtherRelationshipDescription__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Injured Person Details</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Required</behavior>
                 <field>ContactId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_DoNotContact__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_Claimant_Language_Code__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>CTP_Form_First_Name__c</field>
+                <field>CTP_Age__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CTP_Form_Last_Name__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CTP_Form_Email__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CTP_Form_Phone__c</field>
+                <behavior>Edit</behavior>
+                <field>CTP_DoNotContactReason__c</field>
             </layoutItems>
         </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Claim Snapshot</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Managing_Insurer_Code__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CTP_Date_of_accident__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CTP_LodgementDate__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_CommonLawLiabilityStatus__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_Compensation_to_Relatives__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_Managing_Insurer_Claim_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_Accident_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Fault_Status__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CTP_Date_of_Common_Law_Notification__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>false</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Additional Information</label>
+        <layoutColumns/>
+        <layoutColumns/>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -155,6 +210,10 @@
                 <behavior>Edit</behavior>
                 <field>Subject</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Origin</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -169,16 +228,12 @@
                 <behavior>Readonly</behavior>
                 <field>SuppliedEmail</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Description</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>false</customLabel>
-        <detailHeading>false</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Description Information</label>
-        <layoutColumns/>
-        <style>OneColumn</style>
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -228,15 +283,6 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
-        <fields>MILESTONETYPE.MILESTONE</fields>
-        <fields>CASEMILESTONE.TARGET_DATE</fields>
-        <fields>CASEMILESTONE.COMPLETION_DATE</fields>
-        <fields>CASEMILESTONE.TIME_REMAIN_MINS</fields>
-        <fields>CASEMILESTONE.IS_VIOLATED_IN</fields>
-        <fields>CASEMILESTONE.IS_COMPLETED_IN</fields>
-        <relatedList>RelatedCaseMilestoneList</relatedList>
-    </relatedLists>
-    <relatedLists>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
         <fields>TASK.STATUS</fields>
@@ -251,23 +297,30 @@
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedEmailMessageList</relatedList>
-    </relatedLists>
-    <relatedLists>
         <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>MILESTONETYPE.MILESTONE</fields>
+        <fields>CASEMILESTONE.TARGET_DATE</fields>
+        <fields>CASEMILESTONE.COMPLETION_DATE</fields>
+        <fields>CASEMILESTONE.TIME_REMAIN_MINS</fields>
+        <fields>CASEMILESTONE.IS_VIOLATED_IN</fields>
+        <fields>CASEMILESTONE.IS_COMPLETED_IN</fields>
+        <relatedList>RelatedCaseMilestoneList</relatedList>
+    </relatedLists>
     <relatedObjects>ContactId</relatedObjects>
+    <relatedObjects>AccountId</relatedObjects>
     <runAssignmentRulesDefault>true</runAssignmentRulesDefault>
-    <showEmailCheckbox>true</showEmailCheckbox>
+    <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>true</showHighlightsPanel>
     <showInteractionLogPanel>true</showInteractionLogPanel>
-    <showKnowledgeComponent>true</showKnowledgeComponent>
+    <showKnowledgeComponent>false</showKnowledgeComponent>
     <showRunAssignmentRulesCheckbox>true</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>true</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0k000000EyYu</masterLabel>
+        <masterLabel>00h0k000000J3H6</masterLabel>
         <sizeX>3</sizeX>
-        <sizeY>4</sizeY>
+        <sizeY>2</sizeY>
         <summaryLayoutItems>
             <field>ContactId</field>
             <posX>0</posX>
@@ -284,29 +337,9 @@
             <posY>1</posY>
         </summaryLayoutItems>
         <summaryLayoutItems>
-            <field>Subject</field>
-            <posX>1</posX>
-            <posY>2</posY>
-        </summaryLayoutItems>
-        <summaryLayoutItems>
-            <field>Description</field>
-            <posX>1</posX>
-            <posY>3</posY>
-        </summaryLayoutItems>
-        <summaryLayoutItems>
-            <field>Status</field>
-            <posX>2</posX>
-            <posY>0</posY>
-        </summaryLayoutItems>
-        <summaryLayoutItems>
-            <field>Priority</field>
-            <posX>2</posX>
-            <posY>1</posY>
-        </summaryLayoutItems>
-        <summaryLayoutItems>
             <field>OwnerId</field>
             <posX>2</posX>
-            <posY>2</posY>
+            <posY>0</posY>
         </summaryLayoutItems>
         <summaryLayoutStyle>CaseInteraction</summaryLayoutStyle>
     </summaryLayout>

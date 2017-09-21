@@ -22,6 +22,34 @@
         <value>23 week call</value>
     </labels>
     <labels>
+        <fullName>CTP_2_Year_Review_Case_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_2_Year_Review_Case_Status</shortDescription>
+        <value>2 year review</value>
+    </labels>
+    <labels>
+        <fullName>CTP_3_Year_Review_Case_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_3_Year_Review_Case_Status</shortDescription>
+        <value>3 year review</value>
+    </labels>
+    <labels>
+        <fullName>CTP_3_month_review_Case_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_3_month_review_Case_Status</shortDescription>
+        <value>3 month review</value>
+    </labels>
+    <labels>
+        <fullName>CTP_5_Year_Review_Case_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_5_Year_Review_Case_Status</shortDescription>
+        <value>5 year review</value>
+    </labels>
+    <labels>
         <fullName>CTP_75_week_review_Case_Status</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -64,6 +92,13 @@
         <value>CTP External Assessor,CTP Internal Decision Maker</value>
     </labels>
     <labels>
+        <fullName>CTP_ApplicationRecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application record type</shortDescription>
+        <value>Application</value>
+    </labels>
+    <labels>
         <fullName>CTP_ApprovalComment</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -82,7 +117,14 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Claimant Support Case Record Type Name</shortDescription>
-        <value>CTP Assist - Claimant Support</value>
+        <value>CTP Assist - Non-damages</value>
+    </labels>
+    <labels>
+        <fullName>CTP_AssistDamagesRecordTypeName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_AssistDamagesRecordTypeName</shortDescription>
+        <value>CTP Assist - Damages</value>
     </labels>
     <labels>
         <fullName>CTP_Base_URL_to_navigate_to_records</fullName>
@@ -110,7 +152,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>CTP CAS Case Type</shortDescription>
-        <value>CAS</value>
+        <value>CTP Assist</value>
     </labels>
     <labels>
         <fullName>CTP_Cancel</fullName>
@@ -127,6 +169,34 @@
         <value>X</value>
     </labels>
     <labels>
+        <fullName>CTP_CaseItem_AdditionalInforRecordTypeName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_CaseItem_AdditionalInforRecordTypeName</shortDescription>
+        <value>Additional Information</value>
+    </labels>
+    <labels>
+        <fullName>CTP_CaseItem_InsurerRecordTypeName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_CaseItem_InsurerRecordTypeName</shortDescription>
+        <value>Insurer</value>
+    </labels>
+    <labels>
+        <fullName>CTP_CaseItem_RoleGroup_Claimant</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_CaseItem_RoleGroup_Claimant</shortDescription>
+        <value>Claimant</value>
+    </labels>
+    <labels>
+        <fullName>CTP_CaseItem_RoleGroup_Insurer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_CaseItem_RoleGroup_Insurer</shortDescription>
+        <value>Insurer</value>
+    </labels>
+    <labels>
         <fullName>CTP_CaseStatus_ADR</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -134,11 +204,39 @@
         <value>Appropriate Dispute resolution</value>
     </labels>
     <labels>
+        <fullName>CTP_Case_verification_milestone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case verification milestone</shortDescription>
+        <value>CTP Verification Milestone</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Claim_Assessment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Claim Assessment</shortDescription>
+        <value>CTP_Claim_Assessment</value>
+    </labels>
+    <labels>
         <fullName>CTP_Claimant_does_not_want_to_be_contacted_Case_Action_Outcome</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>CTP Claimant does not want to be contacted Case Action Outcome</shortDescription>
         <value>Claimant does not want to be contacted</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Claims_assessment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Claims assessment</shortDescription>
+        <value>Claims assessment</value>
+    </labels>
+    <labels>
+        <fullName>CTP_CompensationToRelatives</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_CompensationToRelatives</shortDescription>
+        <value>Compensation to Relatives</value>
     </labels>
     <labels>
         <fullName>CTP_Complaint</fullName>
@@ -190,6 +288,27 @@
         <value>DRS Feedback</value>
     </labels>
     <labels>
+        <fullName>CTP_Damage_Milestone_name_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Damage_Milestone_name_1</shortDescription>
+        <value>CTP Milestone 1 Damages Entitlement</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Damage_Milestone_name_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Damage_Milestone_name_2</shortDescription>
+        <value>CTP Milestone 2 Damages Entitlement</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Damage_Milestone_name_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Damage_Milestone_name_3</shortDescription>
+        <value>CTP Milestone 3 Damages Entitlement</value>
+    </labels>
+    <labels>
         <fullName>CTP_Declaration</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -199,11 +318,46 @@ making a false or misleading claim or false and misleading statement in support 
 by law and that I may be prosecuted.</value>
     </labels>
     <labels>
+        <fullName>CTP_Default</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default days for milestone</shortDescription>
+        <value>7</value>
+    </labels>
+    <labels>
         <fullName>CTP_DefaultFromEmail</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>CTP_DefaultFromEmail</shortDescription>
         <value>Claimant Advisory Services &lt;nandu.s@capgemini.com&gt;</value>
+    </labels>
+    <labels>
+        <fullName>CTP_DipsuteTask_ParentAssessment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP DipsuteTask ParentAssessment</shortDescription>
+        <value>CTP_Parent_Assessment</value>
+    </labels>
+    <labels>
+        <fullName>CTP_DisputeCategories_For_Allocation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Dispute Categories For Allocation</shortDescription>
+        <value>Merit review,Medical assessment,Misc claims assessment,Claims assessment</value>
+    </labels>
+    <labels>
+        <fullName>CTP_DisputeTask_All_RecordTypes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Dispute Task All Record Types</shortDescription>
+        <value>CTP_Claim_Assessment,CTP_Medical_Injury_Assessment,CTP_Medical_Treatment_Assessment,CTP_Merit_Review_Assessment,CTP_Misc_Claims_Assessment,CTP_Parent_Assessment</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Dispute_Task_Record_Types</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Dispute Task Record Types</shortDescription>
+        <value>CTP_Claim_Assessment,CTP_Medical_Injury_Assessment,CTP_Medical_Treatment_Assessment,CTP_Merit_Review_Assessment,CTP_Misc_Claims_Assessment</value>
     </labels>
     <labels>
         <fullName>CTP_Dispute_Task_Status</fullName>
@@ -238,7 +392,7 @@ by law and that I may be prosecuted.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Enter Claim number</shortDescription>
-        <value>Please enter the claim number</value>
+        <value>Enter claim number</value>
     </labels>
     <labels>
         <fullName>CTP_ErrorTeamAdd1</fullName>
@@ -246,6 +400,20 @@ by law and that I may be prosecuted.</value>
         <protected>false</protected>
         <shortDescription>CTP_ErrorTeamAdd1</shortDescription>
         <value>Please Select User From The List</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Event_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Event Record Type Id</shortDescription>
+        <value>0120k0000004deF</value>
+    </labels>
+    <labels>
+        <fullName>CTP_External_Assessor</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP External Assessor</shortDescription>
+        <value>CTP External Assessor</value>
     </labels>
     <labels>
         <fullName>CTP_Feedback</fullName>
@@ -332,6 +500,20 @@ by law and that I may be prosecuted.</value>
         <value>Master</value>
     </labels>
     <labels>
+        <fullName>CTP_Medical_Injury_Assessment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Medical Injury Assessment</shortDescription>
+        <value>CTP_Medical_Injury_Assessment</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Medical_Treatment_Assessment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Medical Treatment Assessment</shortDescription>
+        <value>CTP_Medical_Treatment_Assessment</value>
+    </labels>
+    <labels>
         <fullName>CTP_Medical_assessment</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -353,6 +535,13 @@ by law and that I may be prosecuted.</value>
         <value>External Assessor,CTP Internal Decision Maker</value>
     </labels>
     <labels>
+        <fullName>CTP_Merit_Review_Assessment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Merit Review Assessment</shortDescription>
+        <value>CTP_Merit_Review_Assessment</value>
+    </labels>
+    <labels>
         <fullName>CTP_Milestone_Name_1</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -365,6 +554,13 @@ by law and that I may be prosecuted.</value>
         <protected>false</protected>
         <shortDescription>CTP Milestone Name 2</shortDescription>
         <value>CTP Milestone 2 Non-Damages Entitlement</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Milestone_Name_For_Compensation_To_Relatives</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Milestone_Name_For_Compensation_To_Relatives</shortDescription>
+        <value>CTP Compensation to Relatives</value>
     </labels>
     <labels>
         <fullName>CTP_Milestone_Name_For_Feedback</fullName>
@@ -386,6 +582,41 @@ by law and that I may be prosecuted.</value>
         <protected>false</protected>
         <shortDescription>CTP Milestone name 4</shortDescription>
         <value>CTP Milestone 4 Non-Damages Entitlement</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Milestone_name_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Milestone_name_5</shortDescription>
+        <value>CTP Milestone 5 Non-Damages Entitlement</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Milestone_name_6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP_Milestone_name_6</shortDescription>
+        <value>CTP Milestone 6 Non-Damages Entitlement</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Minutes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Minutes</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Misc_Claim_Assessment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Misc Claim Assessment</shortDescription>
+        <value>CTP_Misc_Claims_Assessment</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Misc_claims_assessment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Misc claims assessment</shortDescription>
+        <value>Misc claims assessment</value>
     </labels>
     <labels>
         <fullName>CTP_Must_Call</fullName>
@@ -420,7 +651,7 @@ by law and that I may be prosecuted.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Proceed</shortDescription>
-        <value>Proceed</value>
+        <value>Retrieve claim</value>
     </labels>
     <labels>
         <fullName>CTP_RecordType</fullName>
@@ -437,11 +668,25 @@ by law and that I may be prosecuted.</value>
         <value>Rejected</value>
     </labels>
     <labels>
+        <fullName>CTP_Reply_Received_Milestone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reply Received Milestone</shortDescription>
+        <value>CTP Reply received Milestone</value>
+    </labels>
+    <labels>
         <fullName>CTP_ResponseRequired</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>CTP_ResponseRequired</shortDescription>
         <value>Would you like to be contacted in relation to this?</value>
+    </labels>
+    <labels>
+        <fullName>CTP_Screening_Milestone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CTP Screening Milestone</shortDescription>
+        <value>CTP Screening Milestone</value>
     </labels>
     <labels>
         <fullName>CTP_SelectAccess</fullName>
@@ -462,7 +707,7 @@ by law and that I may be prosecuted.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>CTP_StartClaim</shortDescription>
-        <value>Start New Application</value>
+        <value>Lodge an application</value>
     </labels>
     <labels>
         <fullName>CTP_Submit</fullName>

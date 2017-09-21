@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <fullName>CTP_Date_of_ADR__c</fullName>
+        <fullName>CTP_Due_Date_Status__c</fullName>
+        <description>For CTP Assist team - DCR845 reporting needs</description>
         <externalId>false</externalId>
-        <label>Date of ADR</label>
+        <formula>IF(TODAY() - (ActivityDate) = 0, &quot;Due Today&quot;, 
+  IF(TODAY() - (ActivityDate) &gt; 0, &quot;Overdue&quot;, 
+    IF(TODAY() - (ActivityDate) &lt; 0, &quot;Upcoming&quot;,&quot;&quot; 
+      )
+   )
+)</formula>
+        <label>Due Date Status</label>
         <required>false</required>
-        <type>Date</type>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
 </CustomObject>
