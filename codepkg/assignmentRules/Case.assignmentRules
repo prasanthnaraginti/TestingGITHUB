@@ -43,35 +43,6 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>CTP_DRS_Feedback</assignedTo>
-            <assignedToType>Queue</assignedToType>
-            <criteriaItems>
-                <field>Case.RecordTypeId</field>
-                <operation>equals</operation>
-                <value>Feedback</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.CTP_CaseType__c</field>
-                <operation>equals</operation>
-                <value>DRS</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.Status</field>
-                <operation>equals</operation>
-                <value>New</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.Origin</field>
-                <operation>equals</operation>
-                <value>Web</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.Priority</field>
-                <operation>equals</operation>
-                <value>Standard</value>
-            </criteriaItems>
-        </ruleEntry>
-        <ruleEntry>
             <assignedTo>CTP_Assist_Feedback</assignedTo>
             <assignedToType>Queue</assignedToType>
             <criteriaItems>
@@ -80,50 +51,27 @@
                 <value>Feedback</value>
             </criteriaItems>
             <criteriaItems>
-                <field>Case.CTP_CaseType__c</field>
-                <operation>equals</operation>
-                <value>CAS</value>
-            </criteriaItems>
-            <criteriaItems>
                 <field>Case.Status</field>
                 <operation>equals</operation>
                 <value>New</value>
             </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>CTP_Support_Complex</assignedTo>
+            <assignedToType>Queue</assignedToType>
             <criteriaItems>
-                <field>Case.Origin</field>
+                <field>Case.CTP_Risk_Outcome__c</field>
                 <operation>equals</operation>
-                <value>Web</value>
+                <value>High</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>CTP_Assist_Feedback</assignedTo>
+            <assignedTo>CTP_Support_General</assignedTo>
             <assignedToType>Queue</assignedToType>
             <criteriaItems>
                 <field>Case.RecordTypeId</field>
                 <operation>equals</operation>
-                <value>Feedback</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.CTP_CaseType__c</field>
-                <operation>equals</operation>
-                <value>CAS</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.Status</field>
-                <operation>equals</operation>
-                <value>New</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Case.Origin</field>
-                <operation>equals</operation>
-                <value>Email</value>
-            </criteriaItems>
-        </ruleEntry>
-        <ruleEntry>
-            <criteriaItems>
-                <field>Case.RecordTypeId</field>
-                <operation>equals</operation>
-                <value>CTP Assist - Claimant Support</value>
+                <value>CTP Assist - Non-damages</value>
             </criteriaItems>
         </ruleEntry>
     </assignmentRule>
