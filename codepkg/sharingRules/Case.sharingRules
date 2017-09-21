@@ -37,7 +37,7 @@
         <criteriaItems>
             <field>RecordTypeId</field>
             <operation>equals</operation>
-            <value>CTP Assist - Claimant Support</value>
+            <value>CTP Assist - Non-damages</value>
         </criteriaItems>
     </sharingCriteriaRules>
 </SharingRules>
