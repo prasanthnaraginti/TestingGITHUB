@@ -1,0 +1,45 @@
+<aura:component controller="CTP_RequestReply" >
+    
+    <!--method calls-->
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:method name="gotoapp" action="{! c.goToMyApplications}"/>
+    
+    <aura:attribute name="caseItemReply" type="CaseItem__c" />
+    <aura:attribute name="caseItemId" type="String" />
+    <aura:attribute name="caseId" type="String" />
+    
+    
+    <aura:registerEvent name="replyEvent" type="c:CTP_ReplyEvent"/>
+    
+    <div class="slds-grid" style="background-color: #354378; color: #ffffff;">
+        <div class="slds-container_fluid slds-p-horizontal_medium slds-p-vertical_small slds-text-heading_small">INSURER REPLY</div>
+    </div>
+    
+    <div class="slds-grid slds-grid_vertical slds-p-horizontal_large slds-m-top_x-large">
+        
+        <div class="slds-container_fluid slds-p-bottom_large">
+            <div class="slds-text-heading_medium">Reply</div>
+            <label class="slds-form-element__label slds-m-bottom_x-small">Your reply to the claimants dispute application...</label>
+            <ui:inputTextArea value="{!v.caseItemReply.CTP_Your_reply__c}" rows="5"/>
+        </div>
+        
+        <hr />
+        
+        <div class="slds-container_fluid">
+            <c:CTP_Insurer_ReplyRequest_SupportingDocuments caseItemId="{!v.caseItemId}" caseId="{!v.caseId}" editable="true" />
+        </div>
+        <!--
+        <div class="slds-container_fluid slds-m-top_small slds-m-bottom_large">
+            <c:CTP_UI_Dropzone />
+        </div>
+        -->
+        <div class="slds-container_fluid">
+            <lightning:button variant="brand" label="SUBMIT REPLY" onclick="{! c.submitReplyCtrl }"/>
+            <div style="font-size: 15px; display: inline-block;">
+                <div style="display: inline-block; padding: 0 10px; text-align: center; color: #9b9b9b;">or</div>
+                <button class="slds-button" style="color: #1b436f;" onclick="{! c.submitDraftCtrl }"><b>Save as draft</b></button>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

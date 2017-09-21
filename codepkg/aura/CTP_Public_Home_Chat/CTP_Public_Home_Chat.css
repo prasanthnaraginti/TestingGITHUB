@@ -1,0 +1,35 @@
+.THIS .container{
+    display:block;
+}
+
+.THIS.chatNumber{
+    font-family: Roboto;
+    font-size: 54px;
+    line-height: 1.19;
+    text-align: center;
+    color: #3b435b;
+    margin-bottom: 30px;
+}
+
+.THIS .chatText{
+    font-family: Roboto;
+    font-size: 22px;
+    line-height: 1.36;
+    text-align: center;
+    color: #666666;
+    margin-top: 30px;
+    width: 45%;
+    margin: auto;
+    
+}
+.THIS p{
+    margin-top: 30px; 
+}
+.THIS.btnChat{
+    text-align:center;
+    margin-top:40px;
+}
+.THIS .slds-button_brand {
+    padding-left: 1em;
+    padding-right: 1em;
+}

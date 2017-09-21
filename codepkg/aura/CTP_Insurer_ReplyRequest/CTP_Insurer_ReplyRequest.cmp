@@ -1,0 +1,34 @@
+<aura:component controller="CTP_RequestReply" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <!--method calls-->
+    <aura:handler name="replyEvent" event="c:CTP_ReplyEvent" action="{!c.handleComponentEvent}" />     
+    <aura:handler name="init" value="{! this}" action="{! c.doInit}"/>
+    <!--Attribute Declaration-->
+
+    <aura:attribute name="caseItem" type="CaseItem__c" />
+    <aura:attribute name="caseItemId" type="String" />
+    <aura:attribute name="caseId" type="String" />
+    
+    <div class="slds-grid slds-m-bottom_large">
+        
+        <div class="slds-size_7-of-12">
+        	<div class="slds-text-title_xx-large">Reply Request</div>
+        </div>
+        
+        <div class="slds-size_1-of-12"></div>
+
+        <div class="slds-size_4-of-12 slds-border_left slds-p-left_x-large">
+            <div class="slds-text-heading_small slds-m-top_large slds-m-bottom_small pink">AWAITING YOUR REPLY</div>
+            <div class="slds-text-body_large thin">Date Due: <b>{!v.caseItem.CTP_ReplyDueByDate__c}</b></div>
+        </div>
+        
+    </div>
+    <div class="slds-grid">
+    <div class="slds-size_1-of-2 " >
+            {!v.body}
+    </div>
+    <div class="slds-size_1-of-2"><c:CTP_Insurer_ReplyRequest_ClaimantSupplied /></div>
+        <!--<div class="slds-size_1-of-2"><c:CTP_Insurer_ReplyRequest_ClaimantSupplied /></div>-->
+    </div>
+    
+</aura:component>

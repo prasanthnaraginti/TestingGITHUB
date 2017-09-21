@@ -1,0 +1,86 @@
+.THIS{
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+}
+
+.THIS .slds-grid{
+    width:75%; 
+    margin:auto;  
+    
+}
+.THIS .slds-wrap{
+    align-items: stretch;
+}
+
+.THIS .center{
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+}
+.THIS .headingInsights
+{
+    font-family: Roboto;
+    font-size: 40px;
+    line-height: 1.3;
+    text-align: center;
+    color: #3b435b;
+    padding: 74px 0 24px 0;
+}
+.THIS .percentageValMaster
+{
+    width: 210px;
+    margin: auto;
+}
+.THIS .percentageVal{
+    font-family: Roboto;
+    font-size: 72px;
+    letter-spacing: -3.5px;
+    text-align: center;
+    color: #c6007e;
+    display:inline-block;
+}
+.THIS .percentageSymbol{
+    font-size: 26px;
+    vertical-align: top;
+    margin: 10px;
+    top: 15px;
+    color: #c6007e;
+    position: relative;
+}
+.THIS .percentageSubText{
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: #354378;
+    letter-spacing: normal;
+    bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    width: 120%;
+}
+.THIS .insightDetails{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.44;
+    text-align: center;
+    color: #666666;
+    width: 80%;
+    flex: 1;
+    
+    margin: auto;
+}
+.THIS .insightUrl{
+    margin-bottom:50px;
+}
+.THIS .insightUrl a{
+    height: 26px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 2.44;
+    text-align: center;
+    color: #00629b;
+    text-decoration: underline;
+}

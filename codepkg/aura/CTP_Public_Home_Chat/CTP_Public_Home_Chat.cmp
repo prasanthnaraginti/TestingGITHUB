@@ -1,0 +1,12 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <h1 class="chatNumber">1800 354 662</h1>
+    <div class="container">
+        <div class="chatText"><div>We understand how difficult life can be and we are available 24 hours a day 7 days a week to chat with you to help you through your process. </div>
+            <p>Or if you prefer, we also offer online chat.</p></div>    
+    </div>
+    <!-- AJJ - replaced with OOTB snap-in chat widget in lower right hand corner
+<div class="btnChat">
+    <button class="slds-button slds-button_brand">Chat now</button>
+    </div>
+     -->
+</aura:component>

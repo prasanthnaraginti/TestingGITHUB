@@ -1,0 +1,28 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <h1 class="helpHeading">We're here to help you 24/7</h1>
+    <div class="container">
+        <div class="slds-grid slds-wrap">
+            
+            <div class="slds-size_1-of-2">
+                <ul>
+                    <li>Frequently asked questions</li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                </ul>
+            </div>
+            <div class="slds-size_1-of-2">
+                <ul>
+                    <li>Frequently asked questions</li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                    <li>Lorem ipsumsit dolor<lightning:icon class="navArrow" iconName="utility:chevronright" size="x-small"/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</aura:component>

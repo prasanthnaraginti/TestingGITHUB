@@ -1,0 +1,24 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="CTP_CurrentUserController">
+<aura:handler name="init" value="{!this}" action="{!c.init}" />
+<aura:attribute name="userName" type="string" default="A"/>    
+    <div class="home-banner">
+        <div class="banner-container slds-p-vertical_xx-large">
+            <h1 class="slds-m-top_x-large">
+                Hello {!v.userName}, <br />
+                Welcome to your personal SIRA portal
+            </h1>
+            
+            <p class="slds-m-top_large">
+                Fast tracking your dispute
+                <a href="javascript:">Learn more</a>
+            </p>
+            
+            <div>
+                <div class="icon-container_circle slds-align_absolute-center">
+                	<lightning:icon iconName="utility:chevrondown" size="x-small"/>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+</aura:component>

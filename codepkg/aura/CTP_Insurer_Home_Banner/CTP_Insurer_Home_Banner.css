@@ -1,0 +1,14 @@
+.THIS {
+    background-color: #354378;
+    color: #ffffff;
+}
+
+.THIS .banner-container {
+    max-width: 1140px;
+    margin: auto;
+} 
+
+.THIS h1 {
+    font-size: 40px;
+    line-height: 1.13;
+}

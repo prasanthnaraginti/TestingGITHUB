@@ -1,0 +1,24 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <div class="container">
+        <h3 class="slds-text-heading_large headingInsights">Insights</h3>
+        <div class="slds-grid slds-wrap">
+            
+            <div class="slds-size_1-of-3 center">
+                <div class="percentageValMaster" ><div class="percentageVal"><div>14</div><div class="percentageSubText">More</div></div><span class="percentageSymbol">%</span></div>
+                <p class="insightDetails">People who have an independant specialist assessment of the physical condition recieve 14% more remuneration on avarege
+                </p>
+                <div class="insightUrl"><a href="javascript:">find out more</a></div>
+            </div>
+            <div class="slds-size_1-of-3 center"> <div class="percentageValMaster" ><div class="percentageVal">73<div class="percentageSubText">Success</div></div><span class="percentageSymbol">%</span></div>
+                <p class="insightDetails">People who do not employ the use of a lawyer for their claim submissions see a 73% better rateof success
+                </p>
+                <div class="insightUrl"><a href="javascript:">find out more</a></div>
+            </div>
+            <div class="slds-size_1-of-3 center">  <div class="percentageValMaster" ><div class="percentageVal">30<div class="percentageSubText">Faster</div></div><span class="percentageSymbol">%</span></div>
+                <p class="insightDetails">People who submit claims along with all recommended attachments experience a 30% faster handling process
+                </p>
+                <div class="insightUrl"><a href="javascript:">find out more</a></div>
+            </div>
+        </div>
+    </div>
+</aura:component>

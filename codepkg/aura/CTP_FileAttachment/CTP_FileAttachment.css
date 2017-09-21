@@ -1,0 +1,42 @@
+p.THIS {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #354378;
+}
+
+.THIS .full-width {
+    width: 100%;
+}
+
+.THIS .attachment {
+    display: flex;
+    width: 100%;
+    border: solid 1px #c1c6d0;
+    padding: 20px 15px;
+    font-size: 14px;
+    justify-content: space-around;
+}
+
+.THIS .attachment > div {
+    margin-right: 10px;
+}
+
+.THIS .attachment > div:last-child {
+    margin-right: 0;
+}
+
+.THIS .filename, .THIS .description {
+    /*width: calc(50% - 46px);*/
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+.THIS .slds-icon-text-default {
+    fill: #a8b7c7;
+}
+
+.THIS .delete {
+    float: right;   
+    color: #3b435b;
+}

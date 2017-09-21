@@ -1,0 +1,14 @@
+<aura:component >
+	
+    <div class="slds-grid" style="opacity: 0.37; background-color: #354378; color: #ffffff;">
+        <div class="slds-container_fluid slds-p-horizontal_medium slds-p-vertical_small slds-text-heading_small"><b>CLAIMANT SUPPLIED</b></div>
+    </div>
+    
+    <div class="slds-grid slds-grid_vertical" style="background-color: #fafafa;">
+        <div class="slds-container_fluid slds-p-horizontal_medium"><c:CTP_Insurer_ReplyRequest_ClaimantSupplied_Dispute /></div>
+        <div class="slds-container_fluid slds-p-horizontal_medium"><c:CTP_Insurer_ReplyRequest_ClaimantSupplied_Dispute /></div>
+        
+        <div class="slds-container_fluid slds-p-horizontal_medium slds-m-vertical_x-large"><c:CTP_Insurer_ReplyRequest_SupportingDocuments /></div>
+    </div>
+    
+</aura:component>

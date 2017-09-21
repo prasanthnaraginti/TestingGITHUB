@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="targetPortal" type="String"/>
+    <aura:attribute name="targetPortal11" type="String"/>
+   
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_1-of-1 slds-small-size_1-of-6 slds-medium-size_1-of-12 nav">
+            <a href="javscript:" class="button-back" onclick="{!c.goBack}">
+                <lightning:icon iconName="utility:back" size="xx-small"/>
+                <span class="button-back-text">Back</span>
+            </a>
+        </div>
+        <div class="slds-size_1-of-1 slds-small-size_5-of-6 slds-medium-size_6-of-12 form">
+            <c:CTP_StartClaim_New targetPortal="{!v.targetPortal}"/>
+        </div>
+        
+        <div class="slds-size_5-of-12 slds-hide slds-medium-show assistance">                
+            <c:CTP_Insurer_UI_ClaimStages />
+        </div>         
+    </div>
+    
+</aura:component>

@@ -1,0 +1,40 @@
+.THIS.rep-relation {
+    border-radius: 4px;
+    background-color: #fafafa;
+    border: solid 1px #c1c6d0;
+    width: 100%;
+    min-height: 60px;
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+    margin-right: 10px;
+    font-weight: 300;
+    color: #3b435b;
+    padding: 5px;
+    text-align: center;
+}
+
+.THIS.rep-relation:last-child {
+    margin-right: 0;
+}
+
+.THIS.rep-relation.selected {
+    font-weight: 500;
+    color: #0086db;
+    border-color: #0086db;
+}
+
+.THIS .slds-icon-action-check {
+    background-color: #0086db;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 2px 4px;
+    height: 24px;
+    width: 24px;
+}
+
+.THIS .slds-icon-action-check .slds-icon {
+    width: 15px;
+    height: 15px;
+}

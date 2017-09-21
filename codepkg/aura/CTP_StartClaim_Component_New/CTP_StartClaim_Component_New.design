@@ -1,0 +1,5 @@
+<design:component >
+	<!-- made picklist by subhajit -->
+    <design:attribute name="targetPortal" label="Target Portal" description="Please Enter the portal name"  datasource="Insurer,Claimant" default="Claimant"/>
+    <!-- made picklist by subhajit -->
+</design:component>

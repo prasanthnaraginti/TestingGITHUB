@@ -1,0 +1,165 @@
+<aura:component >
+    <aura:attribute name="isOpen" type="boolean"/>
+    
+    <!-- Dummy data for playback 4 -->
+    <aura:attribute name="count" type="integer" default="1"/>
+    <aura:attribute name="title" type="string" default="DRS decision"/>
+    <aura:attribute name="ref" type="string" default="002345"/>
+    
+    <li class="slds-accordion__list-item">
+        <section class="{!v.isOpen ? 'slds-accordion__section slds-is-open': 'slds-accordion__section'}">
+            <div class="slds-accordion__summary">
+                <div class="count">{!v.count}</div>
+                <h3 class="slds-accordion__summary-heading slds-m-right_medium">
+                    <div class="slds-clearfix full-width">
+                        <span class="slds-float_left slds-truncate">{!v.title}</span>
+                        <span class="slds-float_right">Ref#: {!v.ref}</span>
+                    </div>
+                </h3>
+                <aura:if isTrue="{!v.isOpen}">
+                    <lightning:buttonIcon iconName="utility:dash" size="large" variant="bare" alternativeText="Close" />
+                    <aura:set attribute="else">
+                        <lightning:buttonIcon iconName="utility:add" size="large" variant="bare" alternativeText="Open" />
+                    </aura:set>
+                </aura:if>
+            </div>
+            
+            <div class="slds-accordion__content">
+                <div class="slds-p-around_medium slds-m-bottom_medium" style="background-color: #fafafa;"> 
+                    <h3 class="slds-text-heading_x-small slds-m-bottom_x-small">I want to dispute a...</h3>
+                    <div class="radio-special">
+                        <div class="uiInput uiInputRadio uiInput--default uiInput--radio">
+                            <input type="radio" name="type" id="{!v.count + 'type1'}" value="entitlements"/>
+                            <label for="{!v.count + 'type1'}" class="uiLabel-left form-element__label uiLabel">Entitlements</label>
+                            <lightning:icon iconName="action:check" class="slds-hidden"/>
+                        </div>
+                        <div class="uiInput uiInputRadio uiInput--default uiInput--radio">
+                            <input type="radio" name="type" id="{!v.count + 'type2'}" value="medical"/>
+                            <label for="{!v.count + 'type2'}" class="uiLabel-left form-element__label uiLabel">Medical asessment</label>
+                            <lightning:icon iconName="action:check" class="slds-hidden"/>
+                        </div>
+                        <div class="uiInput uiInputRadio uiInput--default uiInput--radio">
+                            <input type="radio" name="type" id="{!v.count + 'type3'}" value="claim"/>
+                            <label for="{!v.count + 'type3'}" class="uiLabel-left form-element__label uiLabel">Claim assessment</label>
+                            <lightning:icon iconName="action:check" class="slds-hidden"/>
+                        </div>
+                        <div class="uiInput uiInputRadio uiInput--default uiInput--radio">
+                            <input type="radio" name="type" id="{!v.count + 'type4'}" value="decision"/>
+                            <label for="{!v.count + 'type4'}" class="uiLabel-left form-element__label uiLabel">DRS decision</label>
+                            <lightning:icon iconName="action:check" class="slds-hidden"/>
+                        </div>
+                        <div class="uiInput uiInputRadio uiInput--default uiInput--radio">
+                            <input type="radio" name="type" id="{!v.count + 'type5'}" value="unsure"/>
+                            <label for="{!v.count + 'type5'}" class="uiLabel-left form-element__label uiLabel">Unsure of dispute</label>
+                            <lightning:icon iconName="action:check" class="slds-hidden"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-m-horizontal_medium"> <!-- TODO: If Dispute type == entitlements || medical assessment || claims assessment -->
+                	
+                    <div class="slds-form-element">
+                        <label class="slds-text-heading_x-small slds-m-bottom_x-small">Has the insurer done an internal review?</label>
+                        <div class="slds-form-element__control slds-p-vertical_x-small">
+                            <ui:inputRadio text="Yes" label="Yes" name="hasInternalReview" />
+                            <ui:inputRadio text="No" label="No" name="hasInternalReview" />
+                        </div>
+                    </div>
+                    
+                    <div class="slds-grid slds-wrap slds-m-bottom_medium"> <!-- Has the insurer done an internal review? == Yes -->
+                        <div class="slds-size_1-of-2">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Date of internal review</label>
+                                <div class="slds-form-element__control">
+                                    <ui:inputDate format="dd/MM/yyyy" displayDatePicker="true"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-size_1-of-2">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Date you received the internal review</label>
+                                <div class="slds-form-element__control">
+                                    <ui:inputDate format="dd/MM/yyyy" displayDatePicker="true"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <aura:if isTrue="false">
+                        <div class="slds-form-element">  <!-- Has the insurer done an internal review? == No -->
+                            <label class="slds-text-heading_x-small slds-m-bottom_x-small">Have you requested an internal review?</label>
+                            <div class="slds-form-element__control slds-p-vertical_x-small">
+                                <ui:inputRadio text="Yes" label="Yes" name="hasRequestedInternalReview" />
+                                <ui:inputRadio text="No" label="No" name="hasRequestedInternalReview" />
+                            </div>
+                        </div>
+                    </aura:if>
+      
+                </div>
+                
+                <hr/>
+                
+                <div class="slds-m-around_medium"> 
+                    
+                    <h3 class="slds-text-heading_x-small slds-m-bottom_x-small">Lorem ipsum</h3>
+                    
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label">Dispute Category...</label>
+                        <div class="radio-special">
+                            <div class="uiInput uiInputRadio uiInput--default uiInput--radio">
+                                <input type="radio" name="cat" id="{!v.count + 'cat1'}"/>
+                                <label for="{!v.count + 'cat1'}" class="uiLabel-left form-element__label uiLabel">Entitlements</label>
+                                <lightning:icon iconName="action:check" class="slds-hidden"/>
+                            </div>
+                            <div class="uiInput uiInputRadio uiInput--default uiInput--radio">
+                                <input type="radio" name="cat" id="{!v.count + 'cat2'}"/>
+                                <label for="{!v.count + 'cat2'}" class="uiLabel-left form-element__label uiLabel">Medical assessment</label>
+                                <lightning:icon iconName="action:check" class="slds-hidden"/>
+                            </div>
+                            <div class="uiInput uiInputRadio uiInput--default uiInput--radio">
+                                <input type="radio" name="cat" id="{!v.count + 'cat3'}"/>
+                                <label for="{!v.count + 'cat3'}" class="uiLabel-left form-element__label uiLabel">Claim assessment</label>
+                                <lightning:icon iconName="action:check" class="slds-hidden"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label">The type of dispute is a: <div class="optional">optional</div></label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect >
+                                <ui:inputSelectOption text="Miscellaneous claims assessment" label="Miscellaneous claims assessment" value="true" />
+                                <ui:inputSelectOption text="Other" label="Other" />
+                            </ui:inputSelect>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label">And the dispute is... <div class="optional">optional</div></label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect >
+                                <ui:inputSelectOption text="Death or injury has resulted from an accident" label="Death or injury has resulted from an accident" value="true" />
+                                <ui:inputSelectOption text="Other" label="Other" />
+                            </ui:inputSelect>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="slds-form-element">	================================================== For Insurer
+                        <label class="slds-form-element__label">Who was the decision maker?</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect >
+                                <ui:inputSelectOption text="Mark Jones" label="Mark Jones" value="true" />
+                            </ui:inputSelect>
+                        </div>
+                    </div>-->
+                    
+                </div>
+                
+                <lightning:button label="- Remove dispute" class="full-width"/>
+            </div>
+            
+        </section>
+    </li>
+    
+</aura:component>

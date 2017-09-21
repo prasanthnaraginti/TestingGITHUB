@@ -1,0 +1,33 @@
+<aura:component >
+    
+    <div class="slds-text-heading_medium slds-m-top_x-large">Dispute 1: <span class="thin">Claims Assessment</span></div>
+    
+    <div class="slds-form-element slds-m-top_medium">
+        <label class="slds-form-element__label thin">Reference Number</label>
+        <div class="slds-form-element__control">
+            <div class="slds-form-element__static slds-border_bottom slds-container_fluid">002345</div>
+        </div>
+    </div>
+    
+    <div class="slds-form-element slds-m-top_medium">
+        <label class="slds-form-element__label thin">Insurer internal review date</label>
+        <div class="slds-form-element__control">
+            <div class="slds-form-element__static slds-border_bottom slds-container_fluid">10 - 09 - 2017</div>
+        </div>
+    </div>
+    
+    <div class="slds-form-element slds-m-top_medium">
+        <label class="slds-form-element__label thin">Type 1</label>
+        <div class="slds-form-element__control">
+            <div class="slds-form-element__static slds-border_bottom slds-container_fluid">Death or injury has resulted from an accident</div>
+        </div>
+    </div>
+    
+    <div class="slds-form-element slds-m-top_medium">
+        <label class="slds-form-element__label thin">What coutcome do you want?</label>
+        <div class="slds-form-element__control">
+            <div class="slds-form-element__static slds-container_fluid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida tortor quis nisl faucibus consequat. </div>
+        </div>
+    </div>
+        
+</aura:component>

@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="targetPortal" label="Target Portal" description="Please Enter the portal name" datasource="Insurer,Claimant"/>
+    
+</design:component>

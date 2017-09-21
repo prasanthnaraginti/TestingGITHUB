@@ -1,0 +1,26 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <div class="headDropedown">Application Overview <lightning:icon iconName="utility:chevrondown" size="Default"/></div>
+    <div class="container">
+        
+        <div class="slds-grid slds-wrap">
+            
+            <div class="slds-size_1-of-2 contLeft">
+                <h2 class="slds-text-heading_large">Are you ready to lodge your dispute application?</h2>
+                <p>Lodging your dispute application is easy. To rise a dispute you will need a claim number located on the claim form lodged with the at fault insurer. You will need to have requested an insurer internal review.
+                </p>
+                
+                
+            </div>
+            <div class="slds-size_1-of-2">
+                <h2 class="slds-text-heading_large">Dispute Checklist</h2>
+                <ul>
+                    <li><span class="checklistNum">1</span>Lodge a claim with insurer?</li>
+                    <li><span class="checklistNum">2</span>Have a claim number?</li>
+                    <li><span class="checklistNum">3</span>Have requested an insurer internal review?</li>
+                </ul>
+                <c:CTP_StartClaim_Component_New />
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,21 @@
+.THIS {
+    background: #354378;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.THIS .footer-container {
+    max-width: 1040px;
+    margin: auto;
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+.THIS li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.THIS a {
+    color: #ffffff;
+}
