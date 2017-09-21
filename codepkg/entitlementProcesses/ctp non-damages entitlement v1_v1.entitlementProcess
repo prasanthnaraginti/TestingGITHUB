@@ -3,9 +3,8 @@
     <SObjectType>Case</SObjectType>
     <active>true</active>
     <businessHours>SIRA Monday to Friday Business Hours</businessHours>
-    <description>Test version of CTP Non-Damages Entitlement Process with time periods in MINUTES NOT DAYS!</description>
+    <description>CTP Non-Damages Entitlement Process</description>
     <entryStartDateField>Case.CreatedDate</entryStartDateField>
-    <exitCriteriaBooleanFilter>1</exitCriteriaBooleanFilter>
     <exitCriteriaFilterItems>
         <field>Case.Status</field>
         <operation>equals</operation>
@@ -17,7 +16,7 @@
         <milestoneCriteriaFilterItems>
             <field>Case.RecordTypeId</field>
             <operation>equals</operation>
-            <value>CTP Assist - Claimant Support</value>
+            <value>CTP Assist - Non-damages</value>
         </milestoneCriteriaFilterItems>
         <milestoneCriteriaFilterItems>
             <field>Case.Status</field>
@@ -30,7 +29,7 @@
             <value>Must Call</value>
         </milestoneCriteriaFilterItems>
         <milestoneName>CTP Milestone 1 Non-Damages Entitlement</milestoneName>
-        <minutesToComplete>2</minutesToComplete>
+        <minutesToComplete>2400</minutesToComplete>
         <successActions>
             <name>Case.CTP_SetActionOnCase</name>
             <type>FieldUpdate</type>
@@ -56,16 +55,8 @@
                 <name>Case.CTP_SetCaseSeverityToYellow</name>
                 <type>FieldUpdate</type>
             </actions>
-            <actions>
-                <name>Case.CTP_New_Task_has_been_assigned_to_you</name>
-                <type>Task</type>
-            </actions>
             <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
-        </timeTriggers>
-        <timeTriggers>
-            <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
         </timeTriggers>
         <timeTriggers>
             <actions>
@@ -80,8 +71,8 @@
                 <name>Case.CTP_SetSLAViolationToYes</name>
                 <type>FieldUpdate</type>
             </actions>
-            <timeLength>0</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
         </timeTriggers>
         <useCriteriaStartTime>true</useCriteriaStartTime>
     </milestones>
@@ -90,7 +81,7 @@
         <milestoneCriteriaFilterItems>
             <field>Case.RecordTypeId</field>
             <operation>equals</operation>
-            <value>CTP Assist - Claimant Support</value>
+            <value>CTP Assist - Non-damages</value>
         </milestoneCriteriaFilterItems>
         <milestoneCriteriaFilterItems>
             <field>Case.Status</field>
@@ -103,7 +94,7 @@
             <value>Must Call</value>
         </milestoneCriteriaFilterItems>
         <milestoneName>CTP Milestone 2 Non-Damages Entitlement</milestoneName>
-        <minutesToComplete>3</minutesToComplete>
+        <minutesToComplete>2400</minutesToComplete>
         <successActions>
             <name>Case.CTP_SetActionOnCase</name>
             <type>FieldUpdate</type>
@@ -130,7 +121,7 @@
                 <type>FieldUpdate</type>
             </actions>
             <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
         </timeTriggers>
         <timeTriggers>
             <actions>
@@ -145,8 +136,8 @@
                 <name>Case.CTP_SetSLAViolationToYes</name>
                 <type>FieldUpdate</type>
             </actions>
-            <timeLength>1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
         </timeTriggers>
         <useCriteriaStartTime>true</useCriteriaStartTime>
     </milestones>
@@ -155,7 +146,7 @@
         <milestoneCriteriaFilterItems>
             <field>Case.RecordTypeId</field>
             <operation>equals</operation>
-            <value>CTP Assist - Claimant Support</value>
+            <value>CTP Assist - Non-damages</value>
         </milestoneCriteriaFilterItems>
         <milestoneCriteriaFilterItems>
             <field>Case.Status</field>
@@ -168,17 +159,13 @@
             <value>Must Call</value>
         </milestoneCriteriaFilterItems>
         <milestoneName>CTP Milestone 3 Non-Damages Entitlement</milestoneName>
-        <minutesToComplete>3</minutesToComplete>
+        <minutesToComplete>2400</minutesToComplete>
         <successActions>
             <name>Case.CTP_SetActionOnCase</name>
             <type>FieldUpdate</type>
         </successActions>
         <successActions>
             <name>Case.CTP_SetCaseSeverityToGreen</name>
-            <type>FieldUpdate</type>
-        </successActions>
-        <successActions>
-            <name>Case.CTP_SetDueDateToNull</name>
             <type>FieldUpdate</type>
         </successActions>
         <successActions>
@@ -202,8 +189,8 @@
                 <name>Case.CTP_SetSLAViolationToYes</name>
                 <type>FieldUpdate</type>
             </actions>
-            <timeLength>1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
         </timeTriggers>
         <timeTriggers>
             <actions>
@@ -211,7 +198,7 @@
                 <type>FieldUpdate</type>
             </actions>
             <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
         </timeTriggers>
         <useCriteriaStartTime>true</useCriteriaStartTime>
     </milestones>
@@ -220,7 +207,7 @@
         <milestoneCriteriaFilterItems>
             <field>Case.RecordTypeId</field>
             <operation>equals</operation>
-            <value>CTP Assist - Claimant Support</value>
+            <value>CTP Assist - Non-damages</value>
         </milestoneCriteriaFilterItems>
         <milestoneCriteriaFilterItems>
             <field>Case.CTP_Next_Action_Status__c</field>
@@ -233,38 +220,137 @@
             <value>75 week review</value>
         </milestoneCriteriaFilterItems>
         <milestoneName>CTP Milestone 4 Non-Damages Entitlement</milestoneName>
-        <minutesToComplete>3</minutesToComplete>
+        <minutesToComplete>2400</minutesToComplete>
+        <successActions>
+            <name>Case.CTP_SetActionOnCase</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>Case.CTP_SetCaseSeverityToGreen</name>
+            <type>FieldUpdate</type>
+        </successActions>
         <successActions>
             <name>Case.CTP_Set_Case_Status_to_20_month_call</name>
             <type>FieldUpdate</type>
         </successActions>
         <timeTriggers>
             <actions>
+                <name>Case.CTP_SetCaseSeverityToRed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
                 <name>Case.CTP_SetCaseSeverityToYellow</name>
                 <type>FieldUpdate</type>
             </actions>
             <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
         </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>SIRA Monday to Friday Business Hours</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CTP Assist - Non-damages</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.CTP_Next_Action_Status__c</field>
+            <operation>equals</operation>
+            <value>Must Call</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>20 month call</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>CTP Milestone 5 Non-Damages Entitlement</milestoneName>
+        <minutesToComplete>2400</minutesToComplete>
+        <successActions>
+            <name>Case.CTP_SetActionOnCase</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>Case.CTP_SetCaseSeverityToGreen</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>Case.CTP_Update_Case_Status_to_2_year_Review</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>Case.CTP_Update_Next_Action_StatusNA</name>
+            <type>FieldUpdate</type>
+        </successActions>
         <timeTriggers>
             <actions>
                 <name>Case.CTP_SetCaseSeverityToRed</name>
                 <type>FieldUpdate</type>
             </actions>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
             <actions>
-                <name>Case.CTP_SetNumOfViolations</name>
+                <name>Case.CTP_SetCaseSeverityToYellow</name>
                 <type>FieldUpdate</type>
             </actions>
-            <actions>
-                <name>Case.CTP_SetSLAViolationToYes</name>
-                <type>FieldUpdate</type>
-            </actions>
-            <timeLength>1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
         </timeTriggers>
         <useCriteriaStartTime>true</useCriteriaStartTime>
     </milestones>
-    <name>CTP Non-Damages Entitlement</name>
-    <versionMaster>5520k0000008OVn</versionMaster>
+    <milestones>
+        <businessHours>SIRA Monday to Friday Business Hours</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CTP Assist - Non-damages</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.CTP_Next_Action_Status__c</field>
+            <operation>equals</operation>
+            <value>Must Call</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>2 year review</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>CTP Milestone 6 Non-Damages Entitlement</milestoneName>
+        <minutesToComplete>2400</minutesToComplete>
+        <successActions>
+            <name>Case.CTP_SetCaseSeverityToGreen</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>Case.CTP_SetDueDateToNull</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>Case.CTP_SetCaseSeverityToRed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case.CTP_SetCaseSeverityToYellow</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <name>CTP Non-Damages Entitlement v1</name>
+    <versionMaster>5520k00000000qg</versionMaster>
+    <versionNotes>Created with Days Version</versionNotes>
     <versionNumber>1</versionNumber>
 </EntitlementProcess>

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>FAQ Lightning Knowledge Article</description>
     <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>displayOption</name>
+                <value>BOTH</value>
+            </componentInstanceProperties>
+            <componentName>runtime_sales_merge:mergeCandidatesPreviewCard</componentName>
+        </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
                 <name>collapsed</name>
@@ -12,17 +18,6 @@
                 <value>3</value>
             </componentInstanceProperties>
             <componentName>force:highlightsPanel</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>numberOfTopics</name>
-                <value>5</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Trending Topics</value>
-            </componentInstanceProperties>
-            <componentName>forceChatter:trendingTopics</componentName>
         </componentInstances>
         <name>header</name>
         <type>Region</type>
@@ -36,27 +31,25 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>forceKnowledge:articleDataCategoryViewer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>CTP_SubmitForApproval</componentName>
-        </componentInstances>
-        <componentInstances>
             <componentInstanceProperties>
                 <name>parentFieldApiName</name>
-                <value>Article__kav.Id</value>
+                <value>Contact.Id</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>relatedListApiName</name>
-                <value>ProcessSteps</value>
+                <value>Cases</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
             </componentInstanceProperties>
             <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>FAQ Lightning Knowledge Article</masterLabel>
-    <sobjectType>Article__kav</sobjectType>
+    <masterLabel>CTP Assist Public Contact</masterLabel>
+    <sobjectType>Contact</sobjectType>
     <template>
         <name>flexipage:recordHomeTemplateDesktop</name>
     </template>

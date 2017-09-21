@@ -25,6 +25,17 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>numberOfTopics</name>
+                <value>3</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Trending Topics</value>
+            </componentInstanceProperties>
+            <componentName>forceChatter:trendingTopics</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentName>forceKnowledge:articleDataCategoryViewer</componentName>
         </componentInstances>
         <componentInstances>

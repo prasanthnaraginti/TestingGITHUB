@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>FAQ Lightning Knowledge Article</description>
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
@@ -13,18 +12,41 @@
             </componentInstanceProperties>
             <componentName>force:highlightsPanel</componentName>
         </componentInstances>
+        <name>header</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
-                <name>numberOfTopics</name>
-                <value>5</value>
+                <name>createQuickActionName</name>
+                <value>NewContact</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
-                <name>title</name>
-                <value>Trending Topics</value>
+                <name>lookupFieldName</name>
+                <value>ContactId</value>
             </componentInstanceProperties>
-            <componentName>forceChatter:trendingTopics</componentName>
+            <componentInstanceProperties>
+                <name>updateQuickActionName</name>
+                <value>Contact._LightningRelatedContact</value>
+            </componentInstanceProperties>
+            <componentName>console:relatedRecord</componentName>
         </componentInstances>
-        <name>header</name>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>createQuickActionName</name>
+                <value>NewCase</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>lookupFieldName</name>
+                <value>Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>updateQuickActionName</name>
+                <value>Case._LightningUpdateCase</value>
+            </componentInstanceProperties>
+            <componentName>console:relatedRecord</componentName>
+        </componentInstances>
+        <name>leftsidebar</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -36,29 +58,26 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>forceKnowledge:articleDataCategoryViewer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>CTP_SubmitForApproval</componentName>
+            <componentName>forceKnowledge:articleSearchDesktop</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
                 <name>parentFieldApiName</name>
-                <value>Article__kav.Id</value>
+                <value>Case.AccountId</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>relatedListApiName</name>
-                <value>ProcessSteps</value>
+                <value>Cases</value>
             </componentInstanceProperties>
             <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
-        <name>sidebar</name>
+        <name>rightsidebar</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>FAQ Lightning Knowledge Article</masterLabel>
-    <sobjectType>Article__kav</sobjectType>
+    <masterLabel>CTP-Feedback Page</masterLabel>
+    <sobjectType>Case</sobjectType>
     <template>
-        <name>flexipage:recordHomeTemplateDesktop</name>
+        <name>flexipage:recordHomeThreeColHeaderTemplateDesktop</name>
     </template>
     <type>RecordPage</type>
 </FlexiPage>

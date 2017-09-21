@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
     <SObjectType>Case</SObjectType>
-    <active>true</active>
+    <active>false</active>
     <businessHours>SIRA Monday to Friday Business Hours</businessHours>
     <description>Test version of CTP Non-Damages Entitlement Process with time periods in MINUTES NOT DAYS!</description>
     <entryStartDateField>Case.CreatedDate</entryStartDateField>
@@ -11,7 +11,7 @@
         <operation>equals</operation>
         <value>Closed</value>
     </exitCriteriaFilterItems>
-    <isVersionDefault>false</isVersionDefault>
+    <isVersionDefault>true</isVersionDefault>
     <milestones>
         <businessHours>SIRA Monday to Friday Business Hours</businessHours>
         <milestoneCriteriaFilterItems>
@@ -53,22 +53,6 @@
         </successActions>
         <timeTriggers>
             <actions>
-                <name>Case.CTP_SetCaseSeverityToYellow</name>
-                <type>FieldUpdate</type>
-            </actions>
-            <actions>
-                <name>Case.CTP_New_Task_has_been_assigned_to_you</name>
-                <type>Task</type>
-            </actions>
-            <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
-        </timeTriggers>
-        <timeTriggers>
-            <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
-        </timeTriggers>
-        <timeTriggers>
-            <actions>
                 <name>Case.CTP_SetCaseSeverityToRed</name>
                 <type>FieldUpdate</type>
             </actions>
@@ -81,6 +65,22 @@
                 <type>FieldUpdate</type>
             </actions>
             <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case.CTP_SetCaseSeverityToYellow</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case.CTP_New_Task_has_been_assigned_to_you</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <timeLength>-1</timeLength>
             <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
         </timeTriggers>
         <useCriteriaStartTime>true</useCriteriaStartTime>
@@ -126,14 +126,6 @@
         </successActions>
         <timeTriggers>
             <actions>
-                <name>Case.CTP_SetCaseSeverityToYellow</name>
-                <type>FieldUpdate</type>
-            </actions>
-            <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
-        </timeTriggers>
-        <timeTriggers>
-            <actions>
                 <name>Case.CTP_SetCaseSeverityToRed</name>
                 <type>FieldUpdate</type>
             </actions>
@@ -146,6 +138,14 @@
                 <type>FieldUpdate</type>
             </actions>
             <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case.CTP_SetCaseSeverityToYellow</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-1</timeLength>
             <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
         </timeTriggers>
         <useCriteriaStartTime>true</useCriteriaStartTime>
@@ -186,7 +186,7 @@
             <type>FieldUpdate</type>
         </successActions>
         <successActions>
-            <name>Case.CTP_Update_Case_Status_75W</name>
+            <name>Case.CTP_Update_Case_Status_23W</name>
             <type>FieldUpdate</type>
         </successActions>
         <timeTriggers>
@@ -216,7 +216,6 @@
         <useCriteriaStartTime>true</useCriteriaStartTime>
     </milestones>
     <milestones>
-        <businessHours>SIRA Monday to Friday Business Hours</businessHours>
         <milestoneCriteriaFilterItems>
             <field>Case.RecordTypeId</field>
             <operation>equals</operation>
@@ -234,37 +233,9 @@
         </milestoneCriteriaFilterItems>
         <milestoneName>CTP Milestone 4 Non-Damages Entitlement</milestoneName>
         <minutesToComplete>3</minutesToComplete>
-        <successActions>
-            <name>Case.CTP_Set_Case_Status_to_20_month_call</name>
-            <type>FieldUpdate</type>
-        </successActions>
-        <timeTriggers>
-            <actions>
-                <name>Case.CTP_SetCaseSeverityToYellow</name>
-                <type>FieldUpdate</type>
-            </actions>
-            <timeLength>-1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
-        </timeTriggers>
-        <timeTriggers>
-            <actions>
-                <name>Case.CTP_SetCaseSeverityToRed</name>
-                <type>FieldUpdate</type>
-            </actions>
-            <actions>
-                <name>Case.CTP_SetNumOfViolations</name>
-                <type>FieldUpdate</type>
-            </actions>
-            <actions>
-                <name>Case.CTP_SetSLAViolationToYes</name>
-                <type>FieldUpdate</type>
-            </actions>
-            <timeLength>1</timeLength>
-            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
-        </timeTriggers>
         <useCriteriaStartTime>true</useCriteriaStartTime>
     </milestones>
-    <name>CTP Non-Damages Entitlement</name>
-    <versionMaster>5520k0000008OVn</versionMaster>
+    <name>CTP Non-Damages Entitlement old</name>
+    <versionMaster>5520k0000008OUp</versionMaster>
     <versionNumber>1</versionNumber>
 </EntitlementProcess>

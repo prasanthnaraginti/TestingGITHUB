@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
     <SObjectType>Case</SObjectType>
-    <active>false</active>
+    <active>true</active>
     <businessHours>SIRA Monday to Friday Business Hours</businessHours>
-    <description>Entitlement process for all CTP Feedback - CTP Assist and DRS for 1 business day</description>
+    <description>Entitlement process for all CTP Feedback - CTP Assist and DRS for testing changed to minutes</description>
     <entryStartDateField>Case.CreatedDate</entryStartDateField>
     <exitCriteriaFilterItems>
         <field>Case.IsClosed</field>
@@ -24,7 +24,11 @@
             <value>New</value>
         </milestoneCriteriaFilterItems>
         <milestoneName>Case Assignment</milestoneName>
-        <minutesToComplete>480</minutesToComplete>
+        <minutesToComplete>3</minutesToComplete>
+        <successActions>
+            <name>Case.CTP_SetCaseEscalatedToFalse</name>
+            <type>FieldUpdate</type>
+        </successActions>
         <successActions>
             <name>Case.CTP_SetPriorityToStandard</name>
             <type>FieldUpdate</type>
@@ -38,12 +42,20 @@
                 <name>Case.CTP_SetCasePriorityToHigh</name>
                 <type>FieldUpdate</type>
             </actions>
-            <timeLength>0</timeLength>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case.CTP_SetCaseSeverityToYellow</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-1</timeLength>
             <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
         </timeTriggers>
         <useCriteriaStartTime>true</useCriteriaStartTime>
     </milestones>
-    <name>CTP Feedback v1</name>
-    <versionMaster>5520k000000CbqX</versionMaster>
-    <versionNumber>1</versionNumber>
+    <name>CTP Feedback PS</name>
+    <versionMaster>5520k00000000tQ</versionMaster>
+    <versionNumber>2</versionNumber>
 </EntitlementProcess>
