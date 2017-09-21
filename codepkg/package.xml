@@ -41,6 +41,10 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+        <members>Case.CTP  Case Auto-Response Rule</members>
+        <name>AutoResponseRule</name>
+    </types>
+    <types>
         <members>Case.Claim Notification Level</members>
         <members>Case.Claims</members>
         <members>Case.Claims Damages</members>
@@ -181,6 +185,10 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Article__kav</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>CTP_Assist_Dashboards</members>
         <members>CTP_Assist_Dashboards/CTP_Assist_Team_My_Open_Tasks</members>
         <members>CompanyDashboards/wvSTTdwRVFjYhUSNdicEfuKgDgzoAQ</members>
@@ -189,6 +197,25 @@
     <types>
         <members>CTP_Assist</members>
         <name>DataCategoryGroup</name>
+    </types>
+    <types>
+        <members>CTP_Claimant_Advisory_Services</members>
+        <members>CTP_Claimant_Advisory_Services/CTP_DRS_Successful_Screening_Communication_to_Claimant</members>
+        <members>CTP_Claimant_Advisory_Services/CTP_Email_Template_for_Feedback_Case_Escalation</members>
+        <members>CTP_Claimant_Advisory_Services/CTP_Email_Template_for_Knowledge_Review</members>
+        <members>CTP_Claimant_Advisory_Services/CTP_Email_Template_for_submitting_feedback_via_email_web</members>
+        <members>CTP_Claimant_Advisory_Services/Email_Template_for_Knowledge_Article_Rejection</members>
+        <members>unfiled$public/CTP_ClaimantReceivesRequestReplyEmailNotificationForAnApplicationSubmitted</members>
+        <members>unfiled$public/CTP_ClaimantSubmitsReplyAndReceivesEmailAcknowledgementOfReplySubmission</members>
+        <members>unfiled$public/CTP_Claimant_Application_Submission</members>
+        <members>unfiled$public/CTP_InsurerReceivesEmailNotificationConfirmingClaimantHasSubmittedReply</members>
+        <members>unfiled$public/CTP_Insurer_receives_a_Request_for_reply_email_notification_for_an_application</members>
+        <members>unfiled$public/CTP_Static_successful_application_screening_DRS_To_Claimant</members>
+        <members>unfiled$public/InsurerReceivesEmailNotificationConfirmingCTP_ClaimantHasSubmittedReply</members>
+	<members>CTP_Claimant_Advisory_Services/CTP_Email_Template_for_Knowledge_Published</members>
+        <members>CTP_Claimant_Advisory_Services/CTP_Email_Template_for_Knowledge_Submitted</members>
+        <members>unfiled$public/Insurer_Submits_Reply</members>
+        <name>EmailTemplate</name>
     </types>
     <types>
         <members>compensation to relatives_v1</members>
@@ -329,6 +356,13 @@
         <members>DRS_Agent</members>
         <members>DRS_Manager</members>
         <name>Role</name>
+    </types>
+    <types>
+        <members>CaseOrigin</members>
+        <members>CasePriority</members>
+        <members>CaseReason</members>
+        <members>CaseStatus</members>
+        <name>StandardValueSet</name>
     </types>
     <types>
         <members>Case.CAS_ReadOnly_Case_Level_Access</members>
