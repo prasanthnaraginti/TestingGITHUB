@@ -382,10 +382,13 @@
         <name>Flow</name>
     </types>
     <types>
+        <members>CTP_Assist_Member</members>
+        <members>CTP_Knowledge_Manager</members>
         <members>CTP_Assist_Standard_Support_Cases</members>
         <name>Group</name>
     </types>
     <types>
+        <members>Task-CTP_Assist _Task</members>
         <members>Article__kav-CTP Article Page</members>
         <members>Article__kav-CTP Discussion Guide</members>
         <members>Article__kav-CTP FAQ</members>
@@ -433,6 +436,7 @@
     <types>
         <members>CTP_Live_Agent_Supervisor</members>
         <members>Knowledge_Manager</members>
+        <members>CTP_Knowledge_User</members>
         <name>PermissionSet</name>
     </types>
     <types>
