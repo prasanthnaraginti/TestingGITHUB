@@ -1,0 +1,42 @@
+<aura:component controller="CTP_CreateArticleOnCaseController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="recordTypeName" type="String" />
+    <aura:attribute name="recordTypeList" type="String[]" default=""/>
+    <aura:attribute name="isOpen" type="boolean" default="false" />
+    <div class="slds-m-around--x-large">
+        <lightning:button label="{!$Label.c.CTP_CreateNewArticle}" class="slds-button slds-button-brand" aura:id="createNewId" onclick="{!c.openModal}" />
+    </div>
+    <aura:if isTrue="{!v.isOpen}">
+        <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModal}">
+                       {!$Label.c.CTP_CancelCross} <span class="slds-assistive-text">{!$Label.c.CTP_Cancel}</span>
+                    </button>
+                    <h2 id="header43" class="slds-text-heading--medium">{!$Label.c.CTP_NewArticleHeader}</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size--1-of-2 slds-large-size--1-of-2">
+                            <div class="slds-align--absolute-center">{!$Label.c.CTP_RecordType}</div>                            
+                        </div>
+                        <div class="slds-size--1-of-2 slds-large-size--1-of-2">
+                            <ui:inputSelect aura:id="selectid">
+                                <aura:iteration items="{!v.recordTypeList}" var="articletype">                            
+                                    <ui:inputSelectOption text="{!articletype}" label="{!articletype}" />
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div>&nbsp; &nbsp;
+                    </div>                   
+                </div>
+                <div class="slds-modal__footer">
+                    <lightning:button class="slds-button slds-button--neutral" onclick="{!c.closeModal}">{!$Label.c.CTP_Cancel}</lightning:button>
+                    <lightning:button class="slds-button slds-button--brand" onclick="{!c.createRecord}">{!$Label.c.CTP_Next}</lightning:button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    
+</aura:component>
