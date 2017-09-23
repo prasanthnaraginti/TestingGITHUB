@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CTP_Area_Code_Phone__c</fullName>
+        <description>The area code for phone number of person to whom this record relates.</description>
+        <externalId>false</externalId>
+        <label>Area Code (Phone)</label>
+        <length>6</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Claimant_Language_Code__c</fullName>
+        <description>Used to determine which interpreter services are required (if an Interpreter is required).</description>
+        <externalId>false</externalId>
+        <label>Claimant Language Code</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_Consent_for_Survey__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the contact provided consent to be surveyed?</inlineHelpText>
+        <label>Consent for Survey</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CTP_PrimaryPhone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone (Primary)</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CTP_SecondaryPhone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone (Secondary)</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DuplicateStatus__c</fullName>
+        <description>This field is managed by users to indicate which records have been data quality checked. are considered clean or not after data checks have commenced. It is also populated by a Batch Job when records meet matching criteria.</description>
+        <externalId>false</externalId>
+        <label>Duplicate Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Duplicate_Status</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>InterpreterRequired__c</fullName>
+        <description>Accessibility Field: Do you require an interpreter?</description>
+        <externalId>false</externalId>
+        <label>Interpreter Required?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <description>Worker requires an interpreter who speaks the entered language</description>
+        <externalId>false</externalId>
+        <label>Language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>English</fullName>
+                    <default>false</default>
+                    <label>English</label>
+                </value>
+                <value>
+                    <fullName>French</fullName>
+                    <default>false</default>
+                    <label>French</label>
+                </value>
+                <value>
+                    <fullName>German</fullName>
+                    <default>false</default>
+                    <label>German</label>
+                </value>
+                <value>
+                    <fullName>Italian</fullName>
+                    <default>false</default>
+                    <label>Italian</label>
+                </value>
+                <value>
+                    <fullName>Chinese</fullName>
+                    <default>false</default>
+                    <label>Chinese</label>
+                </value>
+                <value>
+                    <fullName>Japanese</fullName>
+                    <default>false</default>
+                    <label>Japanese</label>
+                </value>
+                <value>
+                    <fullName>Greek</fullName>
+                    <default>false</default>
+                    <label>Greek</label>
+                </value>
+                <value>
+                    <fullName>Arabic</fullName>
+                    <default>false</default>
+                    <label>Arabic</label>
+                </value>
+                <value>
+                    <fullName>Spanish</fullName>
+                    <default>false</default>
+                    <label>Spanish</label>
+                </value>
+                <value>
+                    <fullName>Chinese (Simplified)</fullName>
+                    <default>false</default>
+                    <label>Chinese (Simplified)</label>
+                </value>
+                <value>
+                    <fullName>Chinese (Traditional)</fullName>
+                    <default>false</default>
+                    <label>Chinese (Traditional)</label>
+                </value>
+                <value>
+                    <fullName>Danish</fullName>
+                    <default>false</default>
+                    <label>Danish</label>
+                </value>
+                <value>
+                    <fullName>Dutch</fullName>
+                    <default>false</default>
+                    <label>Dutch</label>
+                </value>
+                <value>
+                    <fullName>Finnish</fullName>
+                    <default>false</default>
+                    <label>Finnish</label>
+                </value>
+                <value>
+                    <fullName>Korean</fullName>
+                    <default>false</default>
+                    <label>Korean</label>
+                </value>
+                <value>
+                    <fullName>Portuguese (Brazil)</fullName>
+                    <default>false</default>
+                    <label>Portuguese (Brazil)</label>
+                </value>
+                <value>
+                    <fullName>Russian</fullName>
+                    <default>false</default>
+                    <label>Russian</label>
+                </value>
+                <value>
+                    <fullName>Swedish</fullName>
+                    <default>false</default>
+                    <label>Swedish</label>
+                </value>
+                <value>
+                    <fullName>Thai</fullName>
+                    <default>false</default>
+                    <label>Thai</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Post_Code__c</fullName>
+        <description>Records the postcode of the residence of the person to whom this record relates.</description>
+        <externalId>false</externalId>
+        <label>Post Code</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Name__c</fullName>
+        <description>Records the street name including street type of the residence of the person to whom this record relates.</description>
+        <externalId>false</externalId>
+        <label>Street Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Number__c</fullName>
+        <description>Records the street number of the residence of the person to whom this record relates.</description>
+        <externalId>false</externalId>
+        <label>Street Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suburb__c</fullName>
+        <description>Records the suburb of the residence of the person to whom this record relates.</description>
+        <externalId>false</externalId>
+        <label>Suburb</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Number__c</fullName>
+        <description>Records the unit number of the residence of the person to whom this record relates.</description>
+        <externalId>false</externalId>
+        <label>Unit Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <recordTypes>
+        <fullName>CTP_Public</fullName>
+        <active>true</active>
+        <description>This is the contact record type for any member of the public that does not fall into an above category; e.g. an injured person, claimant, shopper, personal representative.</description>
+        <label>CTP_Public</label>
+        <picklistValues>
+            <picklist>DuplicateStatus__c</picklist>
+            <values>
+                <fullName>Duplicate - no additional information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate - submitted in error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not a duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved - Duplicate%2C additional informationDuplicate - Additional information</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>InterpreterRequired__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Language__c</picklist>
+            <values>
+                <fullName>Arabic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chinese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chinese %28Simplified%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chinese %28Traditional%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dutch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>English</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finnish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>French</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>German</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Greek</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japanese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Korean</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portuguese %28Brazil%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spanish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swedish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thai</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>CTP_DOBFutureDate</fullName>
+        <active>true</active>
+        <description>Date of Birth Must be in the past</description>
+        <errorConditionFormula>Birthdate&gt;=TODAY()</errorConditionFormula>
+        <errorMessage>Date of Birth can not be a future date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CTP_LanugageIfInterpreterRequired</fullName>
+        <active>true</active>
+        <description>Language is required when an Interpreter is Required</description>
+        <errorConditionFormula>OR( 
+AND(ISPICKVAL( InterpreterRequired__c , &quot;Yes&quot;) , 
+OR (ISBLANK( CTP_Claimant_Language_Code__c ),ISNULL( CTP_Claimant_Language_Code__c ))  )
+)</errorConditionFormula>
+        <errorDisplayField>Language__c</errorDisplayField>
+        <errorMessage>Language is required when an Interpreter is Required</errorMessage>
+    </validationRules>
+</CustomObject>
