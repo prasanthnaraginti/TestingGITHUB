@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
-    <folderShares>
-        <accessLevel>Manage</accessLevel>
-        <sharedTo>karthikeyan.dharmaraj@capgemini.com</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
-    <name>CTP Assist Dashboards</name>
-</DashboardFolder>
