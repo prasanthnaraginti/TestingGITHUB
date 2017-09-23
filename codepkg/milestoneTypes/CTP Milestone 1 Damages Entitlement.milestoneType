@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MilestoneType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>CTP Milestone 1 Damages Entitlement creates task to review the Case 13 weeks from the Date of Damages Lodgement</description>
+    <recurrenceType>recursChained</recurrenceType>
+</MilestoneType>

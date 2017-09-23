@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MilestoneType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Claims Assist Non-Damages Entitlement Milestone 4 creates task to call a Claimant 75 business weeks after the date of accident.</description>
+    <recurrenceType>recursChained</recurrenceType>
+</MilestoneType>
