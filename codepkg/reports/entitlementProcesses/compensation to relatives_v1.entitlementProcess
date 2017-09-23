@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>false</active>
+    <businessHours>SIRA Monday to Friday Business Hours</businessHours>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <businessHours>SIRA Monday to Friday Business Hours</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Compensation to Relatives</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Compensation to Relatives</milestoneName>
+        <minutesToComplete>2</minutesToComplete>
+        <successActions>
+            <name>CTP_Assist_Update_DueDate</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>CTP_SetActionOnCase</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>CTP_SetCaseSeverityToGreen</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>CTP_Update_Case_Status_to_In_Progress</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>CTP_SetCaseSeverityToYellow</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>CTP_SetCaseSeverityToRed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>CTP_Contact_the_Claimant</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

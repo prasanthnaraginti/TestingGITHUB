@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>CAS_Read_Write_Case_Level_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Read/Write access to certain case record types for CAS Team Members</description>
+        <label>CAS Read/Write Case Level Access</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>CTP_Assist_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Feedback</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CTP Assist - Non-damages</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>OLCNReadWriteAllCases</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>OLCN - allows access to OLCN Cases</description>
+        <label>OLCNReadWriteAllCases</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>CAS_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Claims Notification</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Auto-response email for feedback submission via email/web</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CTP Email Template for submitting feedback via email/web</name>
+    <style>none</style>
+    <subject>Your Case {!Case.CaseNumber} has been recieved</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Thank you for submitting your feedback. Your feedback will help us ensure the success of the NSW
+CTP scheme.
+
+Our CTP Assist team will review the issues you have raised. If you have chosen to be contacted we
+will provide you with a response within two working days.
+
+If you need help
+If you have any questions please contact CTP Assist on 1300 656 919.
+
+Please do not reply on this email, if you have any enquiries please send your email to
+CTPassist@sira.nsw.gov.au
+
+Kind regards
+CTP Assist
+State Insurance Regulatory Authority
+p 1300 656 919
+www.sira.nsw.gov.au
+
+{!Case.Thread_Id}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
