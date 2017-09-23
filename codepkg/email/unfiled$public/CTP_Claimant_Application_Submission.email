@@ -1,5 +1,0 @@
-Dear {!Contact.Name},
-Your application has been submitted successfully. Your application reference is {!Case.CaseNumber} and link to claimant portal is https://ctpdev04-ctpdev04.cs57.force.com/public
-Date Received: {!DATEVALUE(Case.CreatedDate)}
-Time Received: {!Case.CTP_Time_When_Application_Lodged__c} AEST
-A Dispute Resolution Officer will be assigned to your case and will contact you soon.
