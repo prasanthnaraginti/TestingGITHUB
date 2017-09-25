@@ -1,0 +1,15 @@
+<html>
+The article created by {!Article__kav.CreatedBy} on {!Article__kav.ArticleCreatedDate} has passed the approval process and is now published.
+<br/>
+<br/>
+Comment: {!ApprovalRequest.Comments}
+<br/>
+Article Type:{!Article__kav.ArticleType}
+<br/>
+Article Summary: {!Article__kav.Summary}
+<br/>
+Last Modified by: {!Article__kav.LastModifiedBy}
+<br/>
+Article Number: {!Article__kav.ArticleNumber}
+
+</html>

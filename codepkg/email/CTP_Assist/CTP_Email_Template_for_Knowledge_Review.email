@@ -1,0 +1,5 @@
+{!Article__kav.CreatedBy} has submitted an article created on {!Article__kav.ArticleCreatedDate} which requires your approval.
+
+Article Type: {!Article__kav.RecordType}
+Article Summary: {!Article__kav.Summary}
+Last Modified by: {!Article__kav.LastModifiedBy}

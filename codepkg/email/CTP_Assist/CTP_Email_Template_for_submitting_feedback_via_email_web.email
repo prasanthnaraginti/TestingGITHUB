@@ -1,0 +1,23 @@
+<html>
+<p>
+Dear {!Contact.Name},
+<br/>
+<br/>
+Thank you for submitting your feedback. Your feedback will help us ensure the success of the NSW CTP scheme.
+<br/><br/>
+Our CTP Assist team will review the issues you have raised. If you have chosen to be contacted we will provide you with a response within two working days.
+<br/><br/>
+<b>If you need help</b><br/>
+If you have any questions please contact CTP Assist on 1300 656 919.
+<br/><br/>
+Please do not reply on this email, if you have any enquiries please send your email to <br/>CTPassist@sira.nsw.gov.au
+<br/><br/>
+Kind regards <br/>
+CTP Assist<br/>
+State Insurance Regulatory Authority<br/> 
+p 1300 656 919 <br/>
+www.sira.nsw.gov.au
+<br/><br/>
+{!Case.Thread_Id}
+</p>
+</html>
