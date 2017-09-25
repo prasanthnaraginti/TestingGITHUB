@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <description>Entitlement For Compensation To Relatives</description>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.Status</field>
+        <operation>equals</operation>
+        <value>Closed</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <businessHours>SIRA Monday to Friday Business Hours</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Compensation to Relatives</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.CTP_Next_Action_Status__c</field>
+            <operation>equals</operation>
+            <value>Must Call</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>CTP Compensation to Relatives</milestoneName>
+        <minutesToComplete>2</minutesToComplete>
+        <successActions>
+            <name>CTP_SetCaseSeverityToGreen</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>CTP_SetDueDateToNull</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>CTP_Update_Case_Status_to_In_Progress</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>CTP_Update_Next_Action_StatusNA</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>CTP_SetCaseSeverityToYellow</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>CTP_SetCaseSeverityToRed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>
