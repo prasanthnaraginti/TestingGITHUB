@@ -1,3 +1,0 @@
-Case {!Case.CaseNumber} was received on the {!Case.CreatedDate} .
-It is currently owned by {!Case.OwnerFullName} with {!Case.Status}.
-{!Case.Thread_Id}
